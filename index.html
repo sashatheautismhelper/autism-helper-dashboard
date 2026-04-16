@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Autism Helper — Social Media Dashboard</title>
+<meta name="description" content="Weekly social media analytics & strategy insights for The Autism Helper." />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --brand-primary: #12899B;
+    --brand-primary-dk: #0C6875;
+    --brand-secondary: #F1592E;
+    --brand-secondary-dk: #C3431F;
+    --brand-accent: #F9C80E;
+    --brand-accent-2: #2BB673;
+    --brand-ink: #1A2B33;
+    --brand-sub: #5A7684;
+    --brand-cream: #FDF7EE;
+    --brand-surface: #FFFFFF;
+    --brand-line: #E6EEF1;
+    --good: #2E8B57;
+    --warn: #C65D00;
+    --bad:  #B23A48;
+    --shadow: 0 1px 2px rgba(31,59,71,.05), 0 8px 24px rgba(31,59,71,.06);
+    --radius: 14px;
+  }
+  *{box-sizing:border-box}html,body{margin:0;padding:0}
+  body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--brand-ink);background:var(--brand-cream);line-height:1.5}
+  a{color:var(--brand-primary-dk)}
+  .container{max-width:1240px;margin:0 auto;padding:0 24px}
+  header.topbar{background:var(--brand-surface);border-bottom:1px solid var(--brand-line);padding:14px 0;position:sticky;top:0;z-index:10}
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:16px}
+  .logo-img{height:56px;width:auto;display:block}
+  @media(max-width:640px){.logo-img{height:44px}}
+  .brand-divider{width:1px;height:36px;background:var(--brand-line)}
+  .brand-text h1{margin:0;font-size:16px;font-weight:700;letter-spacing:-.01em}
+  .brand-text p{margin:0;font-size:12.5px;color:var(--brand-sub)}
+  .week-control{display:flex;align-items:center;gap:10px;font-size:13.5px}
+  .week-control select{border:1px solid var(--brand-line);background:var(--brand-surface);border-radius:10px;padding:8px 12px;font-size:13.5px;color:var(--brand-ink)}
+  .update-pill{display:inline-flex;align-items:center;gap:6px;background:#E3F1F3;color:var(--brand-primary-dk);font-size:12px;font-weight:600;padding:6px 10px;border-radius:999px}
+  .update-pill::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--good)}
+  nav.tabs{background:var(--brand-surface);border-bottom:1px solid var(--brand-line)}
+  .tabs-inner{display:flex;gap:4px;overflow-x:auto}
+  .tab{appearance:none;background:transparent;border:0;cursor:pointer;padding:14px 16px;font-size:14px;font-weight:600;color:var(--brand-sub);border-bottom:3px solid transparent;white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+  .tab:hover{color:var(--brand-ink)}
+  .tab.active{color:var(--brand-primary-dk);border-bottom-color:var(--brand-primary)}
+  .tab .dot{width:8px;height:8px;border-radius:50%}
+  .dot-ig{background:#E4405F}.dot-fb{background:#1877F2}.dot-pi{background:#E60023}.dot-tt{background:#111}.dot-yt{background:#FF0000}
+  .dot-ov{background:linear-gradient(135deg,var(--brand-primary),var(--brand-secondary))}
+  main{padding:28px 0 64px}
+  .panel{display:none}.panel.active{display:block}
+  .panel-title{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}
+  .panel-sub{margin:0 0 20px;color:var(--brand-sub);font-size:14px}
+  .grid{display:grid;gap:16px}
+  .kpi-row{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:900px){.kpi-row{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.kpi-row{grid-template-columns:1fr}}
+  .card{background:var(--brand-surface);border:1px solid var(--brand-line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+  .kpi .label{font-size:12.5px;color:var(--brand-sub);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+  .kpi .value{font-size:28px;font-weight:800;margin-top:6px;letter-spacing:-.02em}
+  .kpi .delta{margin-top:4px;font-size:13px;font-weight:600}
+  .delta.up{color:var(--good)}.delta.down{color:var(--bad)}.delta.flat{color:var(--brand-sub)}
+  .section-head{display:flex;align-items:baseline;justify-content:space-between;margin:28px 0 12px}
+  .section-head h3{margin:0;font-size:16px;letter-spacing:-.01em}
+  .section-head .hint{color:var(--brand-sub);font-size:12.5px}
+  .two-col{grid-template-columns:1.2fr 1fr}
+  @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+  .chart-wrap{height:280px}
+  table.posts{width:100%;border-collapse:collapse;font-size:13.5px}
+  table.posts th,table.posts td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--brand-line)}
+  table.posts th{font-size:11.5px;color:var(--brand-sub);text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+  table.posts tr:last-child td{border-bottom:0}
+  .tag{display:inline-block;font-size:11.5px;font-weight:600;padding:3px 8px;border-radius:999px;background:#EEF6F6;color:var(--brand-primary-dk)}
+  .tag.coral{background:#FDECEC;color:#B23A48}.tag.gold{background:#FDF2CC;color:#8A6A00}
+  .insights{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:900px){.insights{grid-template-columns:1fr}}
+  .insight{border-left:4px solid var(--brand-primary);background:var(--brand-surface);border-radius:var(--radius);padding:18px 18px 18px 20px;box-shadow:var(--shadow)}
+  .insight.work{border-left-color:var(--good)}.insight.pivot{border-left-color:var(--warn)}.insight.more{border-left-color:var(--brand-secondary)}
+  .insight h4{margin:0 0 4px;font-size:14px}
+  .insight .eyebrow{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand-sub)}
+  .insight ul{margin:10px 0 0;padding-left:18px}
+  .insight li{margin-bottom:8px;font-size:13.5px}
+  .insight li strong{color:var(--brand-ink)}
+  footer.note{margin-top:28px;font-size:12px;color:var(--brand-sub);text-align:center}
+  .platform-banner{display:flex;align-items:center;gap:14px;padding:14px 18px;border-radius:var(--radius);color:white;margin-bottom:20px;box-shadow:var(--shadow)}
+  .platform-banner h2{margin:0;font-size:18px}
+  .platform-banner p{margin:0;opacity:.92;font-size:13px}
+  .pb-ig{background:linear-gradient(135deg,#833AB4,#FD1D1D,#FCB045)}
+  .pb-fb{background:linear-gradient(135deg,#1877F2,#0F5FC2)}
+  .pb-pi{background:linear-gradient(135deg,#E60023,#AD081B)}
+  .pb-tt{background:linear-gradient(135deg,#111,#3A3A3A)}
+  .pb-yt{background:linear-gradient(135deg,#FF0000,#B80000)}
+  .loading{padding:60px 0;text-align:center;color:var(--brand-sub);font-size:14px}
+  .error{padding:20px;background:#FDECEC;color:#B23A48;border-radius:var(--radius);margin:16px 0;font-size:14px}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand">
+      <img src="assets/TAH-Logo-H.png" alt="The Autism Helper" class="logo-img" />
+      <div class="brand-divider"></div>
+      <div class="brand-text">
+        <h1>Social Media Dashboard</h1>
+        <p id="brand-sub">Weekly analytics &amp; strategy insights</p>
+      </div>
+    </div>
+    <div class="week-control">
+      <span class="update-pill" id="updated-pill">Updated weekly</span>
+      <label for="week">Week of</label>
+      <select id="week"><option>Loading…</option></select>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <div class="container tabs-inner" role="tablist">
+    <button class="tab active" data-tab="overview"><span class="dot dot-ov"></span>Overview</button>
+    <button class="tab" data-tab="instagram"><span class="dot dot-ig"></span>Instagram</button>
+    <button class="tab" data-tab="facebook"><span class="dot dot-fb"></span>Facebook</button>
+    <button class="tab" data-tab="pinterest"><span class="dot dot-pi"></span>Pinterest</button>
+    <button class="tab" data-tab="tiktok"><span class="dot dot-tt"></span>TikTok</button>
+    <button class="tab" data-tab="youtube"><span class="dot dot-yt"></span>YouTube</button>
+  </div>
+</nav>
+
+<main class="container">
+  <div id="loading" class="loading">Loading latest data…</div>
+  <div id="error" class="error" style="display:none"></div>
+
+  <section id="overview" class="panel active"></section>
+  <section id="instagram" class="panel"></section>
+  <section id="facebook" class="panel"></section>
+  <section id="pinterest" class="panel"></section>
+  <section id="tiktok" class="panel"></section>
+  <section id="youtube" class="panel"></section>
+
+  <footer class="note">
+    Data pulled weekly from public profile pages via Apify. Follower counts may differ slightly from
+    native platform analytics due to caching. Updated every Sunday night.
+  </footer>
+</main>
+
+<script>
+// ---------- Tab switching ----------
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  t.classList.add('active');
+  document.getElementById(t.dataset.tab).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}));
+
+// ---------- Chart defaults ----------
+Chart.defaults.font.family = '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
+Chart.defaults.color = '#5A7684';
+const GRID = '#E6EEF1';
+const PLATFORM_COLORS = { instagram:'#E4405F', facebook:'#1877F2', pinterest:'#E60023', tiktok:'#111', youtube:'#FF0000' };
+
+// ---------- Helpers ----------
+const fmt = n => n == null ? '—' : (typeof n === 'number' ? n.toLocaleString('en-US') : n);
+const fmtPct = n => n == null ? '—' : (n.toFixed(1) + '%');
+const fmtDelta = (n, suffix='') => {
+  if (n == null) return '';
+  const cls = n > 0 ? 'up' : n < 0 ? 'down' : 'flat';
+  const arrow = n > 0 ? '▲' : n < 0 ? '▼' : '▬';
+  const sign = n > 0 ? '+' : '';
+  return `<div class="delta ${cls}">${arrow} ${sign}${typeof n === 'number' ? n.toLocaleString('en-US') : n}${suffix}</div>`;
+};
+const kpiCard = (label, value, deltaHtml = '') =>
+  `<div class="card kpi"><div class="label">${label}</div><div class="value">${fmt(value)}</div>${deltaHtml}</div>`;
+
+// ---------- Render: Overview ----------
+function renderOverview(data) {
+  const o = data.overview;
+  const kpis = [
+    kpiCard('Total Followers', o.totals.followers, fmtDelta(o.totals.followersDelta)),
+    kpiCard('Total Engagements', o.totals.engagements, fmtDelta(o.totals.engagementsDeltaPct, '% WoW')),
+    kpiCard('Posts This Week',  o.totals.posts,       fmtDelta(o.totals.postsDelta)),
+    kpiCard('Top Platform',     o.totals.topPlatform, `<div class="delta flat">by engagement share</div>`)
+  ].join('');
+
+  const platformRows = o.platformSummary.map(p => `
+    <tr>
+      <td>${p.name}</td>
+      <td>${fmt(p.followers)}${p.note ? ' <span style="font-size:11px;color:var(--brand-sub)">'+p.note+'</span>' : ''}</td>
+      <td>${fmtDelta(p.followersDelta).replace(/<\/?div[^>]*>/g,'')}</td>
+      <td>${p.topFormat ? '<span class="tag">'+p.topFormat+'</span>' : '—'}</td>
+    </tr>`).join('');
+
+  const topRows = o.topPosts.map((p,i) => `
+    <tr><td>${i+1}</td><td>${p.title}</td><td><span class="tag">${p.platform}</span></td>
+    <td>${p.date}</td><td>${p.format}</td><td>${fmt(p.views)}</td><td>${fmt(p.engagements)}</td></tr>`).join('');
+
+  const renderInsights = (obj) => `
+    <div class="grid insights">
+      <div class="insight work"><div class="eyebrow">What's Working</div><h4>${obj.working.headline}</h4><ul>${obj.working.bullets.map(b=>'<li>'+b+'</li>').join('')}</ul></div>
+      <div class="insight pivot"><div class="eyebrow">Where to Pivot</div><h4>${obj.pivot.headline}</h4><ul>${obj.pivot.bullets.map(b=>'<li>'+b+'</li>').join('')}</ul></div>
+      <div class="insight more"><div class="eyebrow">Post More Of</div><h4>${obj.postMore.headline}</h4><ul>${obj.postMore.bullets.map(b=>'<li>'+b+'</li>').join('')}</ul></div>
+    </div>`;
+
+  document.getElementById('overview').innerHTML = `
+    <h2 class="panel-title">Overview — ${data.meta.weekLabel}</h2>
+    <p class="panel-sub">A snapshot of cross-platform performance, with strategic takeaways for the next two weeks.</p>
+    <div class="grid kpi-row">${kpis}</div>
+
+    <div class="section-head"><h3>Follower growth by platform (last 8 weeks)</h3><span class="hint">Indexed to week 1 = 100</span></div>
+    <div class="grid two-col">
+      <div class="card"><div class="chart-wrap"><canvas id="ovFollowers"></canvas></div></div>
+      <div class="card"><div class="chart-wrap"><canvas id="ovEngagement"></canvas></div></div>
+    </div>
+
+    <div class="section-head"><h3>Platform mix this week</h3><span class="hint">Share of total engagements</span></div>
+    <div class="grid two-col">
+      <div class="card"><div class="chart-wrap"><canvas id="ovMix"></canvas></div></div>
+      <div class="card"><table class="posts"><thead><tr><th>Platform</th><th>Followers</th><th>Δ WoW</th><th>Top Format</th></tr></thead><tbody>${platformRows}</tbody></table></div>
+    </div>
+
+    <div class="section-head"><h3>Top 10 posts across all platforms</h3><span class="hint">Ranked by total engagement this week</span></div>
+    <div class="card" style="padding:8px 12px"><table class="posts"><thead><tr><th>#</th><th>Post</th><th>Platform</th><th>Date</th><th>Format</th><th>Views / Reach</th><th>Engagements</th></tr></thead><tbody>${topRows}</tbody></table></div>
+
+    <div class="section-head"><h3>Strategy insights — next 2 weeks</h3></div>
+    ${renderInsights(o.insights)}`;
+
+  // charts
+  new Chart(document.getElementById('ovFollowers'), {
+    type:'line',
+    data:{ labels: o.followersHistory.labels, datasets: o.followersHistory.datasets.map(d => ({
+      label:d.label, data:d.data, borderColor:d.color, backgroundColor:d.color+'22', tension:.35
+    }))},
+    options:{maintainAspectRatio:false,plugins:{legend:{position:'bottom'}},scales:{y:{grid:{color:GRID}},x:{grid:{display:false}}}}
+  });
+  new Chart(document.getElementById('ovEngagement'), {
+    type:'bar',
+    data:{ labels: o.platformMix.labels, datasets:[{label:'Engagements this week', data:o.platformMix.data, backgroundColor:o.platformMix.colors, borderRadius:8}]},
+    options:{maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{grid:{color:GRID}},x:{grid:{display:false}}}}
+  });
+  new Chart(document.getElementById('ovMix'), {
+    type:'doughnut',
+    data:{ labels: o.platformMix.labels, datasets:[{data: o.platformMix.data, backgroundColor:o.platformMix.colors}]},
+    options:{maintainAspectRatio:false,cutout:'62%',plugins:{legend:{position:'bottom'}}}
+  });
+}
+
+// ---------- Render: generic platform ----------
+function renderPlatform(id, data, opts) {
+  const p = data[id];
+  const banner = `<div class="platform-banner ${opts.bannerClass}"><div style="font-size:22px">${opts.icon}</div><div><h2>${opts.title}</h2><p>${opts.subtitle}</p></div></div>`;
+
+  const kpis = p.kpis.map(k => kpiCard(k.label, k.value, fmtDelta(k.delta, k.deltaSuffix||''))).join('');
+
+  const cols = opts.columns; // array of column headers
+  const fields = opts.fields; // array of field keys in the post object
+  const rows = p.topPosts.map(post => `<tr>${fields.map(f => {
+    const v = post[f];
+    if (f === 'format') return `<td><span class="tag">${v}</span></td>`;
+    if (typeof v === 'number' && f !== 'year') return `<td>${fmt(v)}</td>`;
+    return `<td>${v == null ? '—' : v}</td>`;
+  }).join('')}</tr>`).join('');
+
+  const renderInsights = (obj) => `
+    <div class="grid insights">
+      <div class="insight work"><div class="eyebrow">What's Working</div><h4>${obj.working.headline}</h4><ul>${obj.working.bullets.map(b=>'<li>'+b+'</li>').join('')}</ul></div>
+      <div class="insight pivot"><div class="eyebrow">Where to Pivot</div><h4>${obj.pivot.headline}</h4><ul>${obj.pivot.bullets.map(b=>'<li>'+b+'</li>').join('')}</ul></div>
+      <div class="insight more"><div class="eyebrow">Post More Of</div><h4>${obj.postMore.headline}</h4><ul>${obj.postMore.bullets.map(b=>'<li>'+b+'</li>').join('')}</ul></div>
+    </div>`;
+
+  document.getElementById(id).innerHTML = `
+    ${banner}
+    <div class="grid kpi-row">${kpis}</div>
+    <div class="grid two-col">
+      <div class="card"><div class="chart-wrap"><canvas id="chart-${id}"></canvas></div></div>
+      <div class="card">
+        <h3 style="margin:0 0 8px;font-size:15px;">Top posts this week</h3>
+        <table class="posts"><thead><tr>${cols.map(c=>'<th>'+c+'</th>').join('')}</tr></thead><tbody>${rows}</tbody></table>
+      </div>
+    </div>
+    <div class="section-head"><h3>${opts.title.split(' — ')[0]} insights</h3></div>
+    ${renderInsights(p.insights)}`;
+
+  // trend chart
+  new Chart(document.getElementById('chart-'+id), {
+    type:'line',
+    data:{ labels: p.trend.labels, datasets: p.trend.datasets.map(d => ({
+      label:d.label, data:d.data, borderColor:d.color||PLATFORM_COLORS[id],
+      backgroundColor:(d.color||PLATFORM_COLORS[id])+'22', tension:.35, fill:d.fill !== false, yAxisID:d.axis||'y'
+    }))},
+    options:{maintainAspectRatio:false,plugins:{legend:{position:'bottom'}},
+      scales:{y:{grid:{color:GRID}},y2:{position:'right',grid:{display:false}},x:{grid:{display:false}}}}
+  });
+}
+
+// ---------- Load + render ----------
+const PLATFORM_OPTS = {
+  instagram: { icon:'📸', title:'Instagram — @theautismhelper', subtitle:"Reels-led growth and engagement signals.", bannerClass:'pb-ig',
+    columns:['Post','Date','Format','Likes','Comments','Shares','Eng.'],
+    fields:['title','date','format','likes','comments','shares','engagements'] },
+  facebook: { icon:'👍', title:'Facebook — The Autism Helper', subtitle:"Community and parent-focused conversation.", bannerClass:'pb-fb',
+    columns:['Post','Date','Format','Reactions','Comments','Shares','Eng.'],
+    fields:['title','date','format','reactions','comments','shares','engagements'] },
+  pinterest: { icon:'📌', title:'Pinterest — The Autism Helper', subtitle:"Evergreen resource engine.", bannerClass:'pb-pi',
+    columns:['Pin','Date','Format','Saves','Comments','Repins','Eng.'],
+    fields:['title','date','format','saves','comments','repins','engagements'] },
+  tiktok: { icon:'🎵', title:'TikTok — @theautismhelper', subtitle:"Fastest-growing platform. Short-form classroom content.", bannerClass:'pb-tt',
+    columns:['Video','Date','Length','Views','Likes','Comments','Shares'],
+    fields:['title','date','length','views','likes','comments','shares'] },
+  youtube: { icon:'▶️', title:'YouTube — The Autism Helper', subtitle:"Long-form tutorial home.", bannerClass:'pb-yt',
+    columns:['Video','Published','Length','Views','Likes','Comments','Eng.'],
+    fields:['title','date','length','views','likes','comments','engagements'] }
+};
+
+async function loadWeek(filename) {
+  try {
+    const res = await fetch(filename + '?v=' + Date.now());
+    if (!res.ok) throw new Error('Could not load ' + filename);
+    const data = await res.json();
+    render(data);
+  } catch (err) {
+    document.getElementById('loading').style.display = 'none';
+    const e = document.getElementById('error');
+    e.style.display = 'block';
+    e.textContent = 'Unable to load dashboard data: ' + err.message;
+  }
+}
+
+function render(data) {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('updated-pill').textContent = 'Updated ' + new Date(data.meta.generatedAt).toLocaleDateString('en-US', { month:'short', day:'numeric' });
+  document.getElementById('brand-sub').textContent = `Weekly analytics & strategy insights · Week of ${data.meta.weekLabel}`;
+  renderOverview(data);
+  Object.keys(PLATFORM_OPTS).forEach(id => renderPlatform(id, data, PLATFORM_OPTS[id]));
+}
+
+async function populateWeekPicker() {
+  try {
+    const res = await fetch('data/index.json?v=' + Date.now());
+    const list = await res.json(); // [{file, label}]
+    const sel = document.getElementById('week');
+    sel.innerHTML = list.map((w,i) => `<option value="${w.file}"${i===0?' selected':''}>${w.label}${i===0?' (current)':''}</option>`).join('');
+    sel.addEventListener('change', e => loadWeek(e.target.value));
+    if (list.length) loadWeek(list[0].file);
+    else loadWeek('data/latest.json');
+  } catch {
+    loadWeek('data/latest.json');
+  }
+}
+populateWeekPicker();
+</script>
+</body>
+</html>

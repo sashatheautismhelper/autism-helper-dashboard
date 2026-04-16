@@ -1,0 +1,13 @@
+{
+  "name": "tah-dashboard-refresh",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Weekly data refresh for The Autism Helper social media dashboard",
+  "type": "module",
+  "scripts": {
+    "refresh": "node run_weekly.js"
+  },
+  "dependencies": {
+    "apify-client": "^2.9.0"
+  }
+}

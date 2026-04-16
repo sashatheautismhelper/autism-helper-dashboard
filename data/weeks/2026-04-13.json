@@ -1,0 +1,332 @@
+{
+  "meta": {
+    "week": "2026-04-07/2026-04-13",
+    "weekLabel": "Apr 7 – Apr 13, 2026",
+    "generatedAt": "2026-04-14T04:00:00Z",
+    "source": "sample"
+  },
+  "overview": {
+    "totals": {
+      "followers": 548800,
+      "followersDelta": 2365,
+      "engagements": 96420,
+      "engagementsDeltaPct": 6.8,
+      "posts": 121,
+      "postsDelta": 9,
+      "topPlatform": "TikTok"
+    },
+    "platformSummary": [
+      { "name": "Instagram", "followers": 142300, "followersDelta": 820, "topFormat": "Reels" },
+      { "name": "Facebook",  "followers": 98500,  "followersDelta": 215, "topFormat": "Video" },
+      { "name": "Pinterest", "followers": 215000, "followersDelta": 3100, "topFormat": "Idea Pin", "note": "monthly viewers" },
+      { "name": "TikTok",    "followers": 68200,  "followersDelta": 1240, "topFormat": "Short-form" },
+      { "name": "YouTube",   "followers": 24800,  "followersDelta": 95,   "topFormat": "Tutorial" }
+    ],
+    "platformMix": {
+      "labels": ["Instagram","Facebook","Pinterest","TikTok","YouTube"],
+      "data":   [46200, 12480, 18240, 15600, 3900],
+      "colors": ["#E4405F","#1877F2","#E60023","#111","#FF0000"]
+    },
+    "followersHistory": {
+      "labels": ["W1","W2","W3","W4","W5","W6","W7","W8"],
+      "datasets": [
+        { "label": "Instagram", "data": [100,100.4,101,101.3,101.9,102.3,102.6,103.1], "color": "#E4405F" },
+        { "label": "Facebook",  "data": [100,100.1,100.2,100.3,100.4,100.5,100.6,100.7], "color": "#1877F2" },
+        { "label": "Pinterest", "data": [100,100.6,101.1,101.5,101.8,102.2,102.6,103.1], "color": "#E60023" },
+        { "label": "TikTok",    "data": [100,101.2,102.4,103.8,105.3,107.1,108.9,110.8], "color": "#111" },
+        { "label": "YouTube",   "data": [100,100.1,100.2,100.3,100.4,100.5,100.6,100.7], "color": "#FF0000" }
+      ]
+    },
+    "topPosts": [
+      { "title": "3 visual schedule fails (and fixes)", "platform": "TikTok",    "date": "Apr 9",  "format": "Short video", "views": 410000, "engagements": 28900 },
+      { "title": "5 visual schedule mistakes to avoid", "platform": "Instagram", "date": "Apr 9",  "format": "Reel",        "views": 312000, "engagements": 18400 },
+      { "title": "POV: new sped teacher on day 1",      "platform": "TikTok",    "date": "Apr 11", "format": "Short video", "views": 198000, "engagements": 14100 },
+      { "title": "Classroom reset trend audio",         "platform": "TikTok",    "date": "Apr 8",  "format": "Short video", "views": 142000, "engagements": 11200 },
+      { "title": "IEP prep checklist (free PDF)",       "platform": "Facebook",  "date": "Apr 9",  "format": "Link",        "views": 220000, "engagements": 9840 },
+      { "title": "When the fire drill hits during centers","platform":"TikTok",  "date": "Apr 12", "format": "Short video", "views": 98000,  "engagements": 6990 },
+      { "title": "Free April data sheet (link in bio)", "platform": "Instagram", "date": "Apr 11", "format": "Carousel",    "views": 98000,  "engagements": 7120 },
+      { "title": "Classroom reset – before/after",      "platform": "Instagram", "date": "Apr 8",  "format": "Reel",        "views": 84000,  "engagements": 5980 },
+      { "title": "Summer transition tips for parents",  "platform": "Facebook",  "date": "Apr 11", "format": "Video",       "views": 140000, "engagements": 5210 },
+      { "title": "Day in the life — autism classroom",  "platform": "Instagram", "date": "Apr 12", "format": "Reel",        "views": 71000,  "engagements": 4310 }
+    ],
+    "insights": {
+      "working": {
+        "headline": "Visual routines + behavior-management content",
+        "bullets": [
+          "<strong>TikTok is our fastest grower</strong> (+1,240 followers this week). Short \"classroom hack\" videos under 30 seconds are driving it.",
+          "<strong>Instagram Reels</strong> outperformed static posts by <strong>3.6×</strong> on engagement this week.",
+          "<strong>Pinterest Idea Pins</strong> continue to drive the most traffic back to theautismhelper.com."
+        ]
+      },
+      "pivot": {
+        "headline": "Facebook engagement rate slipping",
+        "bullets": [
+          "<strong>Facebook carousels</strong> underperformed for the 2nd week in a row — consider cross-posting IG Reels natively instead.",
+          "<strong>YouTube views are flat</strong> despite subscriber growth. Thumbnails on the last 3 videos follow the same style; A/B test a bolder, higher-contrast thumbnail.",
+          "<strong>Pinterest posting cadence dropped</strong> from 9/wk to 5/wk. Re-pinning evergreen classroom printables should restore volume."
+        ]
+      },
+      "postMore": {
+        "headline": "Double down on these formats",
+        "bullets": [
+          "<strong>\"Day in the life of a sped teacher\"</strong> Reels/TikToks — average 2.4× engagement of other formats.",
+          "<strong>Free printable announcements</strong> with a clear CTA link — top driver of site sessions this week.",
+          "<strong>Parent-focused content on Facebook</strong> (IEP prep, transitions) — engagement 1.9× higher than teacher-targeted posts there.",
+          "<strong>Before/after classroom setups</strong> on Instagram carousels — highest save-worthy intent signal."
+        ]
+      }
+    }
+  },
+
+  "instagram": {
+    "kpis": [
+      { "label": "Followers",          "value": 142300, "delta": 820 },
+      { "label": "Posts This Week",    "value": 14,     "delta": 2 },
+      { "label": "Total Likes",        "value": 34200,  "delta": 2140 },
+      { "label": "Total Comments",     "value": 1400,   "delta": 85 }
+    ],
+    "trend": {
+      "labels": ["W1","W2","W3","W4","W5","W6","W7","W8"],
+      "datasets": [
+        { "label": "Likes (K)",    "data": [28,29,30,31,32,33,34,34.2], "color": "#E4405F" },
+        { "label": "Comments",     "data": [1100,1150,1200,1250,1280,1320,1360,1400], "axis": "y2", "color": "#1A2B33", "fill": false }
+      ]
+    },
+    "topPosts": [
+      { "title": "5 visual schedule mistakes to avoid",   "date": "Apr 9",  "format": "Reel",     "likes": 14200, "comments": 420, "shares": 2380, "engagements": 18400 },
+      { "title": "Free April data sheet (link in bio)",   "date": "Apr 11", "format": "Carousel", "likes": 5100,  "comments": 310, "shares": 840,  "engagements": 7120 },
+      { "title": "Classroom reset – before/after",        "date": "Apr 8",  "format": "Reel",     "likes": 4620,  "comments": 215, "shares": 610,  "engagements": 5980 },
+      { "title": "Day in the life — autism classroom",    "date": "Apr 12", "format": "Reel",     "likes": 3400,  "comments": 180, "shares": 410,  "engagements": 4310 },
+      { "title": "3 scripts for redirecting behaviors",   "date": "Apr 10", "format": "Reel",     "likes": 2980,  "comments": 145, "shares": 380,  "engagements": 3745 },
+      { "title": "Morning meeting visual cue cards",      "date": "Apr 13", "format": "Carousel", "likes": 2210,  "comments": 98,  "shares": 205,  "engagements": 2513 },
+      { "title": "Token economy setup — quick tour",      "date": "Apr 7",  "format": "Reel",     "likes": 1860,  "comments": 74,  "shares": 168,  "engagements": 2102 },
+      { "title": "IEP goal bank preview",                 "date": "Apr 11", "format": "Carousel", "likes": 1120,  "comments": 58,  "shares": 44,   "engagements": 1222 }
+    ],
+    "insights": {
+      "working": {
+        "headline": "Reels + save-worthy content",
+        "bullets": [
+          "<strong>Reels drove 62% of engagement</strong> with only 24% of posts — highest ROI format.",
+          "<strong>Carousel with free printable</strong> drove 840+ shares; keep pairing freebies with clear CTAs."
+        ]
+      },
+      "pivot": {
+        "headline": "Static single-image posts are underperforming",
+        "bullets": [
+          "Single-image posts averaged <strong>1.3% engagement</strong> vs 5.1% for Reels. Convert quote-style posts into 7–10s text Reels.",
+          "Audio-only Reels ran 18% below the account average — stick with talking-head + b-roll."
+        ]
+      },
+      "postMore": {
+        "headline": "Next 2 weeks",
+        "bullets": [
+          "3× <strong>\"mistake/myth-bust\" Reels</strong> — highest shares.",
+          "1× <strong>before/after classroom setup</strong> carousel per week.",
+          "Pin a <strong>free resource carousel</strong> to profile for end-of-year IEP season."
+        ]
+      }
+    }
+  },
+
+  "facebook": {
+    "kpis": [
+      { "label": "Followers",       "value": 98500, "delta": 215 },
+      { "label": "Posts This Week", "value": 22,    "delta": 1 },
+      { "label": "Total Reactions", "value": 14820, "delta": 620 },
+      { "label": "Total Shares",    "value": 3910,  "delta": 320 }
+    ],
+    "trend": {
+      "labels": ["W1","W2","W3","W4","W5","W6","W7","W8"],
+      "datasets": [
+        { "label": "Reactions",  "data": [13200,13500,13800,14000,14100,14400,14600,14820], "color": "#1877F2" },
+        { "label": "Shares",     "data": [3200,3300,3450,3600,3500,3700,3800,3910], "axis": "y2", "color": "#1A2B33", "fill": false }
+      ]
+    },
+    "topPosts": [
+      { "title": "IEP prep checklist (free PDF)",            "date": "Apr 9",  "format": "Link",      "reactions": 6240, "comments": 480, "shares": 1400, "engagements": 8120 },
+      { "title": "Summer transition tips for parents",        "date": "Apr 11", "format": "Video",     "reactions": 3620, "comments": 320, "shares": 820,  "engagements": 4760 },
+      { "title": "Teacher appreciation shoutout",             "date": "Apr 7",  "format": "Image",     "reactions": 1480, "comments": 190, "shares": 310,  "engagements": 1980 },
+      { "title": "Community Q: biggest IEP win this year?",   "date": "Apr 12", "format": "Text",      "reactions": 910,  "comments": 620, "shares": 180,  "engagements": 1710 },
+      { "title": "Visual schedule routines (cross-post Reel)","date": "Apr 10", "format": "Video",     "reactions": 1120, "comments": 95,  "shares": 240,  "engagements": 1455 },
+      { "title": "FB Live replay: behavior plan 101",         "date": "Apr 8",  "format": "Live",      "reactions": 780,  "comments": 410, "shares": 120,  "engagements": 1310 },
+      { "title": "April classroom printable roundup",         "date": "Apr 13", "format": "Carousel",  "reactions": 410,  "comments": 32,  "shares": 68,   "engagements": 510 },
+      { "title": "Parent PD webinar announcement",            "date": "Apr 11", "format": "Event",     "reactions": 260,  "comments": 18,  "shares": 46,   "engagements": 324 }
+    ],
+    "insights": {
+      "working": {
+        "headline": "Parent-focused, shareable content",
+        "bullets": [
+          "<strong>Shares up +9%</strong> — the IEP checklist alone drove 1,400+ shares.",
+          "<strong>Video posts</strong> are 1.9× more engaging than text/image on FB for our audience."
+        ]
+      },
+      "pivot": {
+        "headline": "Carousels underperform on FB",
+        "bullets": [
+          "Carousels slipped to 510 engagements despite 29K reach.",
+          "Try <strong>cross-posting IG Reels natively</strong> (not shared links) — FB's algorithm favors native short video."
+        ]
+      },
+      "postMore": {
+        "headline": "Next 2 weeks",
+        "bullets": [
+          "2× <strong>parent-focused guides</strong> (IEP, transitions, summer prep).",
+          "1× <strong>community question post</strong> weekly — drives comment-based engagement.",
+          "Begin a <strong>weekly live Q&amp;A</strong> in the FB group."
+        ]
+      }
+    }
+  },
+
+  "pinterest": {
+    "kpis": [
+      { "label": "Monthly Viewers", "value": 215000, "delta": 3100 },
+      { "label": "Pins This Week",  "value": 5,      "delta": -4 },
+      { "label": "Total Saves",     "value": 12500,  "delta": 700 },
+      { "label": "Total Comments",  "value": 120,    "delta": 15 }
+    ],
+    "trend": {
+      "labels": ["W1","W2","W3","W4","W5","W6","W7","W8"],
+      "datasets": [
+        { "label": "Monthly Viewers (K)", "data": [198,201,204,206,208,210,212,215], "color": "#E60023" },
+        { "label": "Saves",               "data": [10800,11200,11500,11700,11800,12000,12200,12500], "axis": "y2", "color": "#1A2B33", "fill": false }
+      ]
+    },
+    "topPosts": [
+      { "title": "Free visual schedule bundle",   "date": "Apr 8",  "format": "Idea Pin",  "saves": 2100, "comments": 28, "repins": 410, "engagements": 2538 },
+      { "title": "Classroom reset printable",     "date": "Apr 10", "format": "Standard",  "saves": 1640, "comments": 19, "repins": 320, "engagements": 1979 },
+      { "title": "Behavior chart — free download","date": "Apr 7",  "format": "Standard",  "saves": 1210, "comments": 14, "repins": 280, "engagements": 1504 },
+      { "title": "IEP goal bank (30+ examples)",  "date": "Apr 12", "format": "Standard",  "saves": 980,  "comments": 22, "repins": 240, "engagements": 1242 },
+      { "title": "Morning meeting routine cards", "date": "Apr 9",  "format": "Idea Pin",  "saves": 840,  "comments": 11, "repins": 160, "engagements": 1011 },
+      { "title": "Calm down corner setup guide",  "date": "Apr 11", "format": "Standard",  "saves": 720,  "comments": 9,  "repins": 140, "engagements": 869 },
+      { "title": "Data collection made simple",   "date": "Apr 13", "format": "Video Pin", "saves": 510,  "comments": 6,  "repins": 95,  "engagements": 611 },
+      { "title": "Token boards — printable set",  "date": "Apr 8",  "format": "Standard",  "saves": 430,  "comments": 4,  "repins": 70,  "engagements": 504 }
+    ],
+    "insights": {
+      "working": {
+        "headline": "Evergreen freebies",
+        "bullets": [
+          "<strong>Pinterest is our #1 referral source</strong> by public save volume — 2,100 saves on the free visual schedule bundle alone.",
+          "<strong>Idea Pins</strong> grew saves +18% over standard pins — keep producing these."
+        ]
+      },
+      "pivot": {
+        "headline": "Pin cadence dropped",
+        "bullets": [
+          "Went from <strong>9 pins/week to 5</strong>. Restore cadence with re-pins of top-performing evergreens.",
+          "Video pins drove lower per-pin saves — test more text-forward standard pin covers with a clear \"Free\" badge."
+        ]
+      },
+      "postMore": {
+        "headline": "Next 2 weeks",
+        "bullets": [
+          "8–10 pins/week with a mix of <strong>2 Idea Pins + 6–8 Standard Pins</strong>.",
+          "Seasonal keywords: <em>end of year IEP, summer data collection, calm down corner</em>.",
+          "Refresh the top 3 evergreen pin covers with bolder headlines."
+        ]
+      }
+    }
+  },
+
+  "tiktok": {
+    "kpis": [
+      { "label": "Followers",      "value": 68200, "delta": 1240 },
+      { "label": "Videos Posted",  "value": 11,    "delta": 2 },
+      { "label": "Total Views",    "value": 890000,"delta": 138000 },
+      { "label": "Total Likes",    "value": 56400, "delta": 4100 }
+    ],
+    "trend": {
+      "labels": ["W1","W2","W3","W4","W5","W6","W7","W8"],
+      "datasets": [
+        { "label": "Views (K)", "data": [520,580,630,690,740,790,820,890], "color": "#111" },
+        { "label": "Followers", "data": [60200,61300,62600,63900,65100,66400,67000,68200], "axis": "y2", "color": "#F1592E", "fill": false }
+      ]
+    },
+    "topPosts": [
+      { "title": "3 visual schedule fails (and fixes)", "date": "Apr 9",  "length": "0:24", "views": 410000, "likes": 22400, "comments": 890, "shares": 5610 },
+      { "title": "POV: new sped teacher on day 1",      "date": "Apr 11", "length": "0:18", "views": 198000, "likes": 10800, "comments": 520, "shares": 2780 },
+      { "title": "Classroom reset trend audio",         "date": "Apr 8",  "length": "0:15", "views": 142000, "likes": 8400,  "comments": 210, "shares": 2590 },
+      { "title": "When the fire drill hits during centers","date":"Apr 12","length":"0:22", "views": 98000,  "likes": 5240,  "comments": 310, "shares": 1420 },
+      { "title": "3 things parents wish teachers knew", "date": "Apr 10", "length": "0:28", "views": 71000,  "likes": 3980,  "comments": 410, "shares": 940 },
+      { "title": "Green light behavior chart — POV",    "date": "Apr 7",  "length": "0:19", "views": 54000,  "likes": 2810,  "comments": 150, "shares": 620 },
+      { "title": "Stimming is not the same as seeking", "date": "Apr 13", "length": "0:31", "views": 42000,  "likes": 2340,  "comments": 280, "shares": 510 },
+      { "title": "Morning meeting in 3 steps",          "date": "Apr 11", "length": "0:16", "views": 28000,  "likes": 1420,  "comments": 64,  "shares": 190 }
+    ],
+    "insights": {
+      "working": {
+        "headline": "Short, funny, teacher-POV videos",
+        "bullets": [
+          "<strong>+1,240 followers</strong> this week — fastest platform for net-new audience.",
+          "Videos <strong>under 20 seconds</strong> earned the highest likes-per-view ratio.",
+          "Trending audio + classroom content is outperforming voice-over tutorials 3 to 1."
+        ]
+      },
+      "pivot": {
+        "headline": "Move longer tutorials to YouTube",
+        "bullets": [
+          "Videos over 28 seconds saw a ~40% drop in like rate. Save tutorials for YouTube; keep TikTok snackable.",
+          "No current strategy for <strong>funneling TikTok viewers to the site</strong>. Add a link-in-bio campaign for a free printable."
+        ]
+      },
+      "postMore": {
+        "headline": "Next 2 weeks",
+        "bullets": [
+          "5 videos/week minimum, each <strong>under 25 seconds</strong>.",
+          "2× <strong>\"POV teacher\" skits</strong> — best for shares.",
+          "1× weekly <strong>trending audio lip-sync</strong> tied to a sped scenario."
+        ]
+      }
+    }
+  },
+
+  "youtube": {
+    "kpis": [
+      { "label": "Subscribers",    "value": 24800, "delta": 95 },
+      { "label": "Videos Posted",  "value": 2,     "delta": 0 },
+      { "label": "Total Views",    "value": 38500, "delta": 200 },
+      { "label": "Total Likes",    "value": 2420,  "delta": 180 }
+    ],
+    "trend": {
+      "labels": ["W1","W2","W3","W4","W5","W6","W7","W8"],
+      "datasets": [
+        { "label": "Views",       "data": [34000,35000,35800,36500,37200,37900,38300,38500], "color": "#FF0000" },
+        { "label": "Subscribers", "data": [24200,24350,24500,24600,24650,24700,24750,24800], "axis": "y2", "color": "#1A2B33", "fill": false }
+      ]
+    },
+    "topPosts": [
+      { "title": "How to write measurable IEP goals",   "date": "Mar 28", "length": "14:02", "views": 9400, "likes": 620, "comments": 84, "engagements": 704 },
+      { "title": "Classroom visual schedule setup",      "date": "Apr 4",  "length": "11:38", "views": 6800, "likes": 410, "comments": 52, "engagements": 462 },
+      { "title": "Data collection made simple",          "date": "Apr 11", "length": "9:12",  "views": 4900, "likes": 290, "comments": 38, "engagements": 328 },
+      { "title": "Calm down corner — full tour",         "date": "Mar 21", "length": "12:45", "views": 4200, "likes": 310, "comments": 44, "engagements": 354 },
+      { "title": "5 behavior mistakes (and fixes) #Shorts","date":"Apr 9","length":"0:48",  "views": 3800, "likes": 260, "comments": 21, "engagements": 281 },
+      { "title": "Reinforcement 101 for sped teachers",  "date": "Mar 14", "length": "16:04", "views": 3100, "likes": 210, "comments": 32, "engagements": 242 },
+      { "title": "Morning meeting — full routine",       "date": "Apr 7",  "length": "8:50",  "views": 2700, "likes": 180, "comments": 19, "engagements": 199 },
+      { "title": "Visual schedule hack #Shorts",         "date": "Apr 12", "length": "0:35",  "views": 2400, "likes": 140, "comments": 12, "engagements": 152 }
+    ],
+    "insights": {
+      "working": {
+        "headline": "Long-form IEP and data tutorials",
+        "bullets": [
+          "The <strong>IEP goals tutorial</strong> continues to grow through search traffic — consistently the top video week over week.",
+          "<strong>YouTube Shorts</strong> are driving higher likes-per-view than long-form — keep repurposing TikToks as Shorts."
+        ]
+      },
+      "pivot": {
+        "headline": "Total views are flat",
+        "bullets": [
+          "Subscriber growth healthy but views barely moved (+0.5% WoW). Likely thumbnail fatigue.",
+          "A/B test a <strong>bolder, higher-contrast thumbnail</strong> with a single 3-word headline on the next video.",
+          "Add <strong>chapter markers</strong> to recent videos to improve mid-video retention."
+        ]
+      },
+      "postMore": {
+        "headline": "Next 2 weeks",
+        "bullets": [
+          "1 new <strong>IEP-season tutorial</strong> (end-of-year goals).",
+          "Repurpose top 3 TikToks as <strong>YouTube Shorts</strong> — cheap growth lever.",
+          "Publish a <strong>\"classroom tour 2026\"</strong> vlog — evergreen high-retention format."
+        ]
+      }
+    }
+  }
+}
