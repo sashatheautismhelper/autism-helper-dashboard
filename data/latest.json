@@ -2,14 +2,14 @@
   "meta": {
     "week": "2026-04-06/2026-04-12",
     "weekLabel": "Apr 6 – Apr 12, 2026",
-    "generatedAt": "2026-04-16T20:27:20.713Z",
+    "generatedAt": "2026-04-16T20:57:02.051Z",
     "source": "apify"
   },
   "overview": {
     "totals": {
-      "followers": 338860,
+      "followers": 338861,
       "followersDelta": 0,
-      "engagements": 16833,
+      "engagements": 16836,
       "engagementsDeltaPct": 0,
       "posts": 13,
       "postsDelta": 0,
@@ -19,13 +19,13 @@
       {
         "name": "Instagram",
         "followers": null,
-        "followersDelta": -142300,
+        "followersDelta": 0,
         "topFormat": "Carousel"
       },
       {
         "name": "Facebook",
-        "followers": 20660,
-        "followersDelta": -77840,
+        "followers": 20661,
+        "followersDelta": 1,
         "topFormat": "—"
       },
       {
@@ -37,13 +37,13 @@
       {
         "name": "Tiktok",
         "followers": 53900,
-        "followersDelta": -14300,
+        "followersDelta": 0,
         "topFormat": "—"
       },
       {
         "name": "Youtube",
         "followers": 49300,
-        "followersDelta": 24500,
+        "followersDelta": 0,
         "topFormat": "—"
       }
     ],
@@ -56,10 +56,10 @@
         "Youtube"
       ],
       "data": [
-        825,
+        827,
         0,
         10258,
-        5737,
+        5738,
         13
       ],
       "colors": [
@@ -85,7 +85,7 @@
         {
           "label": "Facebook",
           "data": [
-            20660
+            20661
           ],
           "color": "#1877F2"
         },
@@ -174,8 +174,8 @@
         "platform": "Instagram",
         "date": "Apr 10",
         "format": "Carousel",
-        "views": 501,
-        "engagements": 508
+        "views": 502,
+        "engagements": 509
       },
       {
         "title": "Token boards — printable set",
@@ -190,8 +190,8 @@
         "platform": "Instagram",
         "date": "Apr 7",
         "format": "Reel",
-        "views": 156,
-        "engagements": 162
+        "views": 157,
+        "engagements": 163
       }
     ],
     "insights": {
@@ -223,7 +223,7 @@
       {
         "label": "Followers",
         "value": null,
-        "delta": -142300
+        "delta": 0
       },
       {
         "label": "Posts This Week",
@@ -232,7 +232,7 @@
       },
       {
         "label": "Total Likes",
-        "value": 770,
+        "value": 772,
         "delta": 0
       },
       {
@@ -260,19 +260,19 @@
         "title": "Autism Acceptance Month is a chance to share perspectives in your classroom.⁠",
         "date": "Apr 10",
         "format": "Carousel",
-        "likes": 501,
+        "likes": 502,
         "comments": 7,
         "shares": 0,
-        "engagements": 508
+        "engagements": 509
       },
       {
         "title": "After The Bell for a K-1 Autism Teacher ✨",
         "date": "Apr 7",
         "format": "Reel",
-        "likes": 156,
+        "likes": 157,
         "comments": 6,
         "shares": 0,
-        "engagements": 162
+        "engagements": 163
       },
       {
         "title": "Favorite Books To Share with Colleagues 📚",
@@ -328,9 +328,8 @@
         ]
       },
       "pivot": {
-        "headline": "Engagement dipped week-over-week",
+        "headline": "Small tweaks to try",
         "bullets": [
-          "Total engagement down <strong>98%</strong>. Investigate posting cadence and formats.",
           "One post drove 62% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
@@ -347,8 +346,8 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 20660,
-        "delta": -77840
+        "value": 20661,
+        "delta": 1
       },
       {
         "label": "Posts This Week",
@@ -374,7 +373,7 @@
         {
           "label": "Followers",
           "data": [
-            20660
+            20661
           ],
           "color": "#1877F2"
         }
@@ -383,14 +382,15 @@
     "topPosts": [],
     "insights": {
       "working": {
-        "headline": "Steady engagement this week",
-        "bullets": []
+        "headline": "Audience is growing",
+        "bullets": [
+          "<strong>1 net new followers</strong> this week."
+        ]
       },
       "pivot": {
-        "headline": "Engagement dipped week-over-week",
+        "headline": "Small tweaks to try",
         "bullets": [
-          "Total engagement down <strong>100%</strong>. Investigate posting cadence and formats.",
-          "Posting cadence dropped to <strong>0</strong> posts (from 8). Restore volume with evergreen re-posts."
+          "Nothing urgent — stay the course."
         ]
       },
       "postMore": {
@@ -539,7 +539,7 @@
       {
         "label": "Followers",
         "value": 53900,
-        "delta": -14300
+        "delta": 0
       },
       {
         "label": "Videos Posted",
@@ -548,7 +548,7 @@
       },
       {
         "label": "Total Views",
-        "value": 5737,
+        "value": 5738,
         "delta": 0
       },
       {
@@ -603,7 +603,7 @@
         "title": "What I would do all year long if I were you... \n#autismacceptancemonth #autismac",
         "date": "Apr 11",
         "length": "0:34",
-        "views": 1030,
+        "views": 1031,
         "likes": 41,
         "comments": 5,
         "shares": 0
@@ -626,10 +626,9 @@
         ]
       },
       "pivot": {
-        "headline": "Engagement dipped week-over-week",
+        "headline": "Small tweaks to try",
         "bullets": [
-          "Total engagement down <strong>99%</strong>. Investigate posting cadence and formats.",
-          "Posting cadence dropped to <strong>5</strong> posts (from 8). Restore volume with evergreen re-posts."
+          "Nothing urgent — stay the course."
         ]
       },
       "postMore": {
@@ -646,7 +645,7 @@
       {
         "label": "Subscribers",
         "value": 49300,
-        "delta": 24500
+        "delta": 0
       },
       {
         "label": "Videos Posted",
@@ -691,17 +690,14 @@
     ],
     "insights": {
       "working": {
-        "headline": "Audience is growing",
+        "headline": "Steady engagement this week",
         "bullets": [
-          "<strong>24,500 net new followers</strong> this week.",
           "Top post: \"<strong>When to Use Functional Subjects in Special Education</strong>\" (00:03:24) drove the most engagement."
         ]
       },
       "pivot": {
-        "headline": "Engagement dipped week-over-week",
+        "headline": "Small tweaks to try",
         "bullets": [
-          "Total engagement down <strong>100%</strong>. Investigate posting cadence and formats.",
-          "Posting cadence dropped to <strong>1</strong> posts (from 8). Restore volume with evergreen re-posts.",
           "One post drove 100% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
