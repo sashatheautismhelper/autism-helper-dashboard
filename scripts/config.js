@@ -21,10 +21,14 @@ export const PLATFORMS = {
     }
   },
   facebook: {
-    actorId:  "apify/facebook-pages-scraper",         // ← confirm during build
+    // facebook-pages-scraper only returns page metadata (followers, about, etc.)
+    // and does NOT return posts. Use facebook-posts-scraper instead — it's
+    // purpose-built to return individual posts with reactions / comments / shares.
+    actorId:  "apify/facebook-posts-scraper",
     input: {
       startUrls: [{ url: "https://www.facebook.com/theautismhelper/" }],
-      resultsLimit: 30
+      resultsLimit: 30,
+      onlyPostsNewerThan: null
     }
   },
   pinterest: {
