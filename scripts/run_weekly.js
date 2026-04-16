@@ -83,20 +83,30 @@ async function main() {
   for (const [name, cfg] of Object.entries(PLATFORMS)) {
     try {
       const raw = await fetchPlatform(name, cfg);
-      platformData[name] = TRANSFORMERS[name](raw, week);
+      const t = TRANSFORMERS[name](raw, week);
+      platformData[name] = t;
+      // Carry the follower count forward from last week if THIS run returned null
+      // (some actors return posts without profile data in the same call).
+      if (platformData[name].profile.followers == null && priorWeek?.[name]?.kpis?.[0]?.value != null) {
+        platformData[name].profile.followers = priorWeek[name].kpis[0].value;
+      }
+      if (t.posts.length === 0) {
+        console.warn(`[${name}] scraper returned 0 posts (actor succeeded but yielded no usable items)`);
+      }
     } catch (err) {
       console.error(`[${name}] FAILED: ${err.message}`);
-      // Fall back to prior-week data if we have it
-      if (priorWeek?.[name]) {
-        console.log(`[${name}] falling back to last week's data`);
-        platformData[name] = {
-          profile: { followers: priorWeek[name].kpis?.[0]?.value, postsInWeek: 0 },
-          posts: priorWeek[name].topPosts || [],
-          _fallback: true
-        };
-      } else {
-        platformData[name] = { profile: { followers: null, postsInWeek: 0 }, posts: [], _fallback: true };
-      }
+      // DO NOT fall back to prior-week posts. That quietly propagates stale
+      // (and potentially sample) data forever if a platform keeps failing.
+      // Keep last-known follower count for continuity, but leave posts empty
+      // so the dashboard surfaces the failure instead of hiding it.
+      platformData[name] = {
+        profile: {
+          followers: priorWeek?.[name]?.kpis?.[0]?.value ?? null,
+          postsInWeek: 0
+        },
+        posts: [],
+        _error: err.message || String(err)
+      };
     }
   }
 
