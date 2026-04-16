@@ -254,12 +254,13 @@ function renderPlatform(id, data, opts) {
 
   const cols = opts.columns; // array of column headers
   const fields = opts.fields; // array of field keys in the post object
-  const rows = p.topPosts.map(post => `<tr>${fields.map(f => {
+  const rows = p.topPosts.length ? p.topPosts.map(post => `<tr>${fields.map(f => {
     const v = post[f];
     if (f === 'format') return `<td><span class="tag">${v}</span></td>`;
     if (typeof v === 'number' && f !== 'year') return `<td>${fmt(v)}</td>`;
     return `<td>${v == null ? '—' : v}</td>`;
-  }).join('')}</tr>`).join('');
+  }).join('')}</tr>`).join('') :
+  `<tr><td colspan="${cols.length}" style="padding:32px;text-align:center;color:var(--brand-sub);font-size:13.5px">No posts returned from the ${id} scraper for this week. Check the Apify run log or try again after the next refresh.</td></tr>`;
 
   const renderInsights = (obj) => `
     <div class="grid insights">
