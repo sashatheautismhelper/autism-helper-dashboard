@@ -1,3 +1,10 @@
 [
-  { "file": "data/weeks/2026-04-13.json", "label": "Apr 7 – Apr 13, 2026" }
+  {
+    "file": "data/weeks/2026-04-13.json",
+    "label": "Apr 7 – Apr 13, 2026"
+  },
+  {
+    "file": "data/weeks/2026-04-12.json",
+    "label": "Apr 6 – Apr 12, 2026"
+  }
 ]
