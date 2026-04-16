@@ -2,18 +2,18 @@
   "meta": {
     "week": "2026-04-06/2026-04-12",
     "weekLabel": "Apr 6 – Apr 12, 2026",
-    "generatedAt": "2026-04-16T21:32:09.742Z",
+    "generatedAt": "2026-04-16T21:57:06.050Z",
     "source": "apify"
   },
   "overview": {
     "totals": {
       "followers": 338861,
       "followersDelta": 0,
-      "engagements": 17168,
+      "engagements": 6919,
       "engagementsDeltaPct": 0,
       "posts": 13,
       "postsDelta": 0,
-      "topPlatform": "Pinterest"
+      "topPlatform": "Tiktok"
     },
     "platformSummary": [
       {
@@ -32,7 +32,7 @@
         "name": "Pinterest",
         "followers": 215000,
         "followersDelta": 0,
-        "topFormat": "Idea Pin"
+        "topFormat": "—"
       },
       {
         "name": "Tiktok",
@@ -56,10 +56,10 @@
         "Youtube"
       ],
       "data": [
-        827,
+        829,
         0,
-        10258,
-        5740,
+        0,
+        5747,
         343
       ],
       "colors": [
@@ -114,84 +114,84 @@
     },
     "topPosts": [
       {
-        "title": "Free visual schedule bundle",
-        "platform": "Pinterest",
-        "date": "Apr 8",
-        "format": "Idea Pin",
-        "views": 0,
-        "engagements": 2538
-      },
-      {
-        "title": "Classroom reset printable",
-        "platform": "Pinterest",
-        "date": "Apr 10",
-        "format": "Standard",
-        "views": 0,
-        "engagements": 1979
-      },
-      {
-        "title": "Behavior chart — free download",
-        "platform": "Pinterest",
-        "date": "Apr 7",
-        "format": "Standard",
-        "views": 0,
-        "engagements": 1504
-      },
-      {
-        "title": "IEP goal bank (30+ examples)",
-        "platform": "Pinterest",
-        "date": "Apr 12",
-        "format": "Standard",
-        "views": 0,
-        "engagements": 1242
-      },
-      {
-        "title": "Morning meeting routine cards",
-        "platform": "Pinterest",
-        "date": "Apr 9",
-        "format": "Idea Pin",
-        "views": 0,
-        "engagements": 1011
-      },
-      {
-        "title": "Calm down corner setup guide",
-        "platform": "Pinterest",
-        "date": "Apr 11",
-        "format": "Standard",
-        "views": 0,
-        "engagements": 869
-      },
-      {
-        "title": "Data collection made simple",
-        "platform": "Pinterest",
-        "date": "Apr 13",
-        "format": "Video Pin",
-        "views": 0,
-        "engagements": 611
-      },
-      {
         "title": "Autism Acceptance Month is a chance to share perspectives in your classroom.⁠",
         "platform": "Instagram",
         "date": "Apr 10",
         "format": "Carousel",
-        "views": 502,
-        "engagements": 509
-      },
-      {
-        "title": "Token boards — printable set",
-        "platform": "Pinterest",
-        "date": "Apr 8",
-        "format": "Standard",
-        "views": 0,
-        "engagements": 504
+        "views": 503,
+        "engagements": 510
       },
       {
         "title": "After The Bell for a K-1 Autism Teacher ✨",
         "platform": "Instagram",
         "date": "Apr 7",
         "format": "Reel",
-        "views": 157,
-        "engagements": 163
+        "views": 158,
+        "engagements": 164
+      },
+      {
+        "title": "Favorite Books To Share with Colleagues 📚",
+        "platform": "Instagram",
+        "date": "Apr 6",
+        "format": "Reel",
+        "views": 84,
+        "engagements": 95
+      },
+      {
+        "title": "From Crisis to Calm: How to Handle Every Stage of Escalation",
+        "platform": "Youtube",
+        "date": "Jan 24",
+        "format": "00:06:40",
+        "views": 2485,
+        "engagements": 76
+      },
+      {
+        "title": "Using AAC In #SpecialEducationClassrooms\n\n#speechtherapy #aac #specialeducationt",
+        "platform": "Tiktok",
+        "date": "Apr 6",
+        "format": "0:45",
+        "views": 1433,
+        "engagements": 49
+      },
+      {
+        "title": "Boost AAC Literacy in Your Special Ed Classroom with Free Read Aloud Resources!",
+        "platform": "Youtube",
+        "date": "Nov 5",
+        "format": "00:07:18",
+        "views": 1346,
+        "engagements": 48
+      },
+      {
+        "title": "Turn Worksheets Into Independent Work | Autism & Special Ed",
+        "platform": "Youtube",
+        "date": "Dec 9",
+        "format": "00:03:31",
+        "views": 1211,
+        "engagements": 46
+      },
+      {
+        "title": "After The Bell for a K-1 #AutismTeacher ✨\n\nWhat’s one thing you always make time",
+        "platform": "Tiktok",
+        "date": "Apr 7",
+        "format": "0:53",
+        "views": 1158,
+        "engagements": 43
+      },
+      {
+        "title": "What I would do all year long if I were you... \n#autismacceptancemonth #autismac",
+        "platform": "Tiktok",
+        "date": "Apr 11",
+        "format": "0:34",
+        "views": 1033,
+        "engagements": 41
+      },
+      {
+        "title": "Systems for Independence in Special Ed",
+        "platform": "Youtube",
+        "date": "Feb 17",
+        "format": "00:05:02",
+        "views": 843,
+        "engagements": 40
       }
     ],
     "insights": {
@@ -199,7 +199,7 @@
         "headline": "Pinterest is leading growth",
         "bullets": [
           "<strong>Pinterest</strong> added 215,000 followers — our fastest grower this week.",
-          "<strong>Standard</strong> is the highest-engaging format this week across all platforms."
+          "<strong>0:14</strong> is the highest-engaging format this week across all platforms."
         ]
       },
       "pivot": {
@@ -212,7 +212,7 @@
         "headline": "Next 2 weeks — cross-platform priorities",
         "bullets": [
           "Double down on <strong>Pinterest</strong> — ride the wave.",
-          "Produce more <strong>Standard</strong> content across platforms.",
+          "Produce more <strong>0:14</strong> content across platforms.",
           "Cross-promote top-performing content between platforms (e.g., TikTok → Reel → Short)."
         ]
       }
@@ -232,7 +232,7 @@
       },
       {
         "label": "Total Likes",
-        "value": 772,
+        "value": 774,
         "delta": 0
       },
       {
@@ -260,19 +260,19 @@
         "title": "Autism Acceptance Month is a chance to share perspectives in your classroom.⁠",
         "date": "Apr 10",
         "format": "Carousel",
-        "likes": 502,
+        "likes": 503,
         "comments": 7,
         "shares": 0,
-        "engagements": 509
+        "engagements": 510
       },
       {
         "title": "After The Bell for a K-1 Autism Teacher ✨",
         "date": "Apr 7",
         "format": "Reel",
-        "likes": 157,
+        "likes": 158,
         "comments": 6,
         "shares": 0,
-        "engagements": 163
+        "engagements": 164
       },
       {
         "title": "Favorite Books To Share with Colleagues 📚",
@@ -413,12 +413,12 @@
       },
       {
         "label": "Total Saves",
-        "value": 8430,
+        "value": 0,
         "delta": 0
       },
       {
         "label": "Total Comments",
-        "value": 113,
+        "value": 0,
         "delta": 0
       }
     ],
@@ -436,98 +436,23 @@
         }
       ]
     },
-    "topPosts": [
-      {
-        "title": "Free visual schedule bundle",
-        "date": "Apr 8",
-        "format": "Idea Pin",
-        "saves": 2100,
-        "comments": 28,
-        "repins": 410,
-        "engagements": 2538
-      },
-      {
-        "title": "Classroom reset printable",
-        "date": "Apr 10",
-        "format": "Standard",
-        "saves": 1640,
-        "comments": 19,
-        "repins": 320,
-        "engagements": 1979
-      },
-      {
-        "title": "Behavior chart — free download",
-        "date": "Apr 7",
-        "format": "Standard",
-        "saves": 1210,
-        "comments": 14,
-        "repins": 280,
-        "engagements": 1504
-      },
-      {
-        "title": "IEP goal bank (30+ examples)",
-        "date": "Apr 12",
-        "format": "Standard",
-        "saves": 980,
-        "comments": 22,
-        "repins": 240,
-        "engagements": 1242
-      },
-      {
-        "title": "Morning meeting routine cards",
-        "date": "Apr 9",
-        "format": "Idea Pin",
-        "saves": 840,
-        "comments": 11,
-        "repins": 160,
-        "engagements": 1011
-      },
-      {
-        "title": "Calm down corner setup guide",
-        "date": "Apr 11",
-        "format": "Standard",
-        "saves": 720,
-        "comments": 9,
-        "repins": 140,
-        "engagements": 869
-      },
-      {
-        "title": "Data collection made simple",
-        "date": "Apr 13",
-        "format": "Video Pin",
-        "saves": 510,
-        "comments": 6,
-        "repins": 95,
-        "engagements": 611
-      },
-      {
-        "title": "Token boards — printable set",
-        "date": "Apr 8",
-        "format": "Standard",
-        "saves": 430,
-        "comments": 4,
-        "repins": 70,
-        "engagements": 504
-      }
-    ],
+    "topPosts": [],
     "insights": {
       "working": {
         "headline": "Steady engagement this week",
-        "bullets": [
-          "Top post: \"<strong>Free visual schedule bundle</strong>\" (Idea Pin) drove the most engagement."
-        ]
+        "bullets": []
       },
       "pivot": {
-        "headline": "Small tweaks to try",
+        "headline": "Engagement dipped week-over-week",
         "bullets": [
-          "Nothing urgent — stay the course."
+          "Total engagement down <strong>100%</strong>. Investigate posting cadence and formats.",
+          "Posting cadence dropped to <strong>0</strong> posts (from 8). Restore volume with evergreen re-posts."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Standard</strong> content — highest engagement this week.",
-          "More <strong>Idea Pin</strong> content — highest engagement this week."
+          "Mix in a fresh format to test audience response."
         ]
       }
     }
@@ -546,7 +471,7 @@
       },
       {
         "label": "Total Views",
-        "value": 5740,
+        "value": 5747,
         "delta": 0
       },
       {
@@ -574,7 +499,7 @@
         "title": "Curriculum Access is SO much more than worksheets! \n\nGet everything you need for",
         "date": "Apr 8",
         "length": "0:14",
-        "views": 1441,
+        "views": 1442,
         "likes": 23,
         "comments": 6,
         "shares": 1
@@ -583,7 +508,7 @@
         "title": "Using AAC In #SpecialEducationClassrooms\n\n#speechtherapy #aac #specialeducationt",
         "date": "Apr 6",
         "length": "0:45",
-        "views": 1432,
+        "views": 1433,
         "likes": 49,
         "comments": 0,
         "shares": 0
@@ -592,7 +517,7 @@
         "title": "After The Bell for a K-1 #AutismTeacher ✨\n\nWhat’s one thing you always make time",
         "date": "Apr 7",
         "length": "0:53",
-        "views": 1155,
+        "views": 1158,
         "likes": 43,
         "comments": 1,
         "shares": 2
@@ -601,7 +526,7 @@
         "title": "What I would do all year long if I were you... \n#autismacceptancemonth #autismac",
         "date": "Apr 11",
         "length": "0:34",
-        "views": 1032,
+        "views": 1033,
         "likes": 41,
         "comments": 5,
         "shares": 0
@@ -610,7 +535,7 @@
         "title": "Books to Share for #autismacceptancemonth. 📚\n\n#autismacceptance #specialeducati",
         "date": "Apr 6",
         "length": "1:53",
-        "views": 680,
+        "views": 681,
         "likes": 19,
         "comments": 1,
         "shares": 0
@@ -652,7 +577,7 @@
       },
       {
         "label": "Total Views",
-        "value": 8125,
+        "value": 8127,
         "delta": 0
       },
       {
@@ -689,7 +614,7 @@
         "title": "Boost AAC Literacy in Your Special Ed Classroom with Free Read Aloud Resources!",
         "date": "Nov 5",
         "length": "00:07:18",
-        "views": 1344,
+        "views": 1346,
         "likes": 38,
         "comments": 10,
         "engagements": 48
@@ -753,8 +678,7 @@
       "working": {
         "headline": "Steady engagement this week",
         "bullets": [
-          "Top post: \"<strong>From Crisis to Calm: How to Handle Every Stage of Escalation</strong>\" (00:06:40) drove the most engagement.",
-          "Engagement volume up <strong>2538%</strong> vs last week — momentum building."
+          "Top post: \"<strong>From Crisis to Calm: How to Handle Every Stage of Escalation</strong>\" (00:06:40) drove the most engagement."
         ]
       },
       "pivot": {
