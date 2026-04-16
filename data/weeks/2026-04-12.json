@@ -2,14 +2,14 @@
   "meta": {
     "week": "2026-04-06/2026-04-12",
     "weekLabel": "Apr 6 – Apr 12, 2026",
-    "generatedAt": "2026-04-16T20:57:02.051Z",
+    "generatedAt": "2026-04-16T21:32:09.742Z",
     "source": "apify"
   },
   "overview": {
     "totals": {
       "followers": 338861,
       "followersDelta": 0,
-      "engagements": 16836,
+      "engagements": 17168,
       "engagementsDeltaPct": 0,
       "posts": 13,
       "postsDelta": 0,
@@ -25,7 +25,7 @@
       {
         "name": "Facebook",
         "followers": 20661,
-        "followersDelta": 1,
+        "followersDelta": 0,
         "topFormat": "—"
       },
       {
@@ -59,8 +59,8 @@
         827,
         0,
         10258,
-        5738,
-        13
+        5740,
+        343
       ],
       "colors": [
         "#E4405F",
@@ -347,7 +347,7 @@
       {
         "label": "Followers",
         "value": 20661,
-        "delta": 1
+        "delta": 0
       },
       {
         "label": "Posts This Week",
@@ -382,10 +382,8 @@
     "topPosts": [],
     "insights": {
       "working": {
-        "headline": "Audience is growing",
-        "bullets": [
-          "<strong>1 net new followers</strong> this week."
-        ]
+        "headline": "Steady engagement this week",
+        "bullets": []
       },
       "pivot": {
         "headline": "Small tweaks to try",
@@ -548,7 +546,7 @@
       },
       {
         "label": "Total Views",
-        "value": 5738,
+        "value": 5740,
         "delta": 0
       },
       {
@@ -576,7 +574,7 @@
         "title": "Curriculum Access is SO much more than worksheets! \n\nGet everything you need for",
         "date": "Apr 8",
         "length": "0:14",
-        "views": 1440,
+        "views": 1441,
         "likes": 23,
         "comments": 6,
         "shares": 1
@@ -603,7 +601,7 @@
         "title": "What I would do all year long if I were you... \n#autismacceptancemonth #autismac",
         "date": "Apr 11",
         "length": "0:34",
-        "views": 1031,
+        "views": 1032,
         "likes": 41,
         "comments": 5,
         "shares": 0
@@ -654,12 +652,12 @@
       },
       {
         "label": "Total Views",
-        "value": 225,
+        "value": 8125,
         "delta": 0
       },
       {
         "label": "Total Likes",
-        "value": 11,
+        "value": 292,
         "delta": 0
       }
     ],
@@ -679,33 +677,97 @@
     },
     "topPosts": [
       {
-        "title": "When to Use Functional Subjects in Special Education",
-        "date": "Apr 8",
-        "length": "00:03:24",
-        "views": 225,
-        "likes": 11,
-        "comments": 2,
-        "engagements": 13
+        "title": "From Crisis to Calm: How to Handle Every Stage of Escalation",
+        "date": "Jan 24",
+        "length": "00:06:40",
+        "views": 2485,
+        "likes": 70,
+        "comments": 6,
+        "engagements": 76
+      },
+      {
+        "title": "Boost AAC Literacy in Your Special Ed Classroom with Free Read Aloud Resources!",
+        "date": "Nov 5",
+        "length": "00:07:18",
+        "views": 1344,
+        "likes": 38,
+        "comments": 10,
+        "engagements": 48
+      },
+      {
+        "title": "Turn Worksheets Into Independent Work | Autism & Special Ed",
+        "date": "Dec 9",
+        "length": "00:03:31",
+        "views": 1211,
+        "likes": 38,
+        "comments": 8,
+        "engagements": 46
+      },
+      {
+        "title": "Systems for Independence in Special Ed",
+        "date": "Feb 17",
+        "length": "00:05:02",
+        "views": 843,
+        "likes": 34,
+        "comments": 6,
+        "engagements": 40
+      },
+      {
+        "title": "Fine Motor Struggles? Try These Genius Accommodations for Special Ed Success!",
+        "date": "Nov 24",
+        "length": "00:07:01",
+        "views": 631,
+        "likes": 33,
+        "comments": 5,
+        "engagements": 38
+      },
+      {
+        "title": "How to Adapt Worksheets for Non-Writers | Easy Special Ed Activity Hack",
+        "date": "Jan 27",
+        "length": "00:03:54",
+        "views": 653,
+        "likes": 27,
+        "comments": 5,
+        "engagements": 32
+      },
+      {
+        "title": "How I Use Visual Expectations to Cut Behavior Issues in Half",
+        "date": "Jan 20",
+        "length": "00:02:37",
+        "views": 499,
+        "likes": 27,
+        "comments": 5,
+        "engagements": 32
+      },
+      {
+        "title": "Kindergarten Self-Contained Classroom Tour",
+        "date": "Apr 3",
+        "length": "00:02:48",
+        "views": 459,
+        "likes": 25,
+        "comments": 6,
+        "engagements": 31
       }
     ],
     "insights": {
       "working": {
         "headline": "Steady engagement this week",
         "bullets": [
-          "Top post: \"<strong>When to Use Functional Subjects in Special Education</strong>\" (00:03:24) drove the most engagement."
+          "Top post: \"<strong>From Crisis to Calm: How to Handle Every Stage of Escalation</strong>\" (00:06:40) drove the most engagement.",
+          "Engagement volume up <strong>2538%</strong> vs last week — momentum building."
         ]
       },
       "pivot": {
         "headline": "Small tweaks to try",
         "bullets": [
-          "One post drove 100% of this week's engagement — concentration risk. Spread the bets."
+          "Nothing urgent — stay the course."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>00:03:24</strong> content — highest engagement this week.",
-          "Mix in a fresh format to test audience response."
+          "More <strong>00:06:40</strong> content — highest engagement this week.",
+          "More <strong>00:07:18</strong> content — highest engagement this week."
         ]
       }
     }
