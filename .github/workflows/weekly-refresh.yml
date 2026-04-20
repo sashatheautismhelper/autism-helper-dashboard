@@ -3,6 +3,8 @@ name: Weekly data refresh
 on:
   schedule:
     # Sundays at 11:00 PM US Central (04:00 UTC Monday) year-round.
+    # During DST (most of the year) this lands at 10 PM Central — close enough.
+    # Adjust the cron if you want strict Eastern/Pacific timing instead.
     - cron: "0 4 * * 1"
   workflow_dispatch: # allow manual triggering from the Actions tab
 
@@ -29,7 +31,10 @@ jobs:
       - name: Run weekly refresh
         working-directory: scripts
         env:
-          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          APIFY_TOKEN:     ${{ secrets.APIFY_TOKEN }}
+          META_IG_TOKEN:   ${{ secrets.META_IG_TOKEN }}
+          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
+          META_PAGE_ID:    ${{ secrets.META_PAGE_ID }}
         run: npm run refresh
 
       - name: Commit updated data
