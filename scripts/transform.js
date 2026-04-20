@@ -20,7 +20,23 @@ const shortDate = iso => new Date(iso).toLocaleDateString("en-US", { month: "sho
 export function transformInstagram(items, window) {
   // Expected fields (apify/instagram-scraper): ownerUsername, followersCount,
   // posts: [{ caption, timestamp, type, likesCount, commentsCount, ... }]
-  const profile = items.find(i => i.ownerUsername || i.username) || items[0] || {};
+  // Some runs return profile as a standalone item; others inline ownerUsername
+  // on every post; others return a nested `owner` object per post. Handle all
+  // three, and pick the first item that yields a follower count of any shape.
+  const followerFields = ["followersCount", "followers_count", "followers"];
+  const getFollowers = i => {
+    for (const f of followerFields) if (i?.[f] != null) return i[f];
+    if (i?.owner) for (const f of followerFields) if (i.owner[f] != null) return i.owner[f];
+    return null;
+  };
+  const profileCandidate =
+    items.find(i => getFollowers(i) != null) ||
+    items.find(i => i?.ownerUsername || i?.username) ||
+    items[0] || {};
+  const profile = {
+    ...profileCandidate,
+    followersCount: getFollowers(profileCandidate) ?? profileCandidate.followersCount ?? null
+  };
   const rawPosts = items.filter(i => i.timestamp || i.takenAtTimestamp);
   const postsInWeek = rawPosts
     .filter(p => inWindow(p.timestamp, window.start, window.end))
