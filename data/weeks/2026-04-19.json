@@ -2,15 +2,15 @@
   "meta": {
     "week": "2026-04-13/2026-04-19",
     "weekLabel": "Apr 13 – Apr 19, 2026",
-    "generatedAt": "2026-04-20T10:23:24.102Z",
+    "generatedAt": "2026-04-20T20:22:08.814Z",
     "source": "apify"
   },
   "overview": {
     "totals": {
-      "followers": 338861,
-      "followersDelta": 0,
-      "engagements": 9692,
-      "engagementsDeltaPct": 0,
+      "followers": 338961,
+      "followersDelta": 100,
+      "engagements": 9750,
+      "engagementsDeltaPct": 0.6,
       "posts": 10,
       "postsDelta": 0,
       "topPlatform": "Tiktok"
@@ -19,7 +19,7 @@
       {
         "name": "Instagram",
         "followers": null,
-        "followersDelta": 0,
+        "followersDelta": null,
         "topFormat": "Reel"
       },
       {
@@ -42,8 +42,8 @@
       },
       {
         "name": "Youtube",
-        "followers": 49300,
-        "followersDelta": 0,
+        "followers": 49400,
+        "followersDelta": 100,
         "topFormat": "—"
       }
     ],
@@ -56,11 +56,11 @@
         "Youtube"
       ],
       "data": [
-        269,
+        271,
         0,
         0,
-        9075,
-        348
+        9130,
+        349
       ],
       "colors": [
         "#E4405F",
@@ -72,12 +72,14 @@
     },
     "followersHistory": {
       "labels": [
+        "Last week",
         "This week"
       ],
       "datasets": [
         {
           "label": "Instagram",
           "data": [
+            0,
             0
           ],
           "color": "#E4405F"
@@ -85,6 +87,7 @@
         {
           "label": "Facebook",
           "data": [
+            20661,
             20661
           ],
           "color": "#1877F2"
@@ -92,6 +95,7 @@
         {
           "label": "Pinterest",
           "data": [
+            215000,
             215000
           ],
           "color": "#E60023"
@@ -99,6 +103,7 @@
         {
           "label": "Tiktok",
           "data": [
+            53900,
             53900
           ],
           "color": "#111"
@@ -106,7 +111,8 @@
         {
           "label": "Youtube",
           "data": [
-            49300
+            49300,
+            49400
           ],
           "color": "#FF0000"
         }
@@ -118,7 +124,7 @@
         "platform": "Tiktok",
         "date": "Apr 14",
         "format": "0:07",
-        "views": 7150,
+        "views": 7172,
         "engagements": 211
       },
       {
@@ -126,23 +132,23 @@
         "platform": "Instagram",
         "date": "Apr 13",
         "format": "Reel",
-        "views": 105,
-        "engagements": 121
+        "views": 106,
+        "engagements": 122
       },
       {
         "title": "From Crisis to Calm: How to Handle Every Stage of Escalation",
         "platform": "Youtube",
         "date": "Jan 24",
         "format": "00:06:40",
-        "views": 2536,
-        "engagements": 78
+        "views": 2553,
+        "engagements": 79
       },
       {
         "title": "Book recommendations for #autismacceptancemonth & all year long \n\n@Winnie White ",
         "platform": "Tiktok",
         "date": "Apr 16",
         "format": "1:11",
-        "views": 1408,
+        "views": 1424,
         "engagements": 61
       },
       {
@@ -166,7 +172,7 @@
         "platform": "Youtube",
         "date": "Dec 9",
         "format": "00:03:31",
-        "views": 1224,
+        "views": 1227,
         "engagements": 46
       },
       {
@@ -183,7 +189,7 @@
         "date": "Apr 16",
         "format": "Reel",
         "views": 40,
-        "engagements": 40
+        "engagements": 41
       },
       {
         "title": "Independent Centers for a Special Education Classroom 😍",
@@ -223,7 +229,7 @@
       {
         "label": "Followers",
         "value": null,
-        "delta": 0
+        "delta": null
       },
       {
         "label": "Posts This Week",
@@ -232,13 +238,15 @@
       },
       {
         "label": "Total Likes",
-        "value": 240,
-        "delta": 0
+        "value": 241,
+        "delta": 0.4,
+        "deltaSuffix": "%"
       },
       {
         "label": "Total Comments",
-        "value": 29,
-        "delta": 0
+        "value": 30,
+        "delta": 3.4,
+        "deltaSuffix": "%"
       }
     ],
     "trend": {
@@ -260,10 +268,10 @@
         "title": "Check off Independent Work with Matching Weekly Workbooks 💪",
         "date": "Apr 13",
         "format": "Reel",
-        "likes": 105,
+        "likes": 106,
         "comments": 16,
         "shares": 0,
-        "engagements": 121
+        "engagements": 122
       },
       {
         "title": "Life skills instruction is never just one level.",
@@ -279,9 +287,9 @@
         "date": "Apr 16",
         "format": "Reel",
         "likes": 40,
-        "comments": 0,
+        "comments": 1,
         "shares": 0,
-        "engagements": 40
+        "engagements": 41
       },
       {
         "title": "Independent Centers for a Special Education Classroom 😍",
@@ -319,9 +327,9 @@
         ]
       },
       "pivot": {
-        "headline": "Engagement dipped week-over-week",
+        "headline": "Small tweaks to try",
         "bullets": [
-          "Total engagement down <strong>68%</strong>. Investigate posting cadence and formats."
+          "Nothing urgent — stay the course."
         ]
       },
       "postMore": {
@@ -348,22 +356,26 @@
       {
         "label": "Total Reactions",
         "value": 0,
-        "delta": 0
+        "delta": null,
+        "deltaSuffix": "%"
       },
       {
         "label": "Total Shares",
         "value": 0,
-        "delta": 0
+        "delta": null,
+        "deltaSuffix": "%"
       }
     ],
     "trend": {
       "labels": [
+        "Last week",
         "This week"
       ],
       "datasets": [
         {
           "label": "Followers",
           "data": [
+            20661,
             20661
           ],
           "color": "#1877F2"
@@ -405,22 +417,26 @@
       {
         "label": "Total Saves",
         "value": 0,
-        "delta": 0
+        "delta": null,
+        "deltaSuffix": "%"
       },
       {
         "label": "Total Comments",
         "value": 0,
-        "delta": 0
+        "delta": null,
+        "deltaSuffix": "%"
       }
     ],
     "trend": {
       "labels": [
+        "Last week",
         "This week"
       ],
       "datasets": [
         {
           "label": "Followers",
           "data": [
+            215000,
             215000
           ],
           "color": "#E60023"
@@ -461,23 +477,27 @@
       },
       {
         "label": "Total Views",
-        "value": 9075,
-        "delta": 0
+        "value": 9130,
+        "delta": 0.6,
+        "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 294,
-        "delta": 0
+        "value": 296,
+        "delta": 0.7,
+        "deltaSuffix": "%"
       }
     ],
     "trend": {
       "labels": [
+        "Last week",
         "This week"
       ],
       "datasets": [
         {
           "label": "Followers",
           "data": [
+            53900,
             53900
           ],
           "color": "#111"
@@ -489,7 +509,7 @@
         "title": "Check Off #IndependentWork with Matching Weekly Workbooks 💪\n\n@Gracie Tantillo \n",
         "date": "Apr 14",
         "length": "0:07",
-        "views": 7150,
+        "views": 7172,
         "likes": 211,
         "comments": 3,
         "shares": 2
@@ -498,7 +518,7 @@
         "title": "Book recommendations for #autismacceptancemonth & all year long \n\n@Winnie White ",
         "date": "Apr 16",
         "length": "1:11",
-        "views": 1408,
+        "views": 1424,
         "likes": 61,
         "comments": 0,
         "shares": 9
@@ -507,8 +527,8 @@
         "title": "Throwback Thursday for #autismacceptancemonth | Just Say Hi \n\n#autismacceptance ",
         "date": "Apr 16",
         "length": "1:12",
-        "views": 517,
-        "likes": 22,
+        "views": 534,
+        "likes": 24,
         "comments": 1,
         "shares": 0
       }
@@ -517,8 +537,7 @@
       "working": {
         "headline": "Steady engagement this week",
         "bullets": [
-          "Top post: \"<strong>Check Off #IndependentWork with Matching Weekly Workbooks 💪\n\n@Gracie Tantillo \n</strong>\" (0:07) drove the most engagement.",
-          "Engagement volume up <strong>58%</strong> vs last week — momentum building."
+          "Top post: \"<strong>Check Off #IndependentWork with Matching Weekly Workbooks 💪\n\n@Gracie Tantillo \n</strong>\" (0:07) drove the most engagement."
         ]
       },
       "pivot": {
@@ -540,8 +559,8 @@
     "kpis": [
       {
         "label": "Subscribers",
-        "value": 49300,
-        "delta": 0
+        "value": 49400,
+        "delta": 100
       },
       {
         "label": "Videos Posted",
@@ -550,24 +569,28 @@
       },
       {
         "label": "Total Views",
-        "value": 8270,
-        "delta": 0
+        "value": 8314,
+        "delta": 0.5,
+        "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 297,
-        "delta": 0
+        "value": 298,
+        "delta": 0.3,
+        "deltaSuffix": "%"
       }
     ],
     "trend": {
       "labels": [
+        "Last week",
         "This week"
       ],
       "datasets": [
         {
           "label": "Followers",
           "data": [
-            49300
+            49300,
+            49400
           ],
           "color": "#FF0000"
         }
@@ -578,10 +601,10 @@
         "title": "From Crisis to Calm: How to Handle Every Stage of Escalation",
         "date": "Jan 24",
         "length": "00:06:40",
-        "views": 2536,
-        "likes": 72,
+        "views": 2553,
+        "likes": 73,
         "comments": 6,
-        "engagements": 78
+        "engagements": 79
       },
       {
         "title": "Boost AAC Literacy in Your Special Ed Classroom with Free Read Aloud Resources!",
@@ -596,7 +619,7 @@
         "title": "Turn Worksheets Into Independent Work | Autism & Special Ed",
         "date": "Dec 9",
         "length": "00:03:31",
-        "views": 1224,
+        "views": 1227,
         "likes": 38,
         "comments": 8,
         "engagements": 46
@@ -632,7 +655,7 @@
         "title": "Kindergarten Self-Contained Classroom Tour",
         "date": "Apr 3",
         "length": "00:02:48",
-        "views": 508,
+        "views": 531,
         "likes": 26,
         "comments": 6,
         "engagements": 32
@@ -641,7 +664,7 @@
         "title": "How I Use Visual Expectations to Cut Behavior Issues in Half",
         "date": "Jan 20",
         "length": "00:02:37",
-        "views": 502,
+        "views": 503,
         "likes": 27,
         "comments": 5,
         "engagements": 32
@@ -649,8 +672,9 @@
     ],
     "insights": {
       "working": {
-        "headline": "Steady engagement this week",
+        "headline": "Audience is growing",
         "bullets": [
+          "<strong>100 net new followers</strong> this week.",
           "Top post: \"<strong>From Crisis to Calm: How to Handle Every Stage of Escalation</strong>\" (00:06:40) drove the most engagement."
         ]
       },
