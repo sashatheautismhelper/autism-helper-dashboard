@@ -23,6 +23,7 @@ import { fileURLToPath } from "node:url";
 
 import { PLATFORMS, WEEKS_TO_KEEP } from "./config.js";
 import { fetchPlatform } from "./fetch_apify.js";
+import { META_FETCHERS } from "./fetch_meta.js";
 import { TRANSFORMERS } from "./transform.js";
 import { platformInsights, overviewInsights } from "./insights.js";
 
@@ -70,6 +71,13 @@ async function main() {
     console.error("APIFY_TOKEN not set. Aborting.");
     process.exit(1);
   }
+  // Instagram + Facebook now come from Meta Graph API directly.
+  for (const k of ["META_IG_TOKEN", "META_PAGE_TOKEN", "META_PAGE_ID"]) {
+    if (!process.env[k]) {
+      console.error(`${k} not set. Aborting.`);
+      process.exit(1);
+    }
+  }
 
   const week = previousWeekWindow();
   console.log(`Refreshing for week: ${week.label}  (${week.start} → ${week.end})`);
@@ -82,8 +90,17 @@ async function main() {
   const platformData = {};
   for (const [name, cfg] of Object.entries(PLATFORMS)) {
     try {
-      const raw = await fetchPlatform(name, cfg);
-      const t = TRANSFORMERS[name](raw, week);
+      let t;
+      if (META_FETCHERS[name]) {
+        // Instagram + Facebook: native Meta Graph API, already in normalized shape.
+        console.log(`[${name}] fetching via Meta Graph API…`);
+        t = await META_FETCHERS[name](week);
+        console.log(`[${name}] got ${t.posts.length} posts, ${t.profile.followers ?? "—"} followers`);
+      } else {
+        // Pinterest / TikTok / YouTube: Apify + transform pipeline.
+        const raw = await fetchPlatform(name, cfg);
+        t = TRANSFORMERS[name](raw, week);
+      }
       platformData[name] = t;
       // Carry the follower count forward from last week if THIS run returned null
       // (some actors return posts without profile data in the same call).
@@ -136,7 +153,7 @@ function labelForEndDate(endIso) {
 }
 
 // ---------- Dashboard assembly ----------
-function buildDashboard(week, p, prior) {
+export function buildDashboard(week, p, prior) {
   // ---- small helpers for week-over-week math ----
   const safePct = (cur, prev) => {
     if (prev == null || prev === 0) return null; // can't compute % growth from 0
@@ -355,7 +372,12 @@ function buildFollowersHistory(p, prior) {
 
 const cap = s => s ? s.charAt(0).toUpperCase() + s.slice(1) : "";
 
-main().catch(err => {
-  console.error("REFRESH FAILED:", err);
-  process.exit(1);
-});
+// Run main() only when invoked as the entry-point script (not when imported
+// by a test harness).
+const isEntryPoint = process.argv[1] && path.resolve(process.argv[1]) === __filename;
+if (isEntryPoint) {
+  main().catch(err => {
+    console.error("REFRESH FAILED:", err);
+    process.exit(1);
+  });
+}
