@@ -137,47 +137,74 @@ function labelForEndDate(endIso) {
 
 // ---------- Dashboard assembly ----------
 function buildDashboard(week, p, prior) {
+  // ---- small helpers for week-over-week math ----
+  const safePct = (cur, prev) => {
+    if (prev == null || prev === 0) return null; // can't compute % growth from 0
+    return Number((((cur - prev) / prev) * 100).toFixed(1));
+  };
+  const priorKpiValueByLabel = (name, label) => {
+    const arr = prior?.[name]?.kpis;
+    if (!Array.isArray(arr)) return null;
+    const hit = arr.find(k => k?.label === label);
+    return hit ? (hit.value ?? null) : null;
+  };
+
   const kpiByPlatform = (name) => {
     const pd = p[name];
-    const priorPd = prior?.[name];
-    const priorFollowers = priorPd?.kpis?.[0]?.value ?? 0;
-    const followersDelta = (pd.profile.followers || 0) - priorFollowers;
-    const totalLikes = pd.posts.reduce((s, x) => s + (x.likes || 0), 0);
-    const totalComments = pd.posts.reduce((s, x) => s + (x.comments || 0), 0);
-    const totalShares = pd.posts.reduce((s, x) => s + (x.shares || x.repins || 0), 0);
-    const totalViews = pd.posts.reduce((s, x) => s + (x.views || 0), 0);
+    const totalLikes     = pd.posts.reduce((s, x) => s + (x.likes || 0), 0);
+    const totalComments  = pd.posts.reduce((s, x) => s + (x.comments || 0), 0);
+    const totalShares    = pd.posts.reduce((s, x) => s + (x.shares || x.repins || 0), 0);
+    const totalViews     = pd.posts.reduce((s, x) => s + (x.views || 0), 0);
+    const totalReactions = pd.posts.reduce((s, x) => s + (x.reactions || 0), 0);
+    const totalSaves     = pd.posts.reduce((s, x) => s + (x.saves || 0), 0);
 
-    // Platform-specific KPI cards
+    // Build the current-week KPI list per platform. For each card we also look
+    // up the same card's value from last week (by label match) so we can show a
+    // true WoW absolute delta OR percentage change.
+    //   - "follower-style" cards (Followers, Subscribers, Monthly Viewers): absolute +/- delta
+    //   - "count" cards (Posts/Videos/Pins This Week): absolute +/- delta
+    //   - "engagement aggregate" cards (Likes/Views/Reactions/etc.): percentage delta
+    const abs = (label, value) => {
+      const prev = priorKpiValueByLabel(name, label);
+      const cur = value ?? 0;
+      return { label, value, delta: prev == null ? null : cur - prev };
+    };
+    const pct = (label, value) => {
+      const prev = priorKpiValueByLabel(name, label);
+      const cur = value ?? 0;
+      return { label, value, delta: safePct(cur, prev), deltaSuffix: "%" };
+    };
+
     const KPI_SPECS = {
       instagram: [
-        { label: "Followers",        value: pd.profile.followers, delta: followersDelta },
-        { label: "Posts This Week",  value: pd.profile.postsInWeek, delta: 0 },
-        { label: "Total Likes",      value: totalLikes, delta: 0 },
-        { label: "Total Comments",   value: totalComments, delta: 0 }
+        abs("Followers",       pd.profile.followers),
+        abs("Posts This Week", pd.profile.postsInWeek),
+        pct("Total Likes",     totalLikes),
+        pct("Total Comments",  totalComments)
       ],
       facebook: [
-        { label: "Followers",        value: pd.profile.followers, delta: followersDelta },
-        { label: "Posts This Week",  value: pd.profile.postsInWeek, delta: 0 },
-        { label: "Total Reactions",  value: pd.posts.reduce((s,x)=>s+(x.reactions||0),0), delta: 0 },
-        { label: "Total Shares",     value: totalShares, delta: 0 }
+        abs("Followers",       pd.profile.followers),
+        abs("Posts This Week", pd.profile.postsInWeek),
+        pct("Total Reactions", totalReactions),
+        pct("Total Shares",    totalShares)
       ],
       pinterest: [
-        { label: "Monthly Viewers",  value: pd.profile.followers, delta: followersDelta },
-        { label: "Pins This Week",   value: pd.profile.postsInWeek, delta: 0 },
-        { label: "Total Saves",      value: pd.posts.reduce((s,x)=>s+(x.saves||0),0), delta: 0 },
-        { label: "Total Comments",   value: totalComments, delta: 0 }
+        abs("Monthly Viewers", pd.profile.followers),
+        abs("Pins This Week",  pd.profile.postsInWeek),
+        pct("Total Saves",     totalSaves),
+        pct("Total Comments",  totalComments)
       ],
       tiktok: [
-        { label: "Followers",        value: pd.profile.followers, delta: followersDelta },
-        { label: "Videos Posted",    value: pd.profile.postsInWeek, delta: 0 },
-        { label: "Total Views",      value: totalViews, delta: 0 },
-        { label: "Total Likes",      value: totalLikes, delta: 0 }
+        abs("Followers",       pd.profile.followers),
+        abs("Videos Posted",   pd.profile.postsInWeek),
+        pct("Total Views",     totalViews),
+        pct("Total Likes",     totalLikes)
       ],
       youtube: [
-        { label: "Subscribers",      value: pd.profile.followers, delta: followersDelta },
-        { label: "Videos Posted",    value: pd.profile.postsInWeek, delta: 0 },
-        { label: "Total Views",      value: totalViews, delta: 0 },
-        { label: "Total Likes",      value: totalLikes, delta: 0 }
+        abs("Subscribers",     pd.profile.followers),
+        abs("Videos Posted",   pd.profile.postsInWeek),
+        pct("Total Views",     totalViews),
+        pct("Total Likes",     totalLikes)
       ]
     };
     return KPI_SPECS[name];
@@ -200,17 +227,39 @@ function buildDashboard(week, p, prior) {
   const totalEng = Object.values(p).reduce((s, x) =>
     s + x.posts.reduce((ss, y) => ss + (y.engagements || y.views || 0), 0), 0);
 
+  // Sum the same three numbers from last week's dashboard so we can build real
+  // WoW deltas. Prior dashboards store platforms as top-level keys alongside
+  // meta/overview, so only look at keys that are actual platforms.
+  const priorPlatforms = prior
+    ? Object.fromEntries(Object.entries(prior).filter(([k]) => PLATFORMS[k]))
+    : {};
+  const priorTotalFollowers = Object.values(priorPlatforms)
+    .reduce((s, x) => s + (x?.kpis?.find(k => /followers?|subscribers|viewers/i.test(k?.label || ""))?.value || 0), 0);
+  const priorTotalPosts = Object.values(priorPlatforms)
+    .reduce((s, x) => s + (x?.kpis?.find(k => /posts? this week|videos? posted|pins? this week/i.test(k?.label || ""))?.value || 0), 0);
+  const priorTotalEng = Object.values(priorPlatforms)
+    .reduce((s, x) => s + (x?.topPosts || []).reduce((ss, y) => ss + (y.engagements || y.views || 0), 0), 0);
+
+  const followersDelta = priorTotalFollowers ? (totalFollowers - priorTotalFollowers) : null;
+  const engagementsDeltaPct = safePct(totalEng, priorTotalEng);
+  const postsDelta = priorTotalPosts != null ? (totalPosts - priorTotalPosts) : null;
+
   const topPlatform = Object.entries(p).map(([n, d]) => ({
     n, eng: d.posts.reduce((s,y)=>s+(y.engagements||y.views||0),0)
   })).sort((a,b)=>b.eng-a.eng)[0]?.n || "—";
 
-  const platformSummary = Object.entries(p).map(([name, d]) => ({
-    name: cap(name),
-    followers: d.profile.followers,
-    followersDelta: (d.profile.followers || 0) - (prior?.[name]?.kpis?.[0]?.value || 0),
-    topFormat: (d.posts[0]?.format) || "—",
-    note: d.profile.followersNote
-  }));
+  const platformSummary = Object.entries(p).map(([name, d]) => {
+    const priorFollowers = prior?.[name]?.kpis?.[0]?.value;
+    return {
+      name: cap(name),
+      followers: d.profile.followers,
+      followersDelta: (priorFollowers == null || d.profile.followers == null)
+        ? null
+        : d.profile.followers - priorFollowers,
+      topFormat: (d.posts[0]?.format) || "—",
+      note: d.profile.followersNote
+    };
+  });
 
   const platformMix = {
     labels: Object.keys(p).map(cap),
@@ -240,11 +289,11 @@ function buildDashboard(week, p, prior) {
     overview: {
       totals: {
         followers: totalFollowers,
-        followersDelta: 0, // computed in UI if needed
+        followersDelta,
         engagements: totalEng,
-        engagementsDeltaPct: 0,
+        engagementsDeltaPct,
         posts: totalPosts,
-        postsDelta: 0,
+        postsDelta,
         topPlatform: cap(topPlatform)
       },
       platformSummary,
@@ -267,24 +316,40 @@ function reconstructFromDashboard(platformBlock) {
 }
 
 function buildTrend(name, pd, prior) {
-  // Minimal implementation: seed with current week; history fills in over time
-  // as more weeks accrue. Once 8 weeks of data exist, plot the full rolling window.
+  // Plot last week + this week when we have a prior value. This gives the
+  // per-platform follower chart a non-trivial line as soon as we have >=2
+  // weeks of data. The chart naturally extends as more history accrues.
+  const priorFollowers = prior?.[name]?.kpis?.[0]?.value;
+  const curFollowers   = pd.profile.followers ?? priorFollowers ?? 0;
+  const haveBoth = priorFollowers != null && pd.profile.followers != null;
   return {
-    labels: ["This week"],
+    labels: haveBoth ? ["Last week", "This week"] : ["This week"],
     datasets: [
-      { label: "Followers", data: [pd.profile.followers || 0], color: PLATFORM_COLORS[name] }
+      { label: "Followers",
+        data: haveBoth ? [priorFollowers, curFollowers] : [curFollowers],
+        color: PLATFORM_COLORS[name] }
     ]
   };
 }
 
 function buildFollowersHistory(p, prior) {
+  // Same idea as buildTrend, but one dataset per platform.
+  const haveAnyPrior = Object.keys(p).some(name => prior?.[name]?.kpis?.[0]?.value != null);
+  const labels = haveAnyPrior ? ["Last week", "This week"] : ["This week"];
   return {
-    labels: ["This week"],
-    datasets: Object.entries(p).map(([name, d]) => ({
-      label: cap(name),
-      data: [d.profile.followers || 0],
-      color: PLATFORM_COLORS[name]
-    }))
+    labels,
+    datasets: Object.entries(p).map(([name, d]) => {
+      const priorFollowers = prior?.[name]?.kpis?.[0]?.value;
+      const curFollowers   = d.profile.followers ?? priorFollowers ?? 0;
+      const data = haveAnyPrior
+        ? [priorFollowers ?? curFollowers, curFollowers]
+        : [curFollowers];
+      return {
+        label: cap(name),
+        data,
+        color: PLATFORM_COLORS[name]
+      };
+    })
   };
 }
 
