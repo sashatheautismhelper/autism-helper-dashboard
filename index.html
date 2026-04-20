@@ -164,11 +164,20 @@ const PLATFORM_COLORS = { instagram:'#E4405F', facebook:'#1877F2', pinterest:'#E
 const fmt = n => n == null ? '—' : (typeof n === 'number' ? n.toLocaleString('en-US') : n);
 const fmtPct = n => n == null ? '—' : (n.toFixed(1) + '%');
 const fmtDelta = (n, suffix='') => {
-  if (n == null) return '';
+  if (n == null) return '<div class="delta flat">— no prior week</div>';
   const cls = n > 0 ? 'up' : n < 0 ? 'down' : 'flat';
   const arrow = n > 0 ? '▲' : n < 0 ? '▼' : '▬';
   const sign = n > 0 ? '+' : '';
-  return `<div class="delta ${cls}">${arrow} ${sign}${typeof n === 'number' ? n.toLocaleString('en-US') : n}${suffix}</div>`;
+  let body;
+  if (typeof n === 'number') {
+    // Percentage deltas: 1 decimal. Absolute deltas: integer with thousands sep.
+    body = (suffix === '%' || suffix === '% WoW')
+      ? n.toFixed(1)
+      : n.toLocaleString('en-US');
+  } else {
+    body = n;
+  }
+  return `<div class="delta ${cls}">${arrow} ${sign}${body}${suffix}</div>`;
 };
 const kpiCard = (label, value, deltaHtml = '') =>
   `<div class="card kpi"><div class="label">${label}</div><div class="value">${fmt(value)}</div>${deltaHtml}</div>`;
