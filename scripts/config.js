@@ -45,12 +45,16 @@ export const PLATFORMS = {
       resultsPerPage: 30
     }
   },
+  // NOTE: YouTube is NOT here — it's fetched via scripts/fetch_youtube.js
+  // using the YouTube Data API v3 + Analytics API v2 directly. This map
+  // lists only the platforms we still route through Apify.
   youtube: {
-    actorId:  "streamers/youtube-scraper",            // ← confirm during build
-    input: {
-      startUrls: [{ url: "https://www.youtube.com/@theautismhelper" }],
-      maxResults: 30
-    }
+    // Still declared so run_weekly.js's PLATFORMS loop iterates over it,
+    // but the fetcher dispatch checks YT_FETCHERS first and uses the
+    // native API path instead of Apify.
+    actorId: null,
+    input: null,
+    _nativeFetcher: "fetch_youtube.js"
   }
 };
 
