@@ -1,20 +1,22 @@
 // ---------------------------------------------------------------------------
-// Weekly refresh orchestrator
+// Daily refresh orchestrator
 //
-// Called by .github/workflows/weekly-refresh.yml every Sunday night.
+// Called by .github/workflows/weekly-refresh.yml daily at 04:00 UTC.
 //
 // Flow:
-//   1. Figure out the week we're reporting on (previous Mon–Sun window).
-//   2. For each platform, call the Apify Actor and get raw data.
+//   1. Figure out the reporting window (rolling 7 days ending yesterday UTC).
+//   2. For each platform, call the Meta Graph API (IG/FB) or Apify Actor
+//      (Pinterest/TikTok/YouTube) and get raw data.
 //   3. Transform each payload into our normalized shape.
-//   4. Load last week's file (if it exists) for WoW comparisons.
+//   4. Load the previous rolling-7-day snapshot (if it exists) for WoW
+//      comparisons — "vs 7 days ago" deltas.
 //   5. Generate insights per platform + overview.
 //   6. Build the full dashboard JSON and write it to data/weeks/YYYY-MM-DD.json
 //      plus data/latest.json + data/index.json.
 //
-// Failure mode: if a single platform's Actor fails, we log + keep going with
-// that platform's data from last week. If everything fails, we exit non-zero
-// and GitHub Actions notifies Sasha.
+// Failure mode: if a single platform's fetch fails, the platform card surfaces
+// the error instead of showing stale data. If everything fails, we exit non-zero
+// and GitHub Actions opens a tracking issue.
 // ---------------------------------------------------------------------------
 
 import fs from "node:fs/promises";
@@ -36,16 +38,19 @@ const PLATFORM_COLORS = {
   instagram: "#E4405F", facebook: "#1877F2", pinterest: "#E60023", tiktok: "#111", youtube: "#FF0000"
 };
 
-// ---------- Week window (previous Mon 00:00 UTC → Sun 23:59 UTC) ----------
-function previousWeekWindow(now = new Date()) {
+// ---------- Reporting window (rolling 7 days ending yesterday UTC) ----------
+//
+// We run daily. Each run reports on the most recent 7 full days. Yesterday
+// (UTC) is the window end; 6 days before that is the window start. File names
+// remain YYYY-MM-DD.json keyed by window end date so daily snapshots accumulate.
+function trailing7DayWindow(now = new Date()) {
   const d = new Date(now);
-  const day = d.getUTCDay(); // 0=Sun, 1=Mon
-  const sunOffset = day === 0 ? 7 : day;           // how many days back to last Sunday
-  const sunday = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() - sunOffset));
-  const monday = new Date(sunday); monday.setUTCDate(sunday.getUTCDate() - 6);
+  // yesterday UTC
+  const end = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() - 1));
+  const start = new Date(end); start.setUTCDate(end.getUTCDate() - 6);
   const iso = x => x.toISOString().slice(0, 10);
-  const label = `${monday.toLocaleString("en-US", { month:"short", day:"numeric", timeZone:"UTC" })} – ${sunday.toLocaleString("en-US", { month:"short", day:"numeric", year:"numeric", timeZone:"UTC" })}`;
-  return { start: iso(monday), end: iso(sunday), label };
+  const label = `${start.toLocaleString("en-US", { month:"short", day:"numeric", timeZone:"UTC" })} – ${end.toLocaleString("en-US", { month:"short", day:"numeric", year:"numeric", timeZone:"UTC" })}`;
+  return { start: iso(start), end: iso(end), label };
 }
 
 // ---------- File helpers ----------
@@ -79,12 +84,25 @@ async function main() {
     }
   }
 
-  const week = previousWeekWindow();
-  console.log(`Refreshing for week: ${week.label}  (${week.start} → ${week.end})`);
+  const week = trailing7DayWindow();
+  console.log(`Refreshing for 7-day window ending: ${week.label}  (${week.start} → ${week.end})`);
 
-  // Load prior week for WoW comparisons
-  const priorFiles = await listWeekFiles();
-  const priorWeek = priorFiles.length ? await readJson(path.join(WEEKS_DIR, priorFiles[0])) : null;
+  // Load the snapshot from 7 days ago (if available) for true WoW comparisons.
+  // We look for data/weeks/{end-7}.json specifically rather than just "the most
+  // recent" — since we refresh daily, "most recent" is yesterday, which would
+  // give us 1-day-over-day deltas instead of the 7-day-over-7-day deltas users expect.
+  const priorEnd = new Date(week.end + "T00:00:00Z");
+  priorEnd.setUTCDate(priorEnd.getUTCDate() - 7);
+  const priorEndIso = priorEnd.toISOString().slice(0, 10);
+  const priorPath = path.join(WEEKS_DIR, `${priorEndIso}.json`);
+  let priorWeek = await readJson(priorPath);
+  if (!priorWeek) {
+    // Fall back to most recent snapshot if 7-day-ago isn't available yet
+    const priorFiles = await listWeekFiles();
+    // Skip today's file if it's already been written earlier today
+    const priorFileNames = priorFiles.filter(f => f !== `${week.end}.json`);
+    priorWeek = priorFileNames.length ? await readJson(path.join(WEEKS_DIR, priorFileNames[0])) : null;
+  }
 
   // Fetch + transform each platform
   const platformData = {};
@@ -227,14 +245,28 @@ export function buildDashboard(week, p, prior) {
     return KPI_SPECS[name];
   };
 
-  // Build per-platform objects
+  // Build per-platform objects. Fields beyond the base set (demographics, etc.)
+  // are only populated by the Meta fetcher — for Apify-sourced platforms they
+  // pass through as undefined/null, and the frontend renders those sections as
+  // "not available for this platform yet."
   const out = {};
   for (const name of Object.keys(p)) {
+    const pd = p[name];
     out[name] = {
       kpis: kpiByPlatform(name),
-      trend: buildTrend(name, p[name], prior),
-      topPosts: p[name].posts,
-      insights: platformInsights(name, p[name], prior?.[name] ? reconstructFromDashboard(prior[name]) : null)
+      trend: buildTrend(name, pd, prior),
+      topPosts: pd.posts,
+      insights: platformInsights(name, pd, prior?.[name] ? reconstructFromDashboard(prior[name]) : null),
+      // Pass through the extended Meta-only fields. Undefined for non-Meta platforms.
+      demographics:        pd.demographics ?? null,
+      demographicsNote:    pd.demographicsNote ?? null,
+      followerChurn:       pd.followerChurn ?? null,
+      actionFunnel:        pd.actionFunnel ?? null,
+      formatPerformance:   pd.formatPerformance ?? null,
+      bestTimeToPost:      pd.bestTimeToPost ?? null,
+      stories:             pd.stories ?? null,
+      reactionBreakdown:   pd.reactionBreakdown ?? null,
+      _error:              pd._error ?? null
     };
   }
 
@@ -301,7 +333,8 @@ export function buildDashboard(week, p, prior) {
       week: `${week.start}/${week.end}`,
       weekLabel: week.label,
       generatedAt: new Date().toISOString(),
-      source: "apify"
+      source: "meta-graph-api + apify",
+      windowType: "trailing-7-days"
     },
     overview: {
       totals: {
