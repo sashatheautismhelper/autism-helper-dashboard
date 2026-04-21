@@ -1,168 +1,416 @@
 // ---------------------------------------------------------------------------
-// Insights engine — applies deterministic rules to this week's numbers and
-// generates the "What's Working / Where to Pivot / Post More Of" blocks.
+// Daily refresh orchestrator
 //
-// Rules are intentionally simple. They can be tuned easily, and an LLM pass
-// can be added later if you want more nuance.
+// Called by .github/workflows/weekly-refresh.yml daily at 04:00 UTC.
+//
+// Flow:
+//   1. Figure out the reporting window (rolling 7 days ending yesterday UTC).
+//   2. For each platform, call the Meta Graph API (IG/FB) or Apify Actor
+//      (Pinterest/TikTok/YouTube) and get raw data.
+//   3. Transform each payload into our normalized shape.
+//   4. Load the previous rolling-7-day snapshot (if it exists) for WoW
+//      comparisons — "vs 7 days ago" deltas.
+//   5. Generate insights per platform + overview.
+//   6. Build the full dashboard JSON and write it to data/weeks/YYYY-MM-DD.json
+//      plus data/latest.json + data/index.json.
+//
+// Failure mode: if a single platform's fetch fails, the platform card surfaces
+// the error instead of showing stale data. If everything fails, we exit non-zero
+// and GitHub Actions opens a tracking issue.
 // ---------------------------------------------------------------------------
 
-const pct = (curr, prev) => prev === 0 ? 0 : ((curr - prev) / prev) * 100;
+import fs from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-// ---------- Per-platform insights ----------
-// Format UTC hour as "H AM/PM CT" (US Central, which is UTC-5 during DST /
-// UTC-6 standard). We split the difference at UTC-5 since TAH is in Illinois
-// and DST covers most of the year.
-function utcHourToCentral(utcHour) {
-  const centralHour = (utcHour - 5 + 24) % 24;
-  const ampm = centralHour < 12 ? "AM" : "PM";
-  const display = centralHour % 12 === 0 ? 12 : centralHour % 12;
-  return `${display} ${ampm} CT`;
+import { PLATFORMS, WEEKS_TO_KEEP } from "./config.js";
+import { fetchPlatform } from "./fetch_apify.js";
+import { META_FETCHERS } from "./fetch_meta.js";
+import { TRANSFORMERS } from "./transform.js";
+import { platformInsights, overviewInsights } from "./insights.js";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname  = path.dirname(__filename);
+const DATA_DIR   = path.join(__dirname, "..", "data");
+const WEEKS_DIR  = path.join(DATA_DIR, "weeks");
+
+const PLATFORM_COLORS = {
+  instagram: "#E4405F", facebook: "#1877F2", pinterest: "#E60023", tiktok: "#111", youtube: "#FF0000"
+};
+
+// ---------- Reporting window (rolling 7 days ending yesterday UTC) ----------
+//
+// We run daily. Each run reports on the most recent 7 full days. Yesterday
+// (UTC) is the window end; 6 days before that is the window start. File names
+// remain YYYY-MM-DD.json keyed by window end date so daily snapshots accumulate.
+function trailing7DayWindow(now = new Date()) {
+  const d = new Date(now);
+  // yesterday UTC
+  const end = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate() - 1));
+  const start = new Date(end); start.setUTCDate(end.getUTCDate() - 6);
+  const iso = x => x.toISOString().slice(0, 10);
+  const label = `${start.toLocaleString("en-US", { month:"short", day:"numeric", timeZone:"UTC" })} – ${end.toLocaleString("en-US", { month:"short", day:"numeric", year:"numeric", timeZone:"UTC" })}`;
+  return { start: iso(start), end: iso(end), label };
 }
 
-export function platformInsights(name, thisWeek, lastWeek) {
-  const followerDelta = (thisWeek.profile.followers || 0) - (lastWeek?.profile?.followers || 0);
-  const topPost = thisWeek.posts[0];
-  const totalEng = thisWeek.posts.reduce((s, p) => s + (p.engagements || p.views || p.likes || 0), 0);
-  const prevTotalEng = (lastWeek?.posts || []).reduce((s, p) => s + (p.engagements || p.views || p.likes || 0), 0);
-  const engChange = pct(totalEng, prevTotalEng);
-
-  const working = { headline: "", bullets: [] };
-  const pivot   = { headline: "", bullets: [] };
-  const postMore= { headline: "Next 2 weeks", bullets: [] };
-
-  // WORKING rules
-  if (followerDelta > 0) {
-    // If we have gross churn data, surface gained-vs-lost rather than just net.
-    if (thisWeek.followerChurn?.gained != null && thisWeek.followerChurn?.lost != null) {
-      working.bullets.push(
-        `<strong>${thisWeek.followerChurn.gained.toLocaleString()} new followers</strong> gained ` +
-        `(against ${thisWeek.followerChurn.lost.toLocaleString()} lost → net +${followerDelta.toLocaleString()}).`
-      );
-    } else {
-      working.bullets.push(`<strong>${followerDelta.toLocaleString()} net new followers</strong> this week.`);
-    }
-  }
-  if (topPost) {
-    working.bullets.push(`Top post: "<strong>${topPost.title}</strong>" (${topPost.format || topPost.length || "post"}) drove the most engagement.`);
-  }
-  if (engChange > 10) {
-    working.bullets.push(`Engagement volume up <strong>${engChange.toFixed(0)}%</strong> vs last week — momentum building.`);
-  }
-  working.headline = followerDelta > 0 ? "Audience is growing" : "Steady engagement this week";
-
-  // PIVOT rules
-  if (engChange < -10) {
-    pivot.headline = "Engagement dipped week-over-week";
-    pivot.bullets.push(`Total engagement down <strong>${Math.abs(engChange).toFixed(0)}%</strong>. Investigate posting cadence and formats.`);
-  }
-  // Surface churn-driven pivots even when net followers are up
-  if (thisWeek.followerChurn?.lost > 0 && thisWeek.followerChurn?.gained != null) {
-    const churnRatio = thisWeek.followerChurn.lost / Math.max(1, thisWeek.followerChurn.gained);
-    if (churnRatio > 0.5) {
-      pivot.bullets.push(
-        `Churn ratio is <strong>${(churnRatio*100).toFixed(0)}%</strong> — you're losing ${thisWeek.followerChurn.lost} for every ${thisWeek.followerChurn.gained} gained. ` +
-        `Review recent posts for off-brand content.`
-      );
-    }
-  }
-  if (thisWeek.posts.length < (lastWeek?.posts?.length || 0) - 2) {
-    pivot.bullets.push(`Posting cadence dropped to <strong>${thisWeek.posts.length}</strong> posts (from ${lastWeek.posts.length}). Restore volume with evergreen re-posts.`);
-  }
-  if (thisWeek.posts.length && topPost.engagements / (totalEng || 1) > 0.5) {
-    pivot.bullets.push(`One post drove ${((topPost.engagements / totalEng) * 100).toFixed(0)}% of this week's engagement — concentration risk. Spread the bets.`);
-  }
-  if (!pivot.headline) pivot.headline = "Small tweaks to try";
-  if (pivot.bullets.length === 0) pivot.bullets.push("Nothing urgent — stay the course.");
-
-  // POST MORE rules — prefer API-sourced formatPerformance (with reach/views)
-  // over ad-hoc format grouping when available.
-  if (thisWeek.formatPerformance && thisWeek.formatPerformance.length > 0) {
-    const top = thisWeek.formatPerformance[0];
-    const runnerUp = thisWeek.formatPerformance[1];
-    if (runnerUp && top.avgEngagement > runnerUp.avgEngagement * 1.2) {
-      const lift = Math.round(((top.avgEngagement / runnerUp.avgEngagement) - 1) * 100);
-      postMore.bullets.push(
-        `More <strong>${top.format}</strong> content — averaged ${top.avgEngagement.toLocaleString()} engagements per post, ` +
-        `<strong>${lift}% above</strong> the next format.`
-      );
-    } else {
-      postMore.bullets.push(`More <strong>${top.format}</strong> content — your highest avg engagement format (${top.avgEngagement.toLocaleString()} per post).`);
-    }
-  } else {
-    const formatEng = {};
-    thisWeek.posts.forEach(p => {
-      const f = p.format || p.length || "post";
-      formatEng[f] = (formatEng[f] || 0) + (p.engagements || p.views || 0);
-    });
-    const topFormats = Object.entries(formatEng).sort((a,b) => b[1]-a[1]).slice(0, 2);
-    topFormats.forEach(([f]) => {
-      postMore.bullets.push(`More <strong>${f}</strong> content — highest engagement this week.`);
-    });
-  }
-
-  // Add best-time-to-post recommendation when we have enough signal
-  if (thisWeek.bestTimeToPost) {
-    const bt = thisWeek.bestTimeToPost;
-    postMore.bullets.push(
-      `Schedule your next post for <strong>${bt.topDay} around ${utcHourToCentral(bt.topHour)}</strong> ` +
-      `— historically your highest-engagement window (avg ${bt.topAvgEng.toLocaleString()} engagements).`
-    );
-  }
-
-  if (postMore.bullets.length < 2) postMore.bullets.push("Mix in a fresh format to test audience response.");
-
-  return { working, pivot, postMore };
+// ---------- File helpers ----------
+async function readJson(file) {
+  try { return JSON.parse(await fs.readFile(file, "utf-8")); }
+  catch { return null; }
+}
+async function writeJson(file, data) {
+  await fs.mkdir(path.dirname(file), { recursive: true });
+  await fs.writeFile(file, JSON.stringify(data, null, 2));
+  console.log(`✓ wrote ${path.relative(process.cwd(), file)}`);
+}
+async function listWeekFiles() {
+  try {
+    const files = await fs.readdir(WEEKS_DIR);
+    return files.filter(f => f.endsWith(".json")).sort().reverse();
+  } catch { return []; }
 }
 
-// ---------- Cross-platform overview insights ----------
-export function overviewInsights(platforms, lastWeekPlatforms) {
-  const working = { headline: "", bullets: [] };
-  const pivot   = { headline: "", bullets: [] };
-  const postMore= { headline: "Next 2 weeks — cross-platform priorities", bullets: [] };
-
-  // Find fastest grower
-  const growth = Object.entries(platforms).map(([k, v]) => ({
-    name: k,
-    delta: (v.profile.followers || 0) - (lastWeekPlatforms?.[k]?.profile?.followers || 0)
-  })).sort((a,b) => b.delta - a.delta);
-  const top = growth[0];
-  if (top && top.delta > 0) {
-    working.headline = `${capitalize(top.name)} is leading growth`;
-    working.bullets.push(`<strong>${capitalize(top.name)}</strong> added ${top.delta.toLocaleString()} followers — our fastest grower this week.`);
-  } else {
-    working.headline = "Steady audience across platforms";
+// ---------- Main ----------
+async function main() {
+  if (!process.env.APIFY_TOKEN) {
+    console.error("APIFY_TOKEN not set. Aborting.");
+    process.exit(1);
+  }
+  // Instagram + Facebook now come from Meta Graph API directly.
+  for (const k of ["META_IG_TOKEN", "META_PAGE_TOKEN", "META_PAGE_ID"]) {
+    if (!process.env[k]) {
+      console.error(`${k} not set. Aborting.`);
+      process.exit(1);
+    }
   }
 
-  // Top overall format
-  const allPosts = Object.values(platforms).flatMap(p => p.posts);
-  const formatEng = {};
-  allPosts.forEach(p => {
-    const f = p.format || p.length || "post";
-    formatEng[f] = (formatEng[f] || 0) + (p.engagements || p.views || 0);
+  const week = trailing7DayWindow();
+  console.log(`Refreshing for 7-day window ending: ${week.label}  (${week.start} → ${week.end})`);
+
+  // Load the snapshot from 7 days ago (if available) for true WoW comparisons.
+  // We look for data/weeks/{end-7}.json specifically rather than just "the most
+  // recent" — since we refresh daily, "most recent" is yesterday, which would
+  // give us 1-day-over-day deltas instead of the 7-day-over-7-day deltas users expect.
+  const priorEnd = new Date(week.end + "T00:00:00Z");
+  priorEnd.setUTCDate(priorEnd.getUTCDate() - 7);
+  const priorEndIso = priorEnd.toISOString().slice(0, 10);
+  const priorPath = path.join(WEEKS_DIR, `${priorEndIso}.json`);
+  let priorWeek = await readJson(priorPath);
+  if (!priorWeek) {
+    // Fall back to most recent snapshot if 7-day-ago isn't available yet
+    const priorFiles = await listWeekFiles();
+    // Skip today's file if it's already been written earlier today
+    const priorFileNames = priorFiles.filter(f => f !== `${week.end}.json`);
+    priorWeek = priorFileNames.length ? await readJson(path.join(WEEKS_DIR, priorFileNames[0])) : null;
+  }
+
+  // Fetch + transform each platform
+  const platformData = {};
+  for (const [name, cfg] of Object.entries(PLATFORMS)) {
+    try {
+      let t;
+      if (META_FETCHERS[name]) {
+        // Instagram + Facebook: native Meta Graph API, already in normalized shape.
+        console.log(`[${name}] fetching via Meta Graph API…`);
+        t = await META_FETCHERS[name](week);
+        console.log(`[${name}] got ${t.posts.length} posts, ${t.profile.followers ?? "—"} followers`);
+      } else {
+        // Pinterest / TikTok / YouTube: Apify + transform pipeline.
+        const raw = await fetchPlatform(name, cfg);
+        t = TRANSFORMERS[name](raw, week);
+      }
+      platformData[name] = t;
+      // Carry the follower count forward from last week if THIS run returned null
+      // (some actors return posts without profile data in the same call).
+      if (platformData[name].profile.followers == null && priorWeek?.[name]?.kpis?.[0]?.value != null) {
+        platformData[name].profile.followers = priorWeek[name].kpis[0].value;
+      }
+      if (t.posts.length === 0) {
+        console.warn(`[${name}] scraper returned 0 posts (actor succeeded but yielded no usable items)`);
+      }
+    } catch (err) {
+      console.error(`[${name}] FAILED: ${err.message}`);
+      // DO NOT fall back to prior-week posts. That quietly propagates stale
+      // (and potentially sample) data forever if a platform keeps failing.
+      // Keep last-known follower count for continuity, but leave posts empty
+      // so the dashboard surfaces the failure instead of hiding it.
+      platformData[name] = {
+        profile: {
+          followers: priorWeek?.[name]?.kpis?.[0]?.value ?? null,
+          postsInWeek: 0
+        },
+        posts: [],
+        _error: err.message || String(err)
+      };
+    }
+  }
+
+  // Build dashboard JSON
+  const dashboard = buildDashboard(week, platformData, priorWeek);
+
+  // Write outputs
+  const weekFile = path.join(WEEKS_DIR, `${week.end}.json`);
+  await writeJson(weekFile, dashboard);
+  await writeJson(path.join(DATA_DIR, "latest.json"), dashboard);
+
+  // Rebuild week index (newest first)
+  const all = await listWeekFiles();
+  const index = all.slice(0, WEEKS_TO_KEEP).map(f => {
+    const d = f.replace(".json", "");
+    return { file: `data/weeks/${f}`, label: labelForEndDate(d) };
   });
-  const topFormat = Object.entries(formatEng).sort((a,b) => b[1]-a[1])[0];
-  if (topFormat) {
-    working.bullets.push(`<strong>${topFormat[0]}</strong> is the highest-engaging format this week across all platforms.`);
-  }
+  await writeJson(path.join(DATA_DIR, "index.json"), index);
 
-  // Slowest grower
-  const slow = growth[growth.length - 1];
-  if (slow && slow.delta < 0) {
-    pivot.headline = `${capitalize(slow.name)} lost followers this week`;
-    pivot.bullets.push(`<strong>${capitalize(slow.name)}</strong> down ${Math.abs(slow.delta)} followers. Review recent post performance and cadence.`);
-  } else if (slow && slow.delta < (top?.delta || 0) / 10) {
-    pivot.headline = `${capitalize(slow.name)} is stagnant`;
-    pivot.bullets.push(`<strong>${capitalize(slow.name)}</strong> gained only ${slow.delta} followers. Consider testing a new content angle.`);
-  }
-  if (!pivot.headline) { pivot.headline = "Nothing major to flag"; pivot.bullets.push("All platforms tracking to trend."); }
-
-  // Post more
-  postMore.bullets.push(`Double down on <strong>${capitalize(top?.name || "your fastest-growing platform")}</strong> — ride the wave.`);
-  if (topFormat) postMore.bullets.push(`Produce more <strong>${topFormat[0]}</strong> content across platforms.`);
-  postMore.bullets.push("Cross-promote top-performing content between platforms (e.g., TikTok → Reel → Short).");
-
-  return { working, pivot, postMore };
+  console.log("\nRefresh complete.");
 }
 
-const capitalize = s => s ? s.charAt(0).toUpperCase() + s.slice(1) : "";
+function labelForEndDate(endIso) {
+  const end = new Date(endIso + "T00:00:00Z");
+  const start = new Date(end); start.setUTCDate(end.getUTCDate() - 6);
+  return `${start.toLocaleString("en-US",{month:"short",day:"numeric",timeZone:"UTC"})} – ${end.toLocaleString("en-US",{month:"short",day:"numeric",year:"numeric",timeZone:"UTC"})}`;
+}
 
+// ---------- Dashboard assembly ----------
+export function buildDashboard(week, p, prior) {
+  // ---- small helpers for week-over-week math ----
+  const safePct = (cur, prev) => {
+    if (prev == null || prev === 0) return null; // can't compute % growth from 0
+    return Number((((cur - prev) / prev) * 100).toFixed(1));
+  };
+  const priorKpiValueByLabel = (name, label) => {
+    const arr = prior?.[name]?.kpis;
+    if (!Array.isArray(arr)) return null;
+    const hit = arr.find(k => k?.label === label);
+    return hit ? (hit.value ?? null) : null;
+  };
+
+  const kpiByPlatform = (name) => {
+    const pd = p[name];
+    const totalLikes     = pd.posts.reduce((s, x) => s + (x.likes || 0), 0);
+    const totalComments  = pd.posts.reduce((s, x) => s + (x.comments || 0), 0);
+    const totalShares    = pd.posts.reduce((s, x) => s + (x.shares || x.repins || 0), 0);
+    const totalViews     = pd.posts.reduce((s, x) => s + (x.views || 0), 0);
+    const totalReactions = pd.posts.reduce((s, x) => s + (x.reactions || 0), 0);
+    const totalSaves     = pd.posts.reduce((s, x) => s + (x.saves || 0), 0);
+
+    // Build the current-week KPI list per platform. For each card we also look
+    // up the same card's value from last week (by label match) so we can show a
+    // true WoW absolute delta OR percentage change.
+    //   - "follower-style" cards (Followers, Subscribers, Monthly Viewers): absolute +/- delta
+    //   - "count" cards (Posts/Videos/Pins This Week): absolute +/- delta
+    //   - "engagement aggregate" cards (Likes/Views/Reactions/etc.): percentage delta
+    const abs = (label, value) => {
+      const prev = priorKpiValueByLabel(name, label);
+      const cur = value ?? 0;
+      return { label, value, delta: prev == null ? null : cur - prev };
+    };
+    const pct = (label, value) => {
+      const prev = priorKpiValueByLabel(name, label);
+      const cur = value ?? 0;
+      return { label, value, delta: safePct(cur, prev), deltaSuffix: "%" };
+    };
+
+    const KPI_SPECS = {
+      instagram: [
+        abs("Followers",       pd.profile.followers),
+        abs("Posts This Week", pd.profile.postsInWeek),
+        pct("Total Likes",     totalLikes),
+        pct("Total Comments",  totalComments)
+      ],
+      facebook: [
+        abs("Followers",       pd.profile.followers),
+        abs("Posts This Week", pd.profile.postsInWeek),
+        pct("Total Reactions", totalReactions),
+        pct("Total Shares",    totalShares)
+      ],
+      pinterest: [
+        abs("Monthly Viewers", pd.profile.followers),
+        abs("Pins This Week",  pd.profile.postsInWeek),
+        pct("Total Saves",     totalSaves),
+        pct("Total Comments",  totalComments)
+      ],
+      tiktok: [
+        abs("Followers",       pd.profile.followers),
+        abs("Videos Posted",   pd.profile.postsInWeek),
+        pct("Total Views",     totalViews),
+        pct("Total Likes",     totalLikes)
+      ],
+      youtube: [
+        abs("Subscribers",     pd.profile.followers),
+        abs("Videos Posted",   pd.profile.postsInWeek),
+        pct("Total Views",     totalViews),
+        pct("Total Likes",     totalLikes)
+      ]
+    };
+    return KPI_SPECS[name];
+  };
+
+  // Build per-platform objects. Fields beyond the base set (demographics, etc.)
+  // are only populated by the Meta fetcher — for Apify-sourced platforms they
+  // pass through as undefined/null, and the frontend renders those sections as
+  // "not available for this platform yet."
+  const out = {};
+  for (const name of Object.keys(p)) {
+    const pd = p[name];
+    out[name] = {
+      kpis: kpiByPlatform(name),
+      trend: buildTrend(name, pd, prior),
+      topPosts: pd.posts,
+      insights: platformInsights(name, pd, prior?.[name] ? reconstructFromDashboard(prior[name]) : null),
+      // Pass through the extended Meta-only fields. Undefined for non-Meta platforms.
+      demographics:        pd.demographics ?? null,
+      demographicsNote:    pd.demographicsNote ?? null,
+      followerChurn:       pd.followerChurn ?? null,
+      actionFunnel:        pd.actionFunnel ?? null,
+      formatPerformance:   pd.formatPerformance ?? null,
+      bestTimeToPost:      pd.bestTimeToPost ?? null,
+      stories:             pd.stories ?? null,
+      reactionBreakdown:   pd.reactionBreakdown ?? null,
+      _error:              pd._error ?? null
+    };
+  }
+
+  // Overview
+  const totalFollowers = Object.values(p).reduce((s, x) => s + (x.profile.followers || 0), 0);
+  const totalPosts = Object.values(p).reduce((s, x) => s + x.profile.postsInWeek, 0);
+  const totalEng = Object.values(p).reduce((s, x) =>
+    s + x.posts.reduce((ss, y) => ss + (y.engagements || y.views || 0), 0), 0);
+
+  // Sum the same three numbers from last week's dashboard so we can build real
+  // WoW deltas. Prior dashboards store platforms as top-level keys alongside
+  // meta/overview, so only look at keys that are actual platforms.
+  const priorPlatforms = prior
+    ? Object.fromEntries(Object.entries(prior).filter(([k]) => PLATFORMS[k]))
+    : {};
+  const priorTotalFollowers = Object.values(priorPlatforms)
+    .reduce((s, x) => s + (x?.kpis?.find(k => /followers?|subscribers|viewers/i.test(k?.label || ""))?.value || 0), 0);
+  const priorTotalPosts = Object.values(priorPlatforms)
+    .reduce((s, x) => s + (x?.kpis?.find(k => /posts? this week|videos? posted|pins? this week/i.test(k?.label || ""))?.value || 0), 0);
+  const priorTotalEng = Object.values(priorPlatforms)
+    .reduce((s, x) => s + (x?.topPosts || []).reduce((ss, y) => ss + (y.engagements || y.views || 0), 0), 0);
+
+  const followersDelta = priorTotalFollowers ? (totalFollowers - priorTotalFollowers) : null;
+  const engagementsDeltaPct = safePct(totalEng, priorTotalEng);
+  const postsDelta = priorTotalPosts != null ? (totalPosts - priorTotalPosts) : null;
+
+  const topPlatform = Object.entries(p).map(([n, d]) => ({
+    n, eng: d.posts.reduce((s,y)=>s+(y.engagements||y.views||0),0)
+  })).sort((a,b)=>b.eng-a.eng)[0]?.n || "—";
+
+  const platformSummary = Object.entries(p).map(([name, d]) => {
+    const priorFollowers = prior?.[name]?.kpis?.[0]?.value;
+    return {
+      name: cap(name),
+      followers: d.profile.followers,
+      followersDelta: (priorFollowers == null || d.profile.followers == null)
+        ? null
+        : d.profile.followers - priorFollowers,
+      topFormat: (d.posts[0]?.format) || "—",
+      note: d.profile.followersNote
+    };
+  });
+
+  const platformMix = {
+    labels: Object.keys(p).map(cap),
+    data:   Object.values(p).map(d => d.posts.reduce((s,y)=>s+(y.engagements||y.views||0),0)),
+    colors: Object.keys(p).map(n => PLATFORM_COLORS[n])
+  };
+
+  // Top 10 posts across all platforms
+  const allPosts = Object.entries(p).flatMap(([name, d]) =>
+    d.posts.map(post => ({
+      title: post.title,
+      platform: cap(name),
+      date: post.date,
+      format: post.format || post.length || "post",
+      views: post.views || post.likes || 0,
+      engagements: post.engagements || post.likes || 0
+    }))
+  ).sort((a,b)=>b.engagements-a.engagements).slice(0, 10);
+
+  return {
+    meta: {
+      week: `${week.start}/${week.end}`,
+      weekLabel: week.label,
+      generatedAt: new Date().toISOString(),
+      source: "meta-graph-api + apify",
+      windowType: "trailing-7-days"
+    },
+    overview: {
+      totals: {
+        followers: totalFollowers,
+        followersDelta,
+        engagements: totalEng,
+        engagementsDeltaPct,
+        posts: totalPosts,
+        postsDelta,
+        topPlatform: cap(topPlatform)
+      },
+      platformSummary,
+      platformMix,
+      followersHistory: buildFollowersHistory(p, prior),
+      topPosts: allPosts,
+      insights: overviewInsights(p, prior ? Object.fromEntries(Object.entries(prior).filter(([k])=>PLATFORMS[k])) : null)
+    },
+    ...out
+  };
+}
+
+function reconstructFromDashboard(platformBlock) {
+  // Convert the prior week's dashboard block back to the {profile, posts} shape
+  // used by the insights engine.
+  return {
+    profile: { followers: platformBlock.kpis?.[0]?.value ?? 0 },
+    posts: platformBlock.topPosts || []
+  };
+}
+
+function buildTrend(name, pd, prior) {
+  // Plot last week + this week when we have a prior value. This gives the
+  // per-platform follower chart a non-trivial line as soon as we have >=2
+  // weeks of data. The chart naturally extends as more history accrues.
+  const priorFollowers = prior?.[name]?.kpis?.[0]?.value;
+  const curFollowers   = pd.profile.followers ?? priorFollowers ?? 0;
+  const haveBoth = priorFollowers != null && pd.profile.followers != null;
+  return {
+    labels: haveBoth ? ["Last week", "This week"] : ["This week"],
+    datasets: [
+      { label: "Followers",
+        data: haveBoth ? [priorFollowers, curFollowers] : [curFollowers],
+        color: PLATFORM_COLORS[name] }
+    ]
+  };
+}
+
+function buildFollowersHistory(p, prior) {
+  // Same idea as buildTrend, but one dataset per platform.
+  const haveAnyPrior = Object.keys(p).some(name => prior?.[name]?.kpis?.[0]?.value != null);
+  const labels = haveAnyPrior ? ["Last week", "This week"] : ["This week"];
+  return {
+    labels,
+    datasets: Object.entries(p).map(([name, d]) => {
+      const priorFollowers = prior?.[name]?.kpis?.[0]?.value;
+      const curFollowers   = d.profile.followers ?? priorFollowers ?? 0;
+      const data = haveAnyPrior
+        ? [priorFollowers ?? curFollowers, curFollowers]
+        : [curFollowers];
+      return {
+        label: cap(name),
+        data,
+        color: PLATFORM_COLORS[name]
+      };
+    })
+  };
+}
+
+const cap = s => s ? s.charAt(0).toUpperCase() + s.slice(1) : "";
+
+// Run main() only when invoked as the entry-point script (not when imported
+// by a test harness).
+const isEntryPoint = process.argv[1] && path.resolve(process.argv[1]) === __filename;
+if (isEntryPoint) {
+  main().catch(err => {
+    console.error("REFRESH FAILED:", err);
+    process.exit(1);
+  });
+}
