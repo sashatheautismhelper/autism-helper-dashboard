@@ -26,6 +26,7 @@ import { fileURLToPath } from "node:url";
 import { PLATFORMS, WEEKS_TO_KEEP } from "./config.js";
 import { fetchPlatform } from "./fetch_apify.js";
 import { META_FETCHERS } from "./fetch_meta.js";
+import { YT_FETCHERS } from "./fetch_youtube.js";
 import { TRANSFORMERS } from "./transform.js";
 import { platformInsights, overviewInsights } from "./insights.js";
 
@@ -83,6 +84,13 @@ async function main() {
       process.exit(1);
     }
   }
+  // YouTube now comes from Data API v3 + Analytics API v2 (OAuth).
+  for (const k of ["YT_API_KEY", "YT_CLIENT_ID", "YT_CLIENT_SECRET", "YT_REFRESH_TOKEN"]) {
+    if (!process.env[k]) {
+      console.error(`${k} not set. Aborting.`);
+      process.exit(1);
+    }
+  }
 
   const week = trailing7DayWindow();
   console.log(`Refreshing for 7-day window ending: ${week.label}  (${week.start} → ${week.end})`);
@@ -114,8 +122,13 @@ async function main() {
         console.log(`[${name}] fetching via Meta Graph API…`);
         t = await META_FETCHERS[name](week);
         console.log(`[${name}] got ${t.posts.length} posts, ${t.profile.followers ?? "—"} followers`);
+      } else if (YT_FETCHERS[name]) {
+        // YouTube: native Data API v3 + Analytics API v2, already normalized.
+        console.log(`[${name}] fetching via YouTube Data + Analytics APIs…`);
+        t = await YT_FETCHERS[name](week);
+        console.log(`[${name}] got ${t.posts.length} videos, ${t.profile.followers ?? "—"} subscribers`);
       } else {
-        // Pinterest / TikTok / YouTube: Apify + transform pipeline.
+        // Pinterest / TikTok: Apify + transform pipeline.
         const raw = await fetchPlatform(name, cfg);
         t = TRANSFORMERS[name](raw, week);
       }
@@ -266,6 +279,10 @@ export function buildDashboard(week, p, prior) {
       bestTimeToPost:      pd.bestTimeToPost ?? null,
       stories:             pd.stories ?? null,
       reactionBreakdown:   pd.reactionBreakdown ?? null,
+      // YouTube-only extras (null for other platforms)
+      trafficSources:      pd.trafficSources ?? null,
+      deviceTypes:         pd.deviceTypes ?? null,
+      watchTime:           pd.watchTime ?? null,
       _error:              pd._error ?? null
     };
   }
@@ -333,7 +350,7 @@ export function buildDashboard(week, p, prior) {
       week: `${week.start}/${week.end}`,
       weekLabel: week.label,
       generatedAt: new Date().toISOString(),
-      source: "meta-graph-api + apify",
+      source: "meta-graph-api + youtube-data+analytics-api + apify",
       windowType: "trailing-7-days"
     },
     overview: {
