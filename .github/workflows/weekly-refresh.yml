@@ -35,10 +35,14 @@ jobs:
       - name: Run daily refresh
         working-directory: scripts
         env:
-          APIFY_TOKEN:     ${{ secrets.APIFY_TOKEN }}
-          META_IG_TOKEN:   ${{ secrets.META_IG_TOKEN }}
-          META_PAGE_TOKEN: ${{ secrets.META_PAGE_TOKEN }}
-          META_PAGE_ID:    ${{ secrets.META_PAGE_ID }}
+          APIFY_TOKEN:      ${{ secrets.APIFY_TOKEN }}
+          META_IG_TOKEN:    ${{ secrets.META_IG_TOKEN }}
+          META_PAGE_TOKEN:  ${{ secrets.META_PAGE_TOKEN }}
+          META_PAGE_ID:     ${{ secrets.META_PAGE_ID }}
+          YT_API_KEY:       ${{ secrets.YT_API_KEY }}
+          YT_CLIENT_ID:     ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: npm run refresh
 
       - name: Commit updated data
