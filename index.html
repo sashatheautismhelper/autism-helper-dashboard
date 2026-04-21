@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Autism Helper — Social Media Dashboard</title>
-<meta name="description" content="Weekly social media analytics & strategy insights for The Autism Helper." />
+<meta name="description" content="Daily social media analytics & strategy insights for The Autism Helper." />
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
   :root {
@@ -521,8 +521,8 @@ function renderPlatform(id, data, opts) {
 // ---------- Load + render ----------
 const PLATFORM_OPTS = {
   instagram: { icon:'📸', title:'Instagram — @theautismhelper', subtitle:"Reels-led growth and engagement signals.", bannerClass:'pb-ig',
-    columns:['Post','Date','Format','Likes','Comments','Shares','Eng.'],
-    fields:['title','date','format','likes','comments','shares','engagements'] },
+    columns:['Post','Date','Format','Views','Likes','Comments','Saves','Eng.'],
+    fields:['title','date','format','views','likes','comments','saves','engagements'] },
   facebook: { icon:'👍', title:'Facebook — The Autism Helper', subtitle:"Community and parent-focused conversation.", bannerClass:'pb-fb',
     columns:['Post','Date','Format','Reactions','Comments','Shares','Eng.'],
     fields:['title','date','format','reactions','comments','shares','engagements'] },
@@ -555,7 +555,7 @@ async function loadWeek(filename) {
 function render(data) {
   document.getElementById('loading').style.display = 'none';
   document.getElementById('updated-pill').textContent = 'Updated ' + new Date(data.meta.generatedAt).toLocaleDateString('en-US', { month:'short', day:'numeric' });
-  document.getElementById('brand-sub').textContent = `Weekly analytics & strategy insights · Week of ${data.meta.weekLabel}`;
+  document.getElementById('brand-sub').textContent = `Daily analytics & strategy insights · 7 days ending ${data.meta.weekLabel}`;
   renderOverview(data);
   Object.keys(PLATFORM_OPTS).forEach(id => renderPlatform(id, data, PLATFORM_OPTS[id]));
 }
