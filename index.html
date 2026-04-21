@@ -457,6 +457,53 @@ function renderReactionBreakdownCard(reactions) {
     <div class="card">${pills}</div>`;
 }
 
+// ---------- YouTube-only render cards ----------
+
+function renderWatchTimeCard(wt) {
+  if (!wt) return '';
+  const avgSec = wt.avgViewDurationSec;
+  const avgDur = avgSec == null ? '—'
+    : (Math.floor(avgSec/60)) + ':' + String(avgSec%60).padStart(2,'0');
+  return `
+    <div class="section-head"><h3>Watch time</h3><span class="hint">7-day totals from YouTube Analytics</span></div>
+    <div class="card">
+      <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:8px">
+        <div class="churn-stat"><div class="label">Total views</div><div class="value">${fmt(wt.totalViews)}</div></div>
+        <div class="churn-stat gained"><div class="label">Watch hours</div><div class="value">${fmt(wt.totalWatchHours)}</div></div>
+        <div class="churn-stat"><div class="label">Avg view duration</div><div class="value">${avgDur}</div></div>
+      </div>
+      <p class="section-note">Watch hours is the single metric YouTube's algorithm ranks on. Avg view duration tells you whether your intros are holding viewers.</p>
+    </div>`;
+}
+
+function renderTrafficSourcesCard(sources) {
+  if (!sources || sources.length === 0) return '';
+  const maxViews = Math.max(...sources.map(s => s.views), 1);
+  const rows = sources.map(s => {
+    const pct = Math.round((s.views / maxViews) * 100);
+    return `<div class="demo-row">
+      <div class="demo-label">${s.label}</div>
+      <div class="demo-bar-wrap"><div class="demo-bar-fill" style="width:${pct}%"></div></div>
+      <div class="demo-value">${fmt(s.views)} views · ${s.sharePct}%</div>
+    </div>`;
+  }).join('');
+  return `
+    <div class="section-head"><h3>Traffic sources</h3><span class="hint">Where your viewers came from</span></div>
+    <div class="card">${rows}
+      <p class="section-note">Higher <em>YouTube search</em> share = your titles/tags are pulling algorithmic traffic. Higher <em>Suggested videos</em> = YouTube is promoting you in its sidebar.</p>
+    </div>`;
+}
+
+function renderDeviceTypesCard(devices) {
+  if (!devices || devices.length === 0) return '';
+  const pills = devices.map(d =>
+    `<span class="reaction-pill"><strong>${d.sharePct}%</strong> ${d.label} <span style="opacity:.55">· ${fmt(d.views)} views</span></span>`
+  ).join('');
+  return `
+    <div class="section-head"><h3>Device mix</h3><span class="hint">How viewers watched this week</span></div>
+    <div class="card">${pills}</div>`;
+}
+
 // ---------- Render: generic platform ----------
 function renderPlatform(id, data, opts) {
   const p = data[id];
@@ -481,13 +528,17 @@ function renderPlatform(id, data, opts) {
       <div class="insight more"><div class="eyebrow">Post More Of</div><h4>${obj.postMore.headline}</h4><ul>${obj.postMore.bullets.map(b=>'<li>'+b+'</li>').join('')}</ul></div>
     </div>`;
 
-  // Extended analytics blocks (only populated for IG + FB via Meta Graph API)
+  // Extended analytics blocks (populated for IG+FB via Meta Graph API and for YouTube via YT APIs).
   const churnAndFunnel  = renderChurnAndFunnelCard(p.followerChurn, p.actionFunnel, null);
   const formatPerf      = renderFormatPerformanceCard(p.formatPerformance);
   const bestTime        = renderBestTimeCard(p.bestTimeToPost);
   const demographics    = renderDemographicsCard(p.demographics, p.demographicsNote);
   const stories         = id === 'instagram' ? renderStoriesCard(p.stories) : '';
   const reactionMix     = id === 'facebook'  ? renderReactionBreakdownCard(p.reactionBreakdown) : '';
+  // YouTube-only cards
+  const watchTime       = id === 'youtube' ? renderWatchTimeCard(p.watchTime)           : '';
+  const trafficSources  = id === 'youtube' ? renderTrafficSourcesCard(p.trafficSources) : '';
+  const deviceMix       = id === 'youtube' ? renderDeviceTypesCard(p.deviceTypes)       : '';
 
   document.getElementById(id).innerHTML = `
     ${banner}
@@ -497,7 +548,10 @@ function renderPlatform(id, data, opts) {
       <h3 style="margin:0 0 10px;font-size:15px;">${opts.postsHeading || 'Top posts (last 7 days)'}</h3>
       <table class="posts"><thead><tr>${cols.map(c=>'<th>'+c+'</th>').join('')}</tr></thead><tbody>${rows}</tbody></table>
     </div>
+    ${watchTime}
     ${churnAndFunnel}
+    ${trafficSources}
+    ${deviceMix}
     ${formatPerf}
     ${bestTime}
     ${reactionMix}
@@ -533,9 +587,9 @@ const PLATFORM_OPTS = {
     columns:['Video','Date','Length','Views','Likes','Comments','Shares'],
     fields:['title','date','length','views','likes','comments','shares'] },
   youtube: { icon:'▶️', title:'YouTube — The Autism Helper', subtitle:"Long-form tutorial home.", bannerClass:'pb-yt',
-    postsHeading: 'Top 8 videos by engagement',
-    columns:['Video','Published','Length','Views','Likes','Comments','Eng.'],
-    fields:['title','date','length','views','likes','comments','engagements'] }
+    postsHeading: 'Top videos this week',
+    columns:['Video','Published','Format','Length','Views','Watch (min)','Likes','Comments','Eng.'],
+    fields:['title','date','format','length','views','watchMinutes','likes','comments','engagements'] }
 };
 
 async function loadWeek(filename) {
