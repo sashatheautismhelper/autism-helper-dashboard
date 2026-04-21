@@ -2,31 +2,31 @@
   "meta": {
     "week": "2026-04-14/2026-04-20",
     "weekLabel": "Apr 14 – Apr 20, 2026",
-    "generatedAt": "2026-04-21T13:59:38.810Z",
-    "source": "meta-graph-api + apify",
+    "generatedAt": "2026-04-21T21:32:08.873Z",
+    "source": "meta-graph-api + youtube-data+analytics-api + apify",
     "windowType": "trailing-7-days"
   },
   "overview": {
     "totals": {
-      "followers": 475648,
-      "followersDelta": 20,
-      "engagements": 10564,
-      "engagementsDeltaPct": 3.9,
-      "posts": 27,
-      "postsDelta": -1,
+      "followers": 475667,
+      "followersDelta": 39,
+      "engagements": 10312,
+      "engagementsDeltaPct": 1.4,
+      "posts": 30,
+      "postsDelta": 2,
       "topPlatform": "Tiktok"
     },
     "platformSummary": [
       {
         "name": "Instagram",
-        "followers": 136483,
-        "followersDelta": 6,
+        "followers": 136486,
+        "followersDelta": 9,
         "topFormat": "Reel"
       },
       {
         "name": "Facebook",
-        "followers": 20865,
-        "followersDelta": 14,
+        "followers": 20881,
+        "followersDelta": 30,
         "topFormat": "Video"
       },
       {
@@ -45,7 +45,7 @@
         "name": "Youtube",
         "followers": 49400,
         "followersDelta": 0,
-        "topFormat": "—"
+        "topFormat": "Video"
       }
     ],
     "platformMix": {
@@ -57,11 +57,11 @@
         "Youtube"
       ],
       "data": [
-        292,
-        377,
+        296,
+        389,
         0,
-        9546,
-        349
+        9595,
+        32
       ],
       "colors": [
         "#E4405F",
@@ -81,7 +81,7 @@
           "label": "Instagram",
           "data": [
             136477,
-            136483
+            136486
           ],
           "color": "#E4405F"
         },
@@ -89,7 +89,7 @@
           "label": "Facebook",
           "data": [
             20851,
-            20865
+            20881
           ],
           "color": "#1877F2"
         },
@@ -125,7 +125,7 @@
         "platform": "Tiktok",
         "date": "Apr 14",
         "format": "0:07",
-        "views": 7197,
+        "views": 7207,
         "engagements": 212
       },
       {
@@ -134,7 +134,7 @@
         "date": "Apr 15",
         "format": "Video",
         "views": 0,
-        "engagements": 182
+        "engagements": 190
       },
       {
         "title": "Your new teacher must-have 🙌 Functional jewelry that keeps visual supports righ",
@@ -142,63 +142,63 @@
         "date": "Apr 18",
         "format": "Photo",
         "views": 0,
-        "engagements": 117
+        "engagements": 120
       },
       {
         "title": "Building understanding starts with the stories we share.",
         "platform": "Instagram",
         "date": "Apr 16",
         "format": "Reel",
-        "views": 5427,
-        "engagements": 91
+        "views": 5461,
+        "engagements": 92
       },
       {
         "title": "Life skills instruction is never just one level.",
         "platform": "Instagram",
         "date": "Apr 15",
         "format": "Reel",
-        "views": 5626,
+        "views": 5677,
         "engagements": 86
-      },
-      {
-        "title": "From Crisis to Calm: How to Handle Every Stage of Escalation",
-        "platform": "Youtube",
-        "date": "Jan 24",
-        "format": "00:06:40",
-        "views": 2562,
-        "engagements": 79
       },
       {
         "title": "Independent Centers for a Special Education Classroom 😍",
         "platform": "Instagram",
         "date": "Apr 17",
         "format": "Reel",
-        "views": 4960,
-        "engagements": 70
+        "views": 5026,
+        "engagements": 72
       },
       {
         "title": "Book recommendations for #autismacceptancemonth & all year long \n\n@Winnie White ",
         "platform": "Tiktok",
         "date": "Apr 16",
         "format": "1:11",
-        "views": 1446,
-        "engagements": 61
+        "views": 1453,
+        "engagements": 62
       },
       {
-        "title": "Boost AAC Literacy in Your Special Ed Classroom with Free Read Aloud Resources!",
-        "platform": "Youtube",
-        "date": "Nov 5",
-        "format": "00:07:18",
-        "views": 1353,
-        "engagements": 48
+        "title": "Teaching life skills sounds simple… until you realize how many different levels,",
+        "platform": "Facebook",
+        "date": "Apr 14",
+        "format": "Photo",
+        "views": 0,
+        "engagements": 33
       },
       {
-        "title": "Turn Worksheets Into Independent Work | Autism & Special Ed",
-        "platform": "Youtube",
-        "date": "Dec 9",
-        "format": "00:03:31",
-        "views": 1232,
-        "engagements": 46
+        "title": "Throwback Thursday for #autismacceptancemonth | Just Say Hi \n\n#autismacceptance ",
+        "platform": "Tiktok",
+        "date": "Apr 16",
+        "format": "1:12",
+        "views": 592,
+        "engagements": 31
+      },
+      {
+        "title": "If you’re not sure where to start with Leveled Daily Curriculum… you’re not alon",
+        "platform": "Instagram",
+        "date": "Apr 18",
+        "format": "Reel",
+        "views": 2620,
+        "engagements": 27
       }
     ],
     "insights": {
@@ -212,7 +212,7 @@
       "pivot": {
         "headline": "Facebook is stagnant",
         "bullets": [
-          "<strong>Facebook</strong> gained only 20865 followers. Consider testing a new content angle."
+          "<strong>Facebook</strong> gained only 20881 followers. Consider testing a new content angle."
         ]
       },
       "postMore": {
@@ -229,8 +229,8 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 136483,
-        "delta": 6
+        "value": 136486,
+        "delta": 9
       },
       {
         "label": "Posts This Week",
@@ -239,8 +239,8 @@
       },
       {
         "label": "Total Likes",
-        "value": 155,
-        "delta": -40.4,
+        "value": 157,
+        "delta": -39.6,
         "deltaSuffix": "%"
       },
       {
@@ -260,7 +260,7 @@
           "label": "Followers",
           "data": [
             136477,
-            136483
+            136486
           ],
           "color": "#E4405F"
         }
@@ -273,11 +273,11 @@
         "format": "Reel",
         "likes": 40,
         "comments": 1,
-        "shares": 13,
+        "shares": 14,
         "saves": 37,
-        "views": 5427,
-        "reach": 4219,
-        "engagements": 91
+        "views": 5461,
+        "reach": 4243,
+        "engagements": 92
       },
       {
         "title": "Life skills instruction is never just one level.",
@@ -287,21 +287,21 @@
         "comments": 13,
         "shares": 7,
         "saves": 26,
-        "views": 5626,
-        "reach": 4046,
+        "views": 5677,
+        "reach": 4068,
         "engagements": 86
       },
       {
         "title": "Independent Centers for a Special Education Classroom 😍",
         "date": "Apr 17",
         "format": "Reel",
-        "likes": 41,
+        "likes": 43,
         "comments": 0,
         "shares": 5,
         "saves": 24,
-        "views": 4960,
-        "reach": 3572,
-        "engagements": 70
+        "views": 5026,
+        "reach": 3607,
+        "engagements": 72
       },
       {
         "title": "If you’re not sure where to start with Leveled Daily Curriculum… you’re not alon",
@@ -310,10 +310,10 @@
         "likes": 18,
         "comments": 0,
         "shares": 2,
-        "saves": 6,
-        "views": 2602,
-        "reach": 1982,
-        "engagements": 26
+        "saves": 7,
+        "views": 2620,
+        "reach": 1998,
+        "engagements": 27
       },
       {
         "title": "It’s Okay to Say Hi 👋",
@@ -323,8 +323,8 @@
         "comments": 0,
         "shares": 1,
         "saves": 2,
-        "views": 2989,
-        "reach": 2161,
+        "views": 2997,
+        "reach": 2164,
         "engagements": 19
       }
     ],
@@ -332,7 +332,7 @@
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>6 net new followers</strong> this week.",
+          "<strong>9 net new followers</strong> this week.",
           "Top post: \"<strong>Building understanding starts with the stories we share.</strong>\" (Reel) drove the most engagement."
         ]
       },
@@ -345,7 +345,7 @@
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Reel</strong> content — your highest avg engagement format (58 per post).",
+          "More <strong>Reel</strong> content — your highest avg engagement format (59 per post).",
           "Schedule your next post for <strong>Thu around 11 AM CT</strong> — historically your highest-engagement window (avg 608 engagements)."
         ]
       }
@@ -495,9 +495,9 @@
       {
         "format": "Reel",
         "count": 5,
-        "avgEngagement": 58,
-        "avgReach": 3196,
-        "avgViews": 4321
+        "avgEngagement": 59,
+        "avgReach": 3216,
+        "avgViews": 4356
       }
     ],
     "bestTimeToPost": {
@@ -532,7 +532,7 @@
           null
         ],
         [
-          124,
+          125,
           99,
           null,
           null,
@@ -560,7 +560,7 @@
         [
           127,
           null,
-          16,
+          25,
           null,
           null,
           null,
@@ -599,7 +599,7 @@
           null,
           null,
           null,
-          488,
+          490,
           null,
           null,
           null,
@@ -657,9 +657,9 @@
           null,
           61,
           null,
-          250,
+          251,
           22,
-          65
+          66
         ],
         [
           null,
@@ -706,14 +706,17 @@
       "items": []
     },
     "reactionBreakdown": null,
+    "trafficSources": null,
+    "deviceTypes": null,
+    "watchTime": null,
     "_error": null
   },
   "facebook": {
     "kpis": [
       {
         "label": "Followers",
-        "value": 20865,
-        "delta": 14
+        "value": 20881,
+        "delta": 30
       },
       {
         "label": "Posts This Week",
@@ -722,14 +725,14 @@
       },
       {
         "label": "Total Reactions",
-        "value": 215,
-        "delta": -0.5,
+        "value": 220,
+        "delta": 1.9,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Shares",
-        "value": 50,
-        "delta": 4.2,
+        "value": 54,
+        "delta": 12.5,
         "deltaSuffix": "%"
       }
     ],
@@ -743,7 +746,7 @@
           "label": "Followers",
           "data": [
             20851,
-            20865
+            20881
           ],
           "color": "#1877F2"
         }
@@ -754,35 +757,35 @@
         "title": "Life skills instruction is never just one level.",
         "date": "Apr 15",
         "format": "Video",
-        "reactions": 76,
-        "comments": 96,
-        "shares": 10,
+        "reactions": 79,
+        "comments": 98,
+        "shares": 13,
         "reactionBreakdown": {
-          "like": 72,
+          "like": 75,
           "love": 4,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 182
+        "engagements": 190
       },
       {
         "title": "Your new teacher must-have 🙌 Functional jewelry that keeps visual supports righ",
         "date": "Apr 18",
         "format": "Photo",
-        "reactions": 85,
-        "comments": 11,
+        "reactions": 87,
+        "comments": 12,
         "shares": 21,
         "reactionBreakdown": {
-          "like": 76,
+          "like": 78,
           "love": 9,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 117
+        "engagements": 120
       },
       {
         "title": "Teaching life skills sounds simple… until you realize how many different levels,",
@@ -807,7 +810,7 @@
         "format": "Photo",
         "reactions": 12,
         "comments": 0,
-        "shares": 3,
+        "shares": 4,
         "reactionBreakdown": {
           "like": 12,
           "love": 0,
@@ -816,7 +819,7 @@
           "sad": 0,
           "angry": 0
         },
-        "engagements": 15
+        "engagements": 16
       },
       {
         "title": "If you’re not sure where to start with Leveled Daily Curriculum… you’re not alon",
@@ -891,7 +894,7 @@
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>14 net new followers</strong> this week.",
+          "<strong>30 net new followers</strong> this week.",
           "Top post: \"<strong>Life skills instruction is never just one level.</strong>\" (Video) drove the most engagement."
         ]
       },
@@ -904,18 +907,18 @@
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Video</strong> content — averaged 41 engagements per post, <strong>156% above</strong> the next format.",
-          "Schedule your next post for <strong>Fri around 4 PM CT</strong> — historically your highest-engagement window (avg 674 engagements)."
+          "More <strong>Video</strong> content — averaged 43 engagements per post, <strong>169% above</strong> the next format.",
+          "Schedule your next post for <strong>Fri around 4 PM CT</strong> — historically your highest-engagement window (avg 676 engagements)."
         ]
       }
     },
     "demographics": null,
     "demographicsNote": "Facebook Page demographic data was retired by Meta in 2024 (Graph API v18+). Instagram demographics above are a reasonable proxy for your overall Meta audience.",
     "followerChurn": {
-      "gained": 145111,
+      "gained": 145118,
       "lost": null,
       "lostNote": "Facebook doesn't expose unfollow counts via the Graph API. We report gains only.",
-      "net": 145111
+      "net": 145118
     },
     "actionFunnel": {
       "pageViews": 1912,
@@ -926,7 +929,7 @@
       {
         "format": "Video",
         "count": 5,
-        "avgEngagement": 41,
+        "avgEngagement": 43,
         "avgReach": 0,
         "avgViews": 0
       },
@@ -941,7 +944,7 @@
     "bestTimeToPost": {
       "topDay": "Fri",
       "topHour": 21,
-      "topAvgEng": 674,
+      "topAvgEng": 676,
       "heatmap": [
         [
           null,
@@ -963,7 +966,7 @@
           null,
           52,
           null,
-          15,
+          16,
           9,
           null,
           null,
@@ -1022,7 +1025,7 @@
           3
         ],
         [
-          182,
+          190,
           null,
           null,
           null,
@@ -1095,7 +1098,7 @@
           7,
           11,
           16,
-          674,
+          676,
           null,
           4
         ],
@@ -1120,7 +1123,7 @@
           3,
           1,
           null,
-          42,
+          43,
           null,
           null,
           null
@@ -1140,13 +1143,16 @@
     },
     "stories": null,
     "reactionBreakdown": {
-      "like": 210,
+      "like": 215,
       "love": 18,
       "haha": 0,
       "wow": 0,
       "sad": 0,
       "angry": 0
     },
+    "trafficSources": null,
+    "deviceTypes": null,
+    "watchTime": null,
     "_error": null
   },
   "pinterest": {
@@ -1217,6 +1223,9 @@
     "bestTimeToPost": null,
     "stories": null,
     "reactionBreakdown": null,
+    "trafficSources": null,
+    "deviceTypes": null,
+    "watchTime": null,
     "_error": "You must rent a paid Actor in order to run it after its free trial has expired. To rent this Actor, go to https://console.apify.com/actors/rusvWpGtw0MugV2j4"
   },
   "tiktok": {
@@ -1233,14 +1242,14 @@
       },
       {
         "label": "Total Views",
-        "value": 9546,
-        "delta": 4.3,
+        "value": 9595,
+        "delta": 4.8,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 308,
-        "delta": 3.4,
+        "value": 310,
+        "delta": 4,
         "deltaSuffix": "%"
       }
     ],
@@ -1265,7 +1274,7 @@
         "title": "Check Off #IndependentWork with Matching Weekly Workbooks 💪\n\n@Gracie Tantillo \n",
         "date": "Apr 14",
         "length": "0:07",
-        "views": 7197,
+        "views": 7207,
         "likes": 212,
         "comments": 3,
         "shares": 2
@@ -1274,8 +1283,8 @@
         "title": "Book recommendations for #autismacceptancemonth & all year long \n\n@Winnie White ",
         "date": "Apr 16",
         "length": "1:11",
-        "views": 1446,
-        "likes": 61,
+        "views": 1453,
+        "likes": 62,
         "comments": 0,
         "shares": 9
       },
@@ -1283,16 +1292,16 @@
         "title": "Throwback Thursday for #autismacceptancemonth | Just Say Hi \n\n#autismacceptance ",
         "date": "Apr 16",
         "length": "1:12",
-        "views": 580,
-        "likes": 30,
-        "comments": 1,
+        "views": 592,
+        "likes": 31,
+        "comments": 2,
         "shares": 3
       },
       {
         "title": "Independent Centers for #specialeducationclassroom\n\n#specialeducationteacher #sp",
         "date": "Apr 20",
         "length": "0:17",
-        "views": 323,
+        "views": 343,
         "likes": 5,
         "comments": 0,
         "shares": 0
@@ -1327,6 +1336,9 @@
     "bestTimeToPost": null,
     "stories": null,
     "reactionBreakdown": null,
+    "trafficSources": null,
+    "deviceTypes": null,
+    "watchTime": null,
     "_error": null
   },
   "youtube": {
@@ -1338,19 +1350,19 @@
       },
       {
         "label": "Videos Posted",
-        "value": 1,
-        "delta": 0
+        "value": 4,
+        "delta": 3
       },
       {
         "label": "Total Views",
-        "value": 8348,
-        "delta": 0.3,
+        "value": 1822,
+        "delta": -78.1,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 298,
-        "delta": 0,
+        "value": 26,
+        "delta": -91.3,
         "deltaSuffix": "%"
       }
     ],
@@ -1372,96 +1384,105 @@
     },
     "topPosts": [
       {
-        "title": "From Crisis to Calm: How to Handle Every Stage of Escalation",
-        "date": "Jan 24",
-        "length": "00:06:40",
-        "views": 2562,
-        "likes": 73,
-        "comments": 6,
-        "engagements": 79
+        "id": "hWhrNSqGKaU",
+        "title": "My Favorite Materials to Prep Classroom Resources",
+        "date": "Apr 15",
+        "timestamp": "2026-04-15T12:31:05Z",
+        "format": "Video",
+        "length": "7:12",
+        "durationSec": 432,
+        "views": 228,
+        "likes": 9,
+        "comments": 3,
+        "engagements": 12,
+        "watchMinutes": null,
+        "watchTimeMinutes": null,
+        "averageViewDurationSec": null,
+        "averageViewPercentage": null,
+        "subscribersGained": null,
+        "url": "https://www.youtube.com/watch?v=hWhrNSqGKaU",
+        "thumbnail": "https://i.ytimg.com/vi/hWhrNSqGKaU/hqdefault.jpg"
       },
       {
-        "title": "Boost AAC Literacy in Your Special Ed Classroom with Free Read Aloud Resources!",
-        "date": "Nov 5",
-        "length": "00:07:18",
-        "views": 1353,
-        "likes": 38,
-        "comments": 10,
-        "engagements": 48
+        "id": "HXXZvieyTAQ",
+        "title": "Highly Differentiated Curriculum",
+        "date": "Apr 16",
+        "timestamp": "2026-04-16T18:00:22Z",
+        "format": "Short",
+        "length": "0:11",
+        "durationSec": 11,
+        "views": 524,
+        "likes": 6,
+        "comments": 3,
+        "engagements": 9,
+        "watchMinutes": null,
+        "watchTimeMinutes": null,
+        "averageViewDurationSec": null,
+        "averageViewPercentage": null,
+        "subscribersGained": null,
+        "url": "https://www.youtube.com/watch?v=HXXZvieyTAQ",
+        "thumbnail": "https://i.ytimg.com/vi/HXXZvieyTAQ/hqdefault.jpg"
       },
       {
-        "title": "Turn Worksheets Into Independent Work | Autism & Special Ed",
-        "date": "Dec 9",
-        "length": "00:03:31",
-        "views": 1232,
-        "likes": 38,
-        "comments": 8,
-        "engagements": 46
+        "id": "8IRTC0sjhLU",
+        "title": "Easy Matching Weekly Workbooks Toys Edition",
+        "date": "Apr 14",
+        "timestamp": "2026-04-14T14:00:26Z",
+        "format": "Short",
+        "length": "0:30",
+        "durationSec": 30,
+        "views": 941,
+        "likes": 6,
+        "comments": 0,
+        "engagements": 6,
+        "watchMinutes": null,
+        "watchTimeMinutes": null,
+        "averageViewDurationSec": null,
+        "averageViewPercentage": null,
+        "subscribersGained": null,
+        "url": "https://www.youtube.com/watch?v=8IRTC0sjhLU",
+        "thumbnail": "https://i.ytimg.com/vi/8IRTC0sjhLU/hqdefault.jpg"
       },
       {
-        "title": "Systems for Independence in Special Ed",
-        "date": "Feb 17",
-        "length": "00:05:02",
-        "views": 859,
-        "likes": 36,
-        "comments": 6,
-        "engagements": 42
-      },
-      {
-        "title": "Fine Motor Struggles? Try These Genius Accommodations for Special Ed Success!",
-        "date": "Nov 24",
-        "length": "00:07:01",
-        "views": 632,
-        "likes": 33,
-        "comments": 5,
-        "engagements": 38
-      },
-      {
-        "title": "How to Adapt Worksheets for Non-Writers | Easy Special Ed Activity Hack",
-        "date": "Jan 27",
-        "length": "00:03:54",
-        "views": 662,
-        "likes": 27,
-        "comments": 5,
-        "engagements": 32
-      },
-      {
-        "title": "Kindergarten Self-Contained Classroom Tour",
-        "date": "Apr 3",
-        "length": "00:02:48",
-        "views": 544,
-        "likes": 26,
-        "comments": 6,
-        "engagements": 32
-      },
-      {
-        "title": "How I Use Visual Expectations to Cut Behavior Issues in Half",
-        "date": "Jan 20",
-        "length": "00:02:37",
-        "views": 504,
-        "likes": 27,
-        "comments": 5,
-        "engagements": 32
+        "id": "b_YnpPPHGbM",
+        "title": "Life Skills Work Task Mega Pack",
+        "date": "Apr 20",
+        "timestamp": "2026-04-20T15:01:00Z",
+        "format": "Short",
+        "length": "0:32",
+        "durationSec": 32,
+        "views": 129,
+        "likes": 5,
+        "comments": 0,
+        "engagements": 5,
+        "watchMinutes": null,
+        "watchTimeMinutes": null,
+        "averageViewDurationSec": null,
+        "averageViewPercentage": null,
+        "subscribersGained": null,
+        "url": "https://www.youtube.com/watch?v=b_YnpPPHGbM",
+        "thumbnail": "https://i.ytimg.com/vi/b_YnpPPHGbM/hqdefault.jpg"
       }
     ],
     "insights": {
       "working": {
         "headline": "Steady engagement this week",
         "bullets": [
-          "Top post: \"<strong>From Crisis to Calm: How to Handle Every Stage of Escalation</strong>\" (00:06:40) drove the most engagement."
+          "Top post: \"<strong>My Favorite Materials to Prep Classroom Resources</strong>\" (Video) drove the most engagement."
         ]
       },
       "pivot": {
-        "headline": "Small tweaks to try",
+        "headline": "Engagement dipped week-over-week",
         "bullets": [
-          "Nothing urgent — stay the course."
+          "Total engagement down <strong>91%</strong>. Investigate posting cadence and formats.",
+          "Posting cadence dropped to <strong>4</strong> posts (from 8). Restore volume with evergreen re-posts."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>00:06:40</strong> content — highest engagement this week.",
-          "More <strong>00:07:18</strong> content — highest engagement this week."
+          "More <strong>Video</strong> content — averaged 19 engagements per post, <strong>90% above</strong> the next format.",
+          "Schedule your next post for <strong>Fri around 12 PM CT</strong> — historically your highest-engagement window (avg 43 engagements)."
         ]
       }
     },
@@ -1469,10 +1490,229 @@
     "demographicsNote": null,
     "followerChurn": null,
     "actionFunnel": null,
-    "formatPerformance": null,
-    "bestTimeToPost": null,
+    "formatPerformance": [
+      {
+        "format": "Video",
+        "count": 13,
+        "avgEngagement": 19,
+        "avgReach": 450,
+        "avgViews": 450,
+        "avgWatchMinutes": null
+      },
+      {
+        "format": "Short",
+        "count": 37,
+        "avgEngagement": 10,
+        "avgReach": 651,
+        "avgViews": 651,
+        "avgWatchMinutes": null
+      }
+    ],
+    "bestTimeToPost": {
+      "topDay": "Fri",
+      "topHour": 17,
+      "topAvgEng": 43,
+      "heatmap": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          7,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          10,
+          7,
+          9,
+          null,
+          null,
+          10,
+          5,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          8,
+          8,
+          15,
+          42,
+          13,
+          3,
+          null,
+          null,
+          8,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          16,
+          null,
+          14,
+          null,
+          20,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          8,
+          null,
+          18,
+          13,
+          14,
+          11,
+          null,
+          9,
+          5,
+          8,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          15,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          8,
+          19,
+          13,
+          7,
+          43,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "heatmapDays": [
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "sampleSize": 50,
+      "note": "Best time computed from historical video engagement (UTC hours; frontend converts to CT)."
+    },
     "stories": null,
     "reactionBreakdown": null,
+    "trafficSources": null,
+    "deviceTypes": null,
+    "watchTime": null,
     "_error": null
   }
 }
