@@ -1,11 +1,15 @@
-name: Weekly data refresh
+name: Daily data refresh
+
+# Runs every day at 04:00 UTC (approx. 10-11pm US Central depending on DST).
+# Daily cadence is required to capture Instagram Stories, which Meta only
+# exposes while they're still active (24h window).
+#
+# The reporting window is always "trailing 7 days ending yesterday UTC" — the
+# dashboard view remains a 7-day snapshot, just refreshed daily.
 
 on:
   schedule:
-    # Sundays at 11:00 PM US Central (04:00 UTC Monday) year-round.
-    # During DST (most of the year) this lands at 10 PM Central — close enough.
-    # Adjust the cron if you want strict Eastern/Pacific timing instead.
-    - cron: "0 4 * * 1"
+    - cron: "0 4 * * *"
   workflow_dispatch: # allow manual triggering from the Actions tab
 
 permissions:
@@ -28,7 +32,7 @@ jobs:
         working-directory: scripts
         run: npm install
 
-      - name: Run weekly refresh
+      - name: Run daily refresh
         working-directory: scripts
         env:
           APIFY_TOKEN:     ${{ secrets.APIFY_TOKEN }}
@@ -45,7 +49,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No data changes to commit."
           else
-            git commit -m "chore(data): weekly refresh $(date -u +%Y-%m-%d)"
+            git commit -m "chore(data): daily refresh $(date -u +%Y-%m-%d)"
             git push
           fi
 
@@ -57,6 +61,6 @@ jobs:
             github.rest.issues.create({
               owner: context.repo.owner,
               repo:  context.repo.repo,
-              title: `Weekly refresh failed — ${new Date().toISOString().slice(0,10)}`,
-              body:  `The Sunday refresh job failed. Check the Actions tab for logs:\n\n${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
+              title: `Daily refresh failed — ${new Date().toISOString().slice(0,10)}`,
+              body:  `The daily refresh job failed. Check the Actions tab for logs:\n\n${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`
             });
