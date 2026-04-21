@@ -94,6 +94,43 @@
   .pb-yt{background:linear-gradient(135deg,#FF0000,#B80000)}
   .loading{padding:60px 0;text-align:center;color:var(--brand-sub);font-size:14px}
   .error{padding:20px;background:#FDECEC;color:#B23A48;border-radius:var(--radius);margin:16px 0;font-size:14px}
+  /* --- New: Tier 1/2 analytics sections --- */
+  .section-note{margin:6px 0 12px;font-size:12.5px;color:var(--brand-sub);font-style:italic}
+  .unavailable{padding:18px;color:var(--brand-sub);font-size:13.5px;text-align:center;background:#F7FAFB;border-radius:10px}
+  .three-col{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:900px){.three-col{grid-template-columns:1fr}}
+  .two-col-equal{grid-template-columns:1fr 1fr}
+  @media(max-width:900px){.two-col-equal{grid-template-columns:1fr}}
+  .demo-row{display:flex;align-items:center;gap:10px;margin-bottom:6px;font-size:13px}
+  .demo-row .demo-label{width:90px;color:var(--brand-sub);font-size:12.5px}
+  .demo-row .demo-bar-wrap{flex:1;background:#EEF6F6;border-radius:6px;height:14px;overflow:hidden}
+  .demo-row .demo-bar-fill{height:100%;background:linear-gradient(90deg,var(--brand-primary),var(--brand-primary-dk));border-radius:6px}
+  .demo-row .demo-value{width:52px;text-align:right;font-weight:600}
+  .heatmap{display:grid;grid-template-columns:44px repeat(24,1fr);gap:2px;font-size:10.5px}
+  .heatmap .hm-cell{height:18px;border-radius:3px;background:#F0F4F6}
+  .heatmap .hm-day{color:var(--brand-sub);font-weight:600;font-size:11px;display:flex;align-items:center}
+  .heatmap .hm-hour{color:var(--brand-sub);font-size:10px;text-align:center;padding:2px 0}
+  .best-time-callout{background:linear-gradient(135deg,#E3F1F3 0%,#FFF 100%);border:1px solid var(--brand-line);border-radius:10px;padding:14px 16px;margin-bottom:12px}
+  .best-time-callout strong{color:var(--brand-primary-dk);font-size:15px}
+  .churn-stat{text-align:center;padding:10px}
+  .churn-stat .label{font-size:11.5px;color:var(--brand-sub);text-transform:uppercase;letter-spacing:.05em;font-weight:600}
+  .churn-stat .value{font-size:24px;font-weight:800;margin-top:2px;letter-spacing:-.02em}
+  .churn-stat.gained .value{color:var(--good)}
+  .churn-stat.lost .value{color:var(--bad)}
+  .churn-stat.net .value{color:var(--brand-ink)}
+  .format-bar{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .format-bar .fb-name{width:110px;font-weight:600;font-size:13px}
+  .format-bar .fb-bar{flex:1;background:#EEF6F6;border-radius:6px;height:20px;position:relative}
+  .format-bar .fb-fill{height:100%;background:var(--brand-primary);border-radius:6px}
+  .format-bar .fb-meta{font-size:11.5px;color:var(--brand-sub)}
+  .reaction-pill{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:#F7FAFB;border-radius:999px;font-size:12.5px;margin-right:6px;margin-bottom:6px}
+  .reaction-pill strong{color:var(--brand-ink)}
+  .stories-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
+  .story-card{background:#F7FAFB;border-radius:10px;padding:10px;font-size:12.5px}
+  .story-card .sc-date{color:var(--brand-sub);font-size:11px;margin-bottom:4px}
+  .story-card .sc-metric{display:flex;justify-content:space-between;margin-top:3px}
+  .story-card .sc-metric .m-label{color:var(--brand-sub)}
+  .story-card .sc-metric .m-value{font-weight:600}
 </style>
 </head>
 <body>
@@ -105,12 +142,12 @@
       <div class="brand-divider"></div>
       <div class="brand-text">
         <h1>Social Media Dashboard</h1>
-        <p id="brand-sub">Weekly analytics &amp; strategy insights</p>
+        <p id="brand-sub">Daily analytics &amp; strategy insights</p>
       </div>
     </div>
     <div class="week-control">
-      <span class="update-pill" id="updated-pill">Updated weekly</span>
-      <label for="week">Week of</label>
+      <span class="update-pill" id="updated-pill">Updated daily</span>
+      <label for="week">7 days ending</label>
       <select id="week"><option>Loading…</option></select>
     </div>
   </div>
@@ -139,8 +176,9 @@
   <section id="youtube" class="panel"></section>
 
   <footer class="note">
-    Data pulled weekly from public profile pages via Apify. Follower counts may differ slightly from
-    native platform analytics due to caching. Updated every Sunday night.
+    Instagram and Facebook data pulled natively via the Meta Graph API. Pinterest, TikTok, and YouTube
+    data pulled via Apify from public profile pages. Refreshed daily at 4am UTC; each snapshot covers
+    the trailing 7 days.
   </footer>
 </main>
 
@@ -254,6 +292,171 @@ function renderOverview(data) {
   });
 }
 
+// ---------- Helpers for new Tier 1/2 render blocks ----------
+const utcHourToCT = h => {
+  const ct = (h - 5 + 24) % 24;  // UTC-5 approx; CT is UTC-5 during DST most of the year
+  const ampm = ct < 12 ? 'AM' : 'PM';
+  const disp = ct % 12 === 0 ? 12 : ct % 12;
+  return `${disp}${ampm}`;
+};
+
+function renderDemographicsCard(demo, note) {
+  if (!demo || (!demo.age?.length && !demo.gender?.length && !demo.country?.length && !demo.city?.length)) {
+    return note ? `<div class="card"><h3 style="margin:0 0 8px;font-size:15px;">Audience demographics</h3><div class="unavailable">${note}</div></div>` : '';
+  }
+  // Build horizontal bar list for a breakdown
+  const bars = (arr, topN = 6) => {
+    const items = arr.slice(0, topN);
+    const max = Math.max(...items.map(x => x.value), 1);
+    return items.map(x => {
+      const pct = Math.round((x.value / max) * 100);
+      return `<div class="demo-row"><div class="demo-label">${x.label}</div><div class="demo-bar-wrap"><div class="demo-bar-fill" style="width:${pct}%"></div></div><div class="demo-value">${fmt(x.value)}</div></div>`;
+    }).join('');
+  };
+  const totalCountry = demo.country.reduce((s, x) => s + x.value, 0) || 1;
+  const countryPct = demo.country.slice(0, 6).map(x => {
+    const pct = ((x.value / totalCountry) * 100).toFixed(1);
+    return `<div class="demo-row"><div class="demo-label">${x.label}</div><div class="demo-bar-wrap"><div class="demo-bar-fill" style="width:${Math.min(100, pct)}%"></div></div><div class="demo-value">${pct}%</div></div>`;
+  }).join('');
+
+  return `
+    <div class="section-head"><h3>Audience demographics</h3><span class="hint">Lifetime follower composition</span></div>
+    <div class="grid two-col-equal">
+      <div class="card">
+        <h4 style="margin:0 0 10px;font-size:13.5px;color:var(--brand-sub);text-transform:uppercase;letter-spacing:.05em;">Age</h4>
+        ${demo.age?.length ? bars(demo.age) : '<div class="unavailable">No age data returned by Meta</div>'}
+        <h4 style="margin:18px 0 10px;font-size:13.5px;color:var(--brand-sub);text-transform:uppercase;letter-spacing:.05em;">Gender</h4>
+        ${demo.gender?.length ? bars(demo.gender) : '<div class="unavailable">No gender data returned by Meta</div>'}
+      </div>
+      <div class="card">
+        <h4 style="margin:0 0 10px;font-size:13.5px;color:var(--brand-sub);text-transform:uppercase;letter-spacing:.05em;">Top countries</h4>
+        ${demo.country?.length ? countryPct : '<div class="unavailable">No country data</div>'}
+        <h4 style="margin:18px 0 10px;font-size:13.5px;color:var(--brand-sub);text-transform:uppercase;letter-spacing:.05em;">Top cities</h4>
+        ${demo.city?.length ? bars(demo.city) : '<div class="unavailable">No city data</div>'}
+      </div>
+    </div>`;
+}
+
+function renderBestTimeCard(bt) {
+  if (!bt) return '';
+  // Heatmap: 7 rows (days) x 24 cols (hours). Color intensity by engagement.
+  const maxEng = Math.max(...bt.heatmap.flat().filter(x => x != null), 1);
+  const hourHeaders = Array.from({length:24}, (_, h) =>
+    `<div class="hm-hour">${h % 3 === 0 ? utcHourToCT(h) : ''}</div>`).join('');
+  const rows = bt.heatmap.map((row, di) => {
+    const cells = row.map(v => {
+      if (v == null) return `<div class="hm-cell" title="no post"></div>`;
+      const intensity = Math.min(1, v / maxEng);
+      const hue = 186; // brand-primary-ish
+      const lightness = 95 - Math.round(intensity * 45);
+      return `<div class="hm-cell" style="background:hsl(${hue}, 40%, ${lightness}%)" title="${v.toLocaleString()} avg eng"></div>`;
+    }).join('');
+    return `<div class="hm-day">${bt.heatmapDays[di]}</div>${cells}`;
+  }).join('');
+
+  return `
+    <div class="section-head"><h3>Best time to post</h3><span class="hint">Derived from historical post engagement</span></div>
+    <div class="card">
+      <div class="best-time-callout">
+        <div>Your highest-engagement window has been <strong>${bt.topDay}s around ${utcHourToCT(bt.topHour)} CT</strong> — averaging ${fmt(bt.topAvgEng)} engagements per post.</div>
+      </div>
+      <div class="heatmap">
+        <div></div>${hourHeaders}
+        ${rows}
+      </div>
+      <p class="section-note">Based on ${bt.sampleSize} recent posts. Darker cells = higher average engagement. Empty cells = no posts in that window yet.</p>
+    </div>`;
+}
+
+function renderChurnAndFunnelCard(churn, funnel, churnNote) {
+  if (!churn && !funnel) return '';
+  const churnBlock = churn ? `
+    <div class="card">
+      <h3 style="margin:0 0 10px;font-size:15px;">Follower churn</h3>
+      <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:8px">
+        <div class="churn-stat gained"><div class="label">Gained</div><div class="value">${churn.gained != null ? '+'+fmt(churn.gained) : '—'}</div></div>
+        <div class="churn-stat lost"><div class="label">Lost</div><div class="value">${churn.lost != null ? '−'+fmt(churn.lost) : '—'}</div></div>
+        <div class="churn-stat net"><div class="label">Net</div><div class="value">${churn.net != null ? (churn.net >= 0 ? '+' : '')+fmt(churn.net) : '—'}</div></div>
+      </div>
+      ${churn.lostNote ? '<p class="section-note">'+churn.lostNote+'</p>' : ''}
+    </div>` : `<div class="card"><h3 style="margin:0 0 10px;font-size:15px;">Follower churn</h3><div class="unavailable">${churnNote || 'Not available'}</div></div>`;
+
+  // Action funnel — show whichever fields are present
+  const funnelItems = [];
+  if (funnel) {
+    if (funnel.profileViews  != null) funnelItems.push({label:'Profile views', value: funnel.profileViews});
+    if (funnel.websiteClicks != null) funnelItems.push({label:'Website clicks', value: funnel.websiteClicks});
+    if (funnel.linkTaps      != null) funnelItems.push({label:'Link taps', value: funnel.linkTaps});
+    if (funnel.pageViews     != null) funnelItems.push({label:'Page views', value: funnel.pageViews});
+    if (funnel.ctaClicks     != null) funnelItems.push({label:'CTA clicks', value: funnel.ctaClicks});
+  }
+  const funnelBlock = funnelItems.length ? `
+    <div class="card">
+      <h3 style="margin:0 0 10px;font-size:15px;">Profile → site funnel</h3>
+      <div class="grid" style="grid-template-columns:repeat(${Math.min(3, funnelItems.length)},1fr);gap:8px">
+        ${funnelItems.map(i => `<div class="churn-stat"><div class="label">${i.label}</div><div class="value">${fmt(i.value)}</div></div>`).join('')}
+      </div>
+      ${funnel?.note ? '<p class="section-note">'+funnel.note+'</p>' : ''}
+    </div>` : (funnel ? `<div class="card"><h3 style="margin:0 0 10px;font-size:15px;">Profile → site funnel</h3><div class="unavailable">${funnel.note || 'Not available'}</div></div>` : '');
+
+  return `
+    <div class="section-head"><h3>Growth &amp; traffic</h3><span class="hint">7-day totals</span></div>
+    <div class="grid two-col-equal">${churnBlock}${funnelBlock}</div>`;
+}
+
+function renderFormatPerformanceCard(formats) {
+  if (!formats || formats.length === 0) return '';
+  const maxEng = Math.max(...formats.map(f => f.avgEngagement), 1);
+  const bars = formats.map(f => {
+    const pct = Math.round((f.avgEngagement / maxEng) * 100);
+    return `<div class="format-bar">
+      <div class="fb-name"><span class="tag">${f.format}</span></div>
+      <div class="fb-bar"><div class="fb-fill" style="width:${pct}%"></div></div>
+      <div class="fb-meta">${fmt(f.avgEngagement)} avg eng · ${f.count} post${f.count!==1?'s':''}${f.avgReach ? ' · '+fmt(f.avgReach)+' reach' : ''}</div>
+    </div>`;
+  }).join('');
+
+  return `
+    <div class="section-head"><h3>Format performance</h3><span class="hint">Average engagement by content format</span></div>
+    <div class="card">${bars}</div>`;
+}
+
+function renderStoriesCard(stories) {
+  if (!stories) return '';
+  const items = stories.items || [];
+  if (items.length === 0) {
+    return `<div class="section-head"><h3>Instagram stories</h3></div>
+      <div class="card"><div class="unavailable">${stories.note || 'No stories captured.'}</div></div>`;
+  }
+  const cards = items.map(s => `
+    <div class="story-card">
+      <div class="sc-date">${s.date} · ${s.mediaType || 'STORY'}</div>
+      <div class="sc-metric"><span class="m-label">Views</span><span class="m-value">${fmt(s.views)}</span></div>
+      <div class="sc-metric"><span class="m-label">Reach</span><span class="m-value">${fmt(s.reach)}</span></div>
+      <div class="sc-metric"><span class="m-label">Replies</span><span class="m-value">${fmt(s.replies)}</span></div>
+      <div class="sc-metric"><span class="m-label">Exits</span><span class="m-value">${fmt(s.exits)}</span></div>
+    </div>`).join('');
+  return `
+    <div class="section-head"><h3>Instagram stories</h3><span class="hint">${stories.count} active at refresh time</span></div>
+    <div class="card">
+      <div class="stories-grid">${cards}</div>
+      ${stories.note ? '<p class="section-note" style="margin-top:12px">'+stories.note+'</p>' : ''}
+    </div>`;
+}
+
+function renderReactionBreakdownCard(reactions) {
+  if (!reactions) return '';
+  const entries = Object.entries(reactions).filter(([,v]) => v > 0);
+  if (entries.length === 0) return '';
+  const emojiMap = { like:'👍', love:'❤️', haha:'😂', wow:'😮', sad:'😢', angry:'😡' };
+  const pills = entries.map(([k, v]) =>
+    `<span class="reaction-pill">${emojiMap[k] || ''} <strong>${fmt(v)}</strong> ${k}</span>`
+  ).join('');
+  return `
+    <div class="section-head"><h3>Reaction mix</h3><span class="hint">Total reactions by type across this week's posts</span></div>
+    <div class="card">${pills}</div>`;
+}
+
 // ---------- Render: generic platform ----------
 function renderPlatform(id, data, opts) {
   const p = data[id];
@@ -278,14 +481,28 @@ function renderPlatform(id, data, opts) {
       <div class="insight more"><div class="eyebrow">Post More Of</div><h4>${obj.postMore.headline}</h4><ul>${obj.postMore.bullets.map(b=>'<li>'+b+'</li>').join('')}</ul></div>
     </div>`;
 
+  // Extended analytics blocks (only populated for IG + FB via Meta Graph API)
+  const churnAndFunnel  = renderChurnAndFunnelCard(p.followerChurn, p.actionFunnel, null);
+  const formatPerf      = renderFormatPerformanceCard(p.formatPerformance);
+  const bestTime        = renderBestTimeCard(p.bestTimeToPost);
+  const demographics    = renderDemographicsCard(p.demographics, p.demographicsNote);
+  const stories         = id === 'instagram' ? renderStoriesCard(p.stories) : '';
+  const reactionMix     = id === 'facebook'  ? renderReactionBreakdownCard(p.reactionBreakdown) : '';
+
   document.getElementById(id).innerHTML = `
     ${banner}
     <div class="grid kpi-row">${kpis}</div>
     <div class="card" style="margin-top:16px"><div class="chart-wrap"><canvas id="chart-${id}"></canvas></div></div>
     <div class="card" style="margin-top:16px;padding:14px 16px">
-      <h3 style="margin:0 0 10px;font-size:15px;">${opts.postsHeading || 'Top posts this week'}</h3>
+      <h3 style="margin:0 0 10px;font-size:15px;">${opts.postsHeading || 'Top posts (last 7 days)'}</h3>
       <table class="posts"><thead><tr>${cols.map(c=>'<th>'+c+'</th>').join('')}</tr></thead><tbody>${rows}</tbody></table>
     </div>
+    ${churnAndFunnel}
+    ${formatPerf}
+    ${bestTime}
+    ${reactionMix}
+    ${stories}
+    ${demographics}
     <div class="section-head"><h3>${opts.title.split(' — ')[0]} insights</h3></div>
     ${renderInsights(p.insights)}`;
 
