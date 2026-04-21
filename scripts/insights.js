@@ -9,6 +9,16 @@
 const pct = (curr, prev) => prev === 0 ? 0 : ((curr - prev) / prev) * 100;
 
 // ---------- Per-platform insights ----------
+// Format UTC hour as "H AM/PM CT" (US Central, which is UTC-5 during DST /
+// UTC-6 standard). We split the difference at UTC-5 since TAH is in Illinois
+// and DST covers most of the year.
+function utcHourToCentral(utcHour) {
+  const centralHour = (utcHour - 5 + 24) % 24;
+  const ampm = centralHour < 12 ? "AM" : "PM";
+  const display = centralHour % 12 === 0 ? 12 : centralHour % 12;
+  return `${display} ${ampm} CT`;
+}
+
 export function platformInsights(name, thisWeek, lastWeek) {
   const followerDelta = (thisWeek.profile.followers || 0) - (lastWeek?.profile?.followers || 0);
   const topPost = thisWeek.posts[0];
@@ -22,7 +32,15 @@ export function platformInsights(name, thisWeek, lastWeek) {
 
   // WORKING rules
   if (followerDelta > 0) {
-    working.bullets.push(`<strong>${followerDelta.toLocaleString()} net new followers</strong> this week.`);
+    // If we have gross churn data, surface gained-vs-lost rather than just net.
+    if (thisWeek.followerChurn?.gained != null && thisWeek.followerChurn?.lost != null) {
+      working.bullets.push(
+        `<strong>${thisWeek.followerChurn.gained.toLocaleString()} new followers</strong> gained ` +
+        `(against ${thisWeek.followerChurn.lost.toLocaleString()} lost → net +${followerDelta.toLocaleString()}).`
+      );
+    } else {
+      working.bullets.push(`<strong>${followerDelta.toLocaleString()} net new followers</strong> this week.`);
+    }
   }
   if (topPost) {
     working.bullets.push(`Top post: "<strong>${topPost.title}</strong>" (${topPost.format || topPost.length || "post"}) drove the most engagement.`);
@@ -37,6 +55,16 @@ export function platformInsights(name, thisWeek, lastWeek) {
     pivot.headline = "Engagement dipped week-over-week";
     pivot.bullets.push(`Total engagement down <strong>${Math.abs(engChange).toFixed(0)}%</strong>. Investigate posting cadence and formats.`);
   }
+  // Surface churn-driven pivots even when net followers are up
+  if (thisWeek.followerChurn?.lost > 0 && thisWeek.followerChurn?.gained != null) {
+    const churnRatio = thisWeek.followerChurn.lost / Math.max(1, thisWeek.followerChurn.gained);
+    if (churnRatio > 0.5) {
+      pivot.bullets.push(
+        `Churn ratio is <strong>${(churnRatio*100).toFixed(0)}%</strong> — you're losing ${thisWeek.followerChurn.lost} for every ${thisWeek.followerChurn.gained} gained. ` +
+        `Review recent posts for off-brand content.`
+      );
+    }
+  }
   if (thisWeek.posts.length < (lastWeek?.posts?.length || 0) - 2) {
     pivot.bullets.push(`Posting cadence dropped to <strong>${thisWeek.posts.length}</strong> posts (from ${lastWeek.posts.length}). Restore volume with evergreen re-posts.`);
   }
@@ -46,16 +74,41 @@ export function platformInsights(name, thisWeek, lastWeek) {
   if (!pivot.headline) pivot.headline = "Small tweaks to try";
   if (pivot.bullets.length === 0) pivot.bullets.push("Nothing urgent — stay the course.");
 
-  // POST MORE rules — look at top 3 formats
-  const formatEng = {};
-  thisWeek.posts.forEach(p => {
-    const f = p.format || p.length || "post";
-    formatEng[f] = (formatEng[f] || 0) + (p.engagements || p.views || 0);
-  });
-  const topFormats = Object.entries(formatEng).sort((a,b) => b[1]-a[1]).slice(0, 2);
-  topFormats.forEach(([f]) => {
-    postMore.bullets.push(`More <strong>${f}</strong> content — highest engagement this week.`);
-  });
+  // POST MORE rules — prefer API-sourced formatPerformance (with reach/views)
+  // over ad-hoc format grouping when available.
+  if (thisWeek.formatPerformance && thisWeek.formatPerformance.length > 0) {
+    const top = thisWeek.formatPerformance[0];
+    const runnerUp = thisWeek.formatPerformance[1];
+    if (runnerUp && top.avgEngagement > runnerUp.avgEngagement * 1.2) {
+      const lift = Math.round(((top.avgEngagement / runnerUp.avgEngagement) - 1) * 100);
+      postMore.bullets.push(
+        `More <strong>${top.format}</strong> content — averaged ${top.avgEngagement.toLocaleString()} engagements per post, ` +
+        `<strong>${lift}% above</strong> the next format.`
+      );
+    } else {
+      postMore.bullets.push(`More <strong>${top.format}</strong> content — your highest avg engagement format (${top.avgEngagement.toLocaleString()} per post).`);
+    }
+  } else {
+    const formatEng = {};
+    thisWeek.posts.forEach(p => {
+      const f = p.format || p.length || "post";
+      formatEng[f] = (formatEng[f] || 0) + (p.engagements || p.views || 0);
+    });
+    const topFormats = Object.entries(formatEng).sort((a,b) => b[1]-a[1]).slice(0, 2);
+    topFormats.forEach(([f]) => {
+      postMore.bullets.push(`More <strong>${f}</strong> content — highest engagement this week.`);
+    });
+  }
+
+  // Add best-time-to-post recommendation when we have enough signal
+  if (thisWeek.bestTimeToPost) {
+    const bt = thisWeek.bestTimeToPost;
+    postMore.bullets.push(
+      `Schedule your next post for <strong>${bt.topDay} around ${utcHourToCentral(bt.topHour)}</strong> ` +
+      `— historically your highest-engagement window (avg ${bt.topAvgEng.toLocaleString()} engagements).`
+    );
+  }
+
   if (postMore.bullets.length < 2) postMore.bullets.push("Mix in a fresh format to test audience response.");
 
   return { working, pivot, postMore };
