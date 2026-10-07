@@ -1,5 +1,9 @@
 [
   {
+    "file": "data/weeks/2026-10-06.json",
+    "label": "Sep 30 – Oct 6, 2026"
+  },
+  {
     "file": "data/weeks/2026-10-05.json",
     "label": "Sep 29 – Oct 5, 2026"
   },
@@ -202,9 +206,5 @@
   {
     "file": "data/weeks/2026-08-16.json",
     "label": "Aug 10 – Aug 16, 2026"
-  },
-  {
-    "file": "data/weeks/2026-08-15.json",
-    "label": "Aug 9 – Aug 15, 2026"
   }
 ]
