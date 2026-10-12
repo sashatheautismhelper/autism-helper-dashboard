@@ -1,39 +1,39 @@
 {
   "meta": {
-    "week": "2026-10-04/2026-10-10",
-    "weekLabel": "Oct 4 – Oct 10, 2026",
-    "generatedAt": "2026-10-11T10:34:23.638Z",
+    "week": "2026-10-05/2026-10-11",
+    "weekLabel": "Oct 5 – Oct 11, 2026",
+    "generatedAt": "2026-10-12T11:37:56.540Z",
     "source": "meta-graph-api + youtube-data+analytics-api + apify",
     "windowType": "trailing-7-days"
   },
   "overview": {
     "totals": {
-      "followers": 497055,
-      "followersDelta": 599,
-      "engagements": 320,
-      "engagementsDeltaPct": -88.9,
+      "followers": 497140,
+      "followersDelta": 598,
+      "engagements": 103,
+      "engagementsDeltaPct": -97.4,
       "posts": 16,
-      "postsDelta": 7,
-      "topPlatform": "Facebook"
+      "postsDelta": 5,
+      "topPlatform": "Youtube"
     },
     "platformSummary": [
       {
         "name": "Instagram",
-        "followers": 137275,
+        "followers": 137293,
         "followersDelta": 0,
         "topFormat": "—"
       },
       {
         "name": "Facebook",
-        "followers": 35480,
-        "followersDelta": 499,
-        "topFormat": "Video"
+        "followers": 35547,
+        "followersDelta": 498,
+        "topFormat": "Photo"
       },
       {
         "name": "Pinterest",
         "followers": 215000,
         "followersDelta": 0,
-        "topFormat": "Standard"
+        "topFormat": "—"
       },
       {
         "name": "Tiktok",
@@ -58,10 +58,10 @@
       ],
       "data": [
         0,
-        267,
+        47,
         0,
         0,
-        53
+        56
       ],
       "colors": [
         "#E4405F",
@@ -80,16 +80,16 @@
         {
           "label": "Instagram",
           "data": [
-            137275,
-            137275
+            137293,
+            137293
           ],
           "color": "#E4405F"
         },
         {
           "label": "Facebook",
           "data": [
-            34981,
-            35480
+            35049,
+            35547
           ],
           "color": "#1877F2"
         },
@@ -121,19 +121,11 @@
     },
     "topPosts": [
       {
-        "title": "TIME to learn more! How many times did you say “almost done” today?",
-        "platform": "Facebook",
-        "date": "Oct 4",
-        "format": "Video",
-        "views": 0,
-        "engagements": 241
-      },
-      {
         "title": "Visuals for the School Year!",
         "platform": "Youtube",
         "date": "Oct 7",
         "format": "Short",
-        "views": 736,
+        "views": 744,
         "engagements": 20
       },
       {
@@ -141,14 +133,30 @@
         "platform": "Youtube",
         "date": "Oct 8",
         "format": "Short",
-        "views": 517,
-        "engagements": 14
+        "views": 550,
+        "engagements": 17
+      },
+      {
+        "title": "Bring Halloween themes into foundational practice with three interactive adapted",
+        "platform": "Facebook",
+        "date": "Oct 11",
+        "format": "Photo",
+        "views": 0,
+        "engagements": 13
       },
       {
         "title": "GHOST for fun Halloween themes that target higher-level independent work skills ",
         "platform": "Facebook",
         "date": "Oct 6",
         "format": "Photo",
+        "views": 0,
+        "engagements": 8
+      },
+      {
+        "title": "Setting up a K–1 classroom means making room for learning, play, movement, and a",
+        "platform": "Facebook",
+        "date": "Oct 5",
+        "format": "Video",
         "views": 0,
         "engagements": 7
       },
@@ -157,13 +165,13 @@
         "platform": "Youtube",
         "date": "Oct 6",
         "format": "Short",
-        "views": 131,
+        "views": 137,
         "engagements": 7
       },
       {
-        "title": "Setting up a K–1 classroom means making room for learning, play, movement, and a",
+        "title": "The data sheet is filled out. Now what?",
         "platform": "Facebook",
-        "date": "Oct 5",
+        "date": "Oct 10",
         "format": "Video",
         "views": 0,
         "engagements": 6
@@ -173,7 +181,7 @@
         "platform": "Youtube",
         "date": "Oct 9",
         "format": "Short",
-        "views": 149,
+        "views": 168,
         "engagements": 6
       },
       {
@@ -181,16 +189,8 @@
         "platform": "Youtube",
         "date": "Oct 5",
         "format": "Short",
-        "views": 552,
+        "views": 573,
         "engagements": 6
-      },
-      {
-        "title": "PD to learn more. Your planning period fills up fast when you’re working through",
-        "platform": "Facebook",
-        "date": "Oct 9",
-        "format": "Video",
-        "views": 0,
-        "engagements": 4
       },
       {
         "title": "By October, you know which parts",
@@ -198,7 +198,7 @@
         "date": "Oct 9",
         "format": "Photo",
         "views": 0,
-        "engagements": 4
+        "engagements": 5
       }
     ],
     "insights": {
@@ -206,7 +206,7 @@
         "headline": "Pinterest is leading growth",
         "bullets": [
           "<strong>Pinterest</strong> added 215,000 followers — our fastest grower this week.",
-          "<strong>Video</strong> is the highest-engaging format this week across all platforms."
+          "<strong>Short</strong> is the highest-engaging format this week across all platforms."
         ]
       },
       "pivot": {
@@ -219,7 +219,7 @@
         "headline": "Next 2 weeks — cross-platform priorities",
         "bullets": [
           "Double down on <strong>Pinterest</strong> — ride the wave.",
-          "Produce more <strong>Video</strong> content across platforms.",
+          "Produce more <strong>Short</strong> content across platforms.",
           "Cross-promote top-performing content between platforms (e.g., TikTok → Reel → Short)."
         ]
       }
@@ -229,7 +229,7 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 137275,
+        "value": 137293,
         "delta": 0
       },
       {
@@ -259,8 +259,8 @@
         {
           "label": "Followers",
           "data": [
-            137275,
-            137275
+            137293,
+            137293
           ],
           "color": "#E4405F"
         }
@@ -296,30 +296,30 @@
     "trafficSources": null,
     "deviceTypes": null,
     "watchTime": null,
-    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Sunday, 11-Oct-26 03:34:13 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AT12pUeRZ0j55j5edTNTty7\"}}"
+    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Monday, 12-Oct-26 04:37:48 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AAsqjo7JqO3vsvlnldQ0fOE\"}}"
   },
   "facebook": {
     "kpis": [
       {
         "label": "Followers",
-        "value": 35480,
-        "delta": 499
+        "value": 35547,
+        "delta": 498
       },
       {
         "label": "Posts This Week",
         "value": 11,
-        "delta": 4
+        "delta": 3
       },
       {
         "label": "Total Reactions",
-        "value": 173,
-        "delta": 394.3,
+        "value": 40,
+        "delta": -28.6,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Shares",
-        "value": 12,
-        "delta": null,
+        "value": 5,
+        "delta": 400,
         "deltaSuffix": "%"
       }
     ],
@@ -332,8 +332,8 @@
         {
           "label": "Followers",
           "data": [
-            34981,
-            35480
+            35049,
+            35547
           ],
           "color": "#1877F2"
         }
@@ -341,31 +341,48 @@
     },
     "topPosts": [
       {
-        "title": "TIME to learn more! How many times did you say “almost done” today?",
-        "date": "Oct 4",
-        "format": "Video",
-        "reactions": 151,
-        "comments": 81,
-        "shares": 9,
+        "title": "Bring Halloween themes into foundational practice with three interactive adapted",
+        "date": "Oct 11",
+        "format": "Photo",
+        "reactions": 10,
+        "comments": 1,
+        "shares": 2,
         "reactionBreakdown": {
-          "like": 141,
-          "love": 10,
+          "like": 8,
+          "love": 2,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 241
+        "engagements": 13
       },
       {
         "title": "GHOST for fun Halloween themes that target higher-level independent work skills ",
         "date": "Oct 6",
         "format": "Photo",
-        "reactions": 4,
+        "reactions": 5,
         "comments": 1,
         "shares": 2,
         "reactionBreakdown": {
-          "like": 4,
+          "like": 5,
+          "love": 0,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 8
+      },
+      {
+        "title": "Setting up a K–1 classroom means making room for learning, play, movement, and a",
+        "date": "Oct 5",
+        "format": "Video",
+        "reactions": 7,
+        "comments": 0,
+        "shares": 0,
+        "reactionBreakdown": {
+          "like": 7,
           "love": 0,
           "haha": 0,
           "wow": 0,
@@ -375,8 +392,8 @@
         "engagements": 7
       },
       {
-        "title": "Setting up a K–1 classroom means making room for learning, play, movement, and a",
-        "date": "Oct 5",
+        "title": "The data sheet is filled out. Now what?",
+        "date": "Oct 10",
         "format": "Video",
         "reactions": 6,
         "comments": 0,
@@ -390,6 +407,23 @@
           "angry": 0
         },
         "engagements": 6
+      },
+      {
+        "title": "By October, you know which parts",
+        "date": "Oct 9",
+        "format": "Photo",
+        "reactions": 5,
+        "comments": 0,
+        "shares": 0,
+        "reactionBreakdown": {
+          "like": 5,
+          "love": 0,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 5
       },
       {
         "title": "PD to learn more. Your planning period fills up fast when you’re working through",
@@ -409,25 +443,8 @@
         "engagements": 4
       },
       {
-        "title": "By October, you know which parts",
+        "title": "PD to learn more. By October, you’ve had time to see which routines are working ",
         "date": "Oct 9",
-        "format": "Photo",
-        "reactions": 4,
-        "comments": 0,
-        "shares": 0,
-        "reactionBreakdown": {
-          "like": 4,
-          "love": 0,
-          "haha": 0,
-          "wow": 0,
-          "sad": 0,
-          "angry": 0
-        },
-        "engagements": 4
-      },
-      {
-        "title": "The data sheet is filled out. Now what?",
-        "date": "Oct 10",
         "format": "Video",
         "reactions": 2,
         "comments": 0,
@@ -458,73 +475,55 @@
           "angry": 0
         },
         "engagements": 2
-      },
-      {
-        "title": "PD to learn more. By October, you’ve had time to see which routines are working ",
-        "date": "Oct 9",
-        "format": "Video",
-        "reactions": 1,
-        "comments": 0,
-        "shares": 0,
-        "reactionBreakdown": {
-          "like": 1,
-          "love": 0,
-          "haha": 0,
-          "wow": 0,
-          "sad": 0,
-          "angry": 0
-        },
-        "engagements": 1
       }
     ],
     "insights": {
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>499 net new followers</strong> this week.",
-          "Top post: \"<strong>TIME to learn more! How many times did you say “almost done” today?</strong>\" (Video) drove the most engagement.",
-          "Engagement volume up <strong>603%</strong> vs last week — momentum building."
+          "<strong>498 net new followers</strong> this week.",
+          "Top post: \"<strong>Bring Halloween themes into foundational practice with three interactive adapted</strong>\" (Photo) drove the most engagement."
         ]
       },
       "pivot": {
-        "headline": "Small tweaks to try",
+        "headline": "Engagement dipped week-over-week",
         "bullets": [
-          "One post drove 90% of this week's engagement — concentration risk. Spread the bets."
+          "Total engagement down <strong>29%</strong>. Investigate posting cadence and formats."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Video</strong> content — averaged 43 engagements per post, <strong>2050% above</strong> the next format.",
-          "Schedule your next post for <strong>Thu around 1 PM CT</strong> — historically your highest-engagement window (avg 332 engagements)."
+          "More <strong>Photo</strong> content — averaged 5 engagements per post, <strong>25% above</strong> the next format.",
+          "Schedule your next post for <strong>Thu around 1 PM CT</strong> — historically your highest-engagement window (avg 333 engagements)."
         ]
       }
     },
     "demographics": null,
     "demographicsNote": "Facebook Page demographic data was retired by Meta in 2024 (Graph API v18+). Instagram demographics above are a reasonable proxy for your overall Meta audience.",
     "followerChurn": {
-      "gained": 246882,
+      "gained": 247375,
       "lost": null,
       "lostNote": "Facebook doesn't expose unfollow counts via the Graph API. We report gains only.",
-      "net": 246882
+      "net": 247375
     },
     "actionFunnel": {
-      "pageViews": 3386,
+      "pageViews": 3469,
       "ctaClicks": 0,
       "note": "Facebook Page view / CTA click data may be unavailable if your Page hasn't enabled Professional Dashboard analytics."
     },
     "formatPerformance": [
       {
-        "format": "Video",
+        "format": "Photo",
         "count": 6,
-        "avgEngagement": 43,
+        "avgEngagement": 5,
         "avgReach": 0,
         "avgViews": 0
       },
       {
-        "format": "Photo",
+        "format": "Video",
         "count": 5,
-        "avgEngagement": 2,
+        "avgEngagement": 4,
         "avgReach": 0,
         "avgViews": 0
       }
@@ -532,7 +531,7 @@
     "bestTimeToPost": {
       "topDay": "Thu",
       "topHour": 18,
-      "topAvgEng": 332,
+      "topAvgEng": 333,
       "heatmap": [
         [
           null,
@@ -552,13 +551,13 @@
           null,
           null,
           null,
+          13,
           null,
-          null,
-          241,
+          242,
           null,
           1,
           null,
-          14
+          10
         ],
         [
           null,
@@ -604,7 +603,7 @@
           11,
           null,
           15,
-          11,
+          12,
           null,
           null,
           14,
@@ -657,18 +656,18 @@
           null,
           null,
           4,
-          332,
+          333,
           2,
           61,
-          24,
+          25,
           null,
           null
         ],
         [
           null,
-          50,
+          51,
           null,
-          321,
+          328,
           null,
           null,
           null,
@@ -706,7 +705,7 @@
           null,
           33,
           null,
-          2,
+          6,
           0,
           null,
           4,
@@ -726,13 +725,13 @@
         "Fri",
         "Sat"
       ],
-      "sampleSize": 70,
+      "sampleSize": 69,
       "note": "Best time computed from historical post engagement (UTC hours; frontend converts to CT)."
     },
     "stories": null,
     "reactionBreakdown": {
-      "like": 164,
-      "love": 10,
+      "like": 39,
+      "love": 2,
       "haha": 0,
       "wow": 0,
       "sad": 0,
@@ -784,23 +783,11 @@
         }
       ]
     },
-    "topPosts": [
-      {
-        "title": "(untitled pin)",
-        "date": "Jul 18",
-        "format": "Standard",
-        "saves": 0,
-        "comments": 0,
-        "repins": 0,
-        "engagements": 0
-      }
-    ],
+    "topPosts": [],
     "insights": {
       "working": {
         "headline": "Steady engagement this week",
-        "bullets": [
-          "Top post: \"<strong>(untitled pin)</strong>\" (Standard) drove the most engagement."
-        ]
+        "bullets": []
       },
       "pivot": {
         "headline": "Small tweaks to try",
@@ -811,7 +798,6 @@
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Standard</strong> content — highest engagement this week.",
           "Mix in a fresh format to test audience response."
         ]
       }
@@ -839,7 +825,7 @@
       {
         "label": "Videos Posted",
         "value": 0,
-        "delta": -2
+        "delta": -3
       },
       {
         "label": "Total Views",
@@ -879,7 +865,8 @@
       "pivot": {
         "headline": "Engagement dipped week-over-week",
         "bullets": [
-          "Total engagement down <strong>100%</strong>. Investigate posting cadence and formats."
+          "Total engagement down <strong>100%</strong>. Investigate posting cadence and formats.",
+          "Posting cadence dropped to <strong>0</strong> posts (from 3). Restore volume with evergreen re-posts."
         ]
       },
       "postMore": {
@@ -916,13 +903,13 @@
       },
       {
         "label": "Total Views",
-        "value": 2085,
+        "value": 2172,
         "delta": null,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 52,
+        "value": 55,
         "delta": null,
         "deltaSuffix": "%"
       }
@@ -952,7 +939,7 @@
         "format": "Short",
         "length": "0:17",
         "durationSec": 17,
-        "views": 736,
+        "views": 744,
         "likes": 20,
         "comments": 0,
         "engagements": 20,
@@ -972,10 +959,10 @@
         "format": "Short",
         "length": "0:53",
         "durationSec": 53,
-        "views": 517,
-        "likes": 13,
+        "views": 550,
+        "likes": 16,
         "comments": 1,
-        "engagements": 14,
+        "engagements": 17,
         "watchMinutes": null,
         "watchTimeMinutes": null,
         "averageViewDurationSec": null,
@@ -992,7 +979,7 @@
         "format": "Short",
         "length": "0:20",
         "durationSec": 20,
-        "views": 131,
+        "views": 137,
         "likes": 7,
         "comments": 0,
         "engagements": 7,
@@ -1012,7 +999,7 @@
         "format": "Short",
         "length": "0:40",
         "durationSec": 40,
-        "views": 149,
+        "views": 168,
         "likes": 6,
         "comments": 0,
         "engagements": 6,
@@ -1032,7 +1019,7 @@
         "format": "Short",
         "length": "0:06",
         "durationSec": 6,
-        "views": 552,
+        "views": 573,
         "likes": 6,
         "comments": 0,
         "engagements": 6,
@@ -1062,7 +1049,7 @@
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Video</strong> content — averaged 35 engagements per post, <strong>133% above</strong> the next format.",
+          "More <strong>Video</strong> content — averaged 36 engagements per post, <strong>140% above</strong> the next format.",
           "Schedule your next post for <strong>Wed around 2 PM CT</strong> — historically your highest-engagement window (avg 47 engagements)."
         ]
       }
@@ -1075,17 +1062,17 @@
       {
         "format": "Video",
         "count": 9,
-        "avgEngagement": 35,
-        "avgReach": 1321,
-        "avgViews": 1321,
+        "avgEngagement": 36,
+        "avgReach": 1328,
+        "avgViews": 1328,
         "avgWatchMinutes": null
       },
       {
         "format": "Short",
         "count": 41,
         "avgEngagement": 15,
-        "avgReach": 982,
-        "avgViews": 982,
+        "avgReach": 985,
+        "avgViews": 985,
         "avgWatchMinutes": null
       }
     ],
@@ -1186,14 +1173,14 @@
           null,
           null,
           null,
-          23,
+          24,
           34,
           19,
           20,
           null,
           null,
           47,
-          24,
+          26,
           null,
           null,
           null
@@ -1215,7 +1202,7 @@
           15,
           26,
           24,
-          10,
+          12,
           null,
           null,
           null,
@@ -1244,7 +1231,7 @@
           6,
           23,
           null,
-          19,
+          20,
           null,
           null,
           null,
