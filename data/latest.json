@@ -1,32 +1,32 @@
 {
   "meta": {
-    "week": "2026-10-08/2026-10-14",
-    "weekLabel": "Oct 8 – Oct 14, 2026",
-    "generatedAt": "2026-10-15T08:48:25.137Z",
+    "week": "2026-10-09/2026-10-15",
+    "weekLabel": "Oct 9 – Oct 15, 2026",
+    "generatedAt": "2026-10-16T08:43:19.637Z",
     "source": "meta-graph-api + youtube-data+analytics-api + apify",
     "windowType": "trailing-7-days"
   },
   "overview": {
     "totals": {
-      "followers": 497547,
-      "followersDelta": 557,
-      "engagements": 149,
-      "engagementsDeltaPct": -99.3,
-      "posts": 15,
+      "followers": 497622,
+      "followersDelta": 628,
+      "engagements": 245,
+      "engagementsDeltaPct": -17.5,
+      "posts": 13,
       "postsDelta": 1,
       "topPlatform": "Facebook"
     },
     "platformSummary": [
       {
         "name": "Instagram",
-        "followers": 137319,
+        "followers": 137351,
         "followersDelta": 0,
         "topFormat": "—"
       },
       {
         "name": "Facebook",
-        "followers": 35728,
-        "followersDelta": 457,
+        "followers": 35871,
+        "followersDelta": 528,
         "topFormat": "Photo"
       },
       {
@@ -37,7 +37,7 @@
       },
       {
         "name": "Tiktok",
-        "followers": 55800,
+        "followers": 55700,
         "followersDelta": 0,
         "topFormat": "—"
       },
@@ -45,7 +45,7 @@
         "name": "Youtube",
         "followers": 53700,
         "followersDelta": 100,
-        "topFormat": "Short"
+        "topFormat": "Video"
       }
     ],
     "platformMix": {
@@ -58,10 +58,10 @@
       ],
       "data": [
         0,
-        116,
+        227,
         0,
         0,
-        33
+        18
       ],
       "colors": [
         "#E4405F",
@@ -80,16 +80,16 @@
         {
           "label": "Instagram",
           "data": [
-            137319,
-            137319
+            137351,
+            137351
           ],
           "color": "#E4405F"
         },
         {
           "label": "Facebook",
           "data": [
-            35271,
-            35728
+            35343,
+            35871
           ],
           "color": "#1877F2"
         },
@@ -104,8 +104,8 @@
         {
           "label": "Tiktok",
           "data": [
-            55800,
-            55800
+            55700,
+            55700
           ],
           "color": "#111"
         },
@@ -126,7 +126,7 @@
         "date": "Oct 14",
         "format": "Photo",
         "views": 0,
-        "engagements": 70
+        "engagements": 176
       },
       {
         "title": "Bring Halloween themes into foundational practice with three interactive adapted",
@@ -134,15 +134,15 @@
         "date": "Oct 11",
         "format": "Photo",
         "views": 0,
-        "engagements": 17
+        "engagements": 18
       },
       {
-        "title": "ABC Data Checklist",
+        "title": "Sensory Gym Tour | Activities, Equipment & Visual Supports for an Autism Classroom",
         "platform": "Youtube",
-        "date": "Oct 8",
-        "format": "Short",
-        "views": 616,
-        "engagements": 17
+        "date": "Oct 14",
+        "format": "Video",
+        "views": 435,
+        "engagements": 10
       },
       {
         "title": "The data sheet is filled out. Now what?",
@@ -153,19 +153,11 @@
         "engagements": 8
       },
       {
-        "title": "Sensory Gym Tour | Activities, Equipment & Visual Supports for an Autism Classroom",
-        "platform": "Youtube",
-        "date": "Oct 14",
-        "format": "Video",
-        "views": 228,
-        "engagements": 8
-      },
-      {
         "title": "Feelings Check In Packet",
         "platform": "Youtube",
         "date": "Oct 9",
         "format": "Short",
-        "views": 222,
+        "views": 234,
         "engagements": 8
       },
       {
@@ -177,10 +169,10 @@
         "engagements": 6
       },
       {
-        "title": "By October, you know which parts",
+        "title": "FALL to learn more! ",
         "platform": "Facebook",
-        "date": "Oct 9",
-        "format": "Photo",
+        "date": "Oct 15",
+        "format": "Video",
         "views": 0,
         "engagements": 5
       },
@@ -190,7 +182,15 @@
         "date": "Oct 12",
         "format": "Video",
         "views": 0,
-        "engagements": 4
+        "engagements": 5
+      },
+      {
+        "title": "By October, you know which parts",
+        "platform": "Facebook",
+        "date": "Oct 9",
+        "format": "Photo",
+        "views": 0,
+        "engagements": 5
       },
       {
         "title": "PD to learn more. By October, you’ve had time to see which routines are working ",
@@ -229,7 +229,7 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 137319,
+        "value": 137351,
         "delta": 0
       },
       {
@@ -259,8 +259,8 @@
         {
           "label": "Followers",
           "data": [
-            137319,
-            137319
+            137351,
+            137351
           ],
           "color": "#E4405F"
         }
@@ -296,30 +296,30 @@
     "trafficSources": null,
     "deviceTypes": null,
     "watchTime": null,
-    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Thursday, 15-Oct-26 01:48:15 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AhS3-T1rjnkmst6UF9v_PYC\"}}"
+    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Friday, 16-Oct-26 01:43:08 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AKbl_L0ucY8TLTpmnhmSAQk\"}}"
   },
   "facebook": {
     "kpis": [
       {
         "label": "Followers",
-        "value": 35728,
-        "delta": 457
+        "value": 35871,
+        "delta": 528
       },
       {
         "label": "Posts This Week",
-        "value": 12,
-        "delta": 5
+        "value": 11,
+        "delta": 3
       },
       {
         "label": "Total Reactions",
-        "value": 60,
-        "delta": -60,
+        "value": 99,
+        "delta": -41.8,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Shares",
-        "value": 12,
-        "delta": 20,
+        "value": 23,
+        "delta": 109.1,
         "deltaSuffix": "%"
       }
     ],
@@ -332,8 +332,8 @@
         {
           "label": "Followers",
           "data": [
-            35271,
-            35728
+            35343,
+            35871
           ],
           "color": "#1877F2"
         }
@@ -344,35 +344,35 @@
         "title": "CHOICE to learn more! You’ve modeled asking for help, and reminded everyone what",
         "date": "Oct 14",
         "format": "Photo",
-        "reactions": 20,
-        "comments": 42,
-        "shares": 8,
+        "reactions": 56,
+        "comments": 100,
+        "shares": 20,
         "reactionBreakdown": {
-          "like": 15,
-          "love": 5,
+          "like": 47,
+          "love": 9,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 70
+        "engagements": 176
       },
       {
         "title": "Bring Halloween themes into foundational practice with three interactive adapted",
         "date": "Oct 11",
         "format": "Photo",
-        "reactions": 14,
+        "reactions": 15,
         "comments": 1,
         "shares": 2,
         "reactionBreakdown": {
-          "like": 11,
+          "like": 12,
           "love": 3,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 17
+        "engagements": 18
       },
       {
         "title": "The data sheet is filled out. Now what?",
@@ -409,6 +409,40 @@
         "engagements": 6
       },
       {
+        "title": "FALL to learn more! ",
+        "date": "Oct 15",
+        "format": "Video",
+        "reactions": 2,
+        "comments": 3,
+        "shares": 0,
+        "reactionBreakdown": {
+          "like": 2,
+          "love": 0,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 5
+      },
+      {
+        "title": "ERRORLESS to learn more! ",
+        "date": "Oct 12",
+        "format": "Video",
+        "reactions": 4,
+        "comments": 1,
+        "shares": 0,
+        "reactionBreakdown": {
+          "like": 4,
+          "love": 0,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 5
+      },
+      {
         "title": "By October, you know which parts",
         "date": "Oct 9",
         "format": "Photo",
@@ -426,23 +460,6 @@
         "engagements": 5
       },
       {
-        "title": "ERRORLESS to learn more! ",
-        "date": "Oct 12",
-        "format": "Video",
-        "reactions": 3,
-        "comments": 1,
-        "shares": 0,
-        "reactionBreakdown": {
-          "like": 3,
-          "love": 0,
-          "haha": 0,
-          "wow": 0,
-          "sad": 0,
-          "angry": 0
-        },
-        "engagements": 4
-      },
-      {
         "title": "PD to learn more. By October, you’ve had time to see which routines are working ",
         "date": "Oct 9",
         "format": "Video",
@@ -458,73 +475,56 @@
           "angry": 0
         },
         "engagements": 4
-      },
-      {
-        "title": "Join Grace for a full 2026-2027 classroom tour of her kindergarten self-containe",
-        "date": "Oct 13",
-        "format": "Photo",
-        "reactions": 1,
-        "comments": 0,
-        "shares": 1,
-        "reactionBreakdown": {
-          "like": 1,
-          "love": 0,
-          "haha": 0,
-          "wow": 0,
-          "sad": 0,
-          "angry": 0
-        },
-        "engagements": 2
       }
     ],
     "insights": {
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>457 net new followers</strong> this week.",
+          "<strong>528 net new followers</strong> this week.",
           "Top post: \"<strong>CHOICE to learn more! You’ve modeled asking for help, and reminded everyone what</strong>\" (Photo) drove the most engagement."
         ]
       },
       "pivot": {
         "headline": "Engagement dipped week-over-week",
         "bullets": [
-          "Total engagement down <strong>48%</strong>. Investigate posting cadence and formats.",
-          "One post drove 60% of this week's engagement — concentration risk. Spread the bets."
+          "Total engagement down <strong>14%</strong>. Investigate posting cadence and formats.",
+          "One post drove 78% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Photo</strong> content — averaged 14 engagements per post, <strong>180% above</strong> the next format.",
-          "Schedule your next post for <strong>Fri around 10 PM CT</strong> — historically your highest-engagement window (avg 337 engagements)."
+          "More <strong>Photo</strong> content — averaged 34 engagements per post, <strong>467% above</strong> the next format.",
+          "Schedule your next post for <strong>Fri around 10 PM CT</strong> — historically your highest-engagement window (avg 339 engagements)."
         ]
       }
     },
     "demographics": null,
     "demographicsNote": "Facebook Page demographic data was retired by Meta in 2024 (Graph API v18+). Instagram demographics above are a reasonable proxy for your overall Meta audience.",
     "followerChurn": {
-      "gained": 248739,
+      "gained": 249274,
       "lost": null,
       "lostNote": "Facebook doesn't expose unfollow counts via the Graph API. We report gains only.",
-      "net": 248739
+      "net": 249274
     },
     "actionFunnel": {
-      "pageViews": 3459,
+      "pageViews": 3832,
       "ctaClicks": 0,
       "note": "Facebook Page view / CTA click data may be unavailable if your Page hasn't enabled Professional Dashboard analytics."
     },
     "formatPerformance": [
       {
         "format": "Photo",
-        "count": 7,
-        "avgEngagement": 14,
+        "count": 6,
+        "avgEngagement": 34,
         "avgReach": 0,
         "avgViews": 0
       },
       {
         "format": "Video",
         "count": 5,
-        "avgEngagement": 5,
+        "avgEngagement": 6,
         "avgReach": 0,
         "avgViews": 0
       }
@@ -532,7 +532,7 @@
     "bestTimeToPost": {
       "topDay": "Fri",
       "topHour": 3,
-      "topAvgEng": 337,
+      "topAvgEng": 339,
       "heatmap": [
         [
           null,
@@ -552,13 +552,13 @@
           null,
           null,
           null,
-          17,
+          18,
           null,
-          248,
+          252,
           null,
           1,
           null,
-          10
+          11
         ],
         [
           null,
@@ -584,7 +584,7 @@
           16,
           null,
           null,
-          4
+          5
         ],
         [
           null,
@@ -603,7 +603,7 @@
           null,
           11,
           null,
-          9,
+          10,
           5,
           null,
           null,
@@ -615,7 +615,7 @@
         [
           5,
           null,
-          70,
+          176,
           null,
           null,
           null,
@@ -657,10 +657,10 @@
           null,
           null,
           4,
-          336,
-          2,
-          61,
-          25,
+          33,
+          4,
+          94,
+          null,
           null,
           null
         ],
@@ -668,7 +668,7 @@
           null,
           51,
           null,
-          337,
+          339,
           null,
           null,
           null,
@@ -687,7 +687,7 @@
           10,
           null,
           null,
-          18,
+          19,
           null
         ],
         [
@@ -726,13 +726,13 @@
         "Fri",
         "Sat"
       ],
-      "sampleSize": 62,
+      "sampleSize": 59,
       "note": "Best time computed from historical post engagement (UTC hours; frontend converts to CT)."
     },
     "stories": null,
     "reactionBreakdown": {
-      "like": 54,
-      "love": 8,
+      "like": 88,
+      "love": 12,
       "haha": 0,
       "wow": 0,
       "sad": 0,
@@ -820,24 +820,24 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 55800,
+        "value": 55700,
         "delta": 0
       },
       {
         "label": "Videos Posted",
         "value": 0,
-        "delta": -4
+        "delta": 0
       },
       {
         "label": "Total Views",
         "value": 0,
-        "delta": -100,
+        "delta": null,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
         "value": 0,
-        "delta": -100,
+        "delta": null,
         "deltaSuffix": "%"
       }
     ],
@@ -850,8 +850,8 @@
         {
           "label": "Followers",
           "data": [
-            55800,
-            55800
+            55700,
+            55700
           ],
           "color": "#111"
         }
@@ -864,10 +864,9 @@
         "bullets": []
       },
       "pivot": {
-        "headline": "Engagement dipped week-over-week",
+        "headline": "Small tweaks to try",
         "bullets": [
-          "Total engagement down <strong>100%</strong>. Investigate posting cadence and formats.",
-          "Posting cadence dropped to <strong>0</strong> posts (from 4). Restore volume with evergreen re-posts."
+          "Nothing urgent — stay the course."
         ]
       },
       "postMore": {
@@ -899,19 +898,19 @@
       },
       {
         "label": "Videos Posted",
-        "value": 3,
-        "delta": 0
+        "value": 2,
+        "delta": -2
       },
       {
         "label": "Total Views",
-        "value": 1066,
-        "delta": 22.4,
+        "value": 669,
+        "delta": -51.1,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 31,
-        "delta": 72.2,
+        "value": 17,
+        "delta": -46.9,
         "deltaSuffix": "%"
       }
     ],
@@ -933,26 +932,6 @@
     },
     "topPosts": [
       {
-        "id": "n3s_vnzOLXU",
-        "title": "ABC Data Checklist",
-        "date": "Oct 8",
-        "timestamp": "2026-10-08T16:00:07Z",
-        "format": "Short",
-        "length": "0:53",
-        "durationSec": 53,
-        "views": 616,
-        "likes": 16,
-        "comments": 1,
-        "engagements": 17,
-        "watchMinutes": null,
-        "watchTimeMinutes": null,
-        "averageViewDurationSec": null,
-        "averageViewPercentage": null,
-        "subscribersGained": null,
-        "url": "https://www.youtube.com/watch?v=n3s_vnzOLXU",
-        "thumbnail": "https://i.ytimg.com/vi/n3s_vnzOLXU/hqdefault.jpg"
-      },
-      {
         "id": "fZDWGHpteSA",
         "title": "Sensory Gym Tour | Activities, Equipment & Visual Supports for an Autism Classroom",
         "date": "Oct 14",
@@ -960,10 +939,10 @@
         "format": "Video",
         "length": "4:54",
         "durationSec": 294,
-        "views": 228,
-        "likes": 7,
+        "views": 435,
+        "likes": 9,
         "comments": 1,
-        "engagements": 8,
+        "engagements": 10,
         "watchMinutes": null,
         "watchTimeMinutes": null,
         "averageViewDurationSec": null,
@@ -980,7 +959,7 @@
         "format": "Short",
         "length": "0:40",
         "durationSec": 40,
-        "views": 222,
+        "views": 234,
         "likes": 8,
         "comments": 0,
         "engagements": 8,
@@ -998,14 +977,14 @@
         "headline": "Audience is growing",
         "bullets": [
           "<strong>100 net new followers</strong> this week.",
-          "Top post: \"<strong>ABC Data Checklist</strong>\" (Short) drove the most engagement.",
-          "Engagement volume up <strong>83%</strong> vs last week — momentum building."
+          "Top post: \"<strong>Sensory Gym Tour | Activities, Equipment & Visual Supports for an Autism Classroom</strong>\" (Video) drove the most engagement."
         ]
       },
       "pivot": {
-        "headline": "Small tweaks to try",
+        "headline": "Engagement dipped week-over-week",
         "bullets": [
-          "One post drove 52% of this week's engagement — concentration risk. Spread the bets."
+          "Total engagement down <strong>45%</strong>. Investigate posting cadence and formats.",
+          "One post drove 56% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
@@ -1025,16 +1004,16 @@
         "format": "Video",
         "count": 9,
         "avgEngagement": 35,
-        "avgReach": 1278,
-        "avgViews": 1278,
+        "avgReach": 1307,
+        "avgViews": 1307,
         "avgWatchMinutes": null
       },
       {
         "format": "Short",
         "count": 41,
         "avgEngagement": 15,
-        "avgReach": 995,
-        "avgViews": 995,
+        "avgReach": 999,
+        "avgViews": 999,
         "avgWatchMinutes": null
       }
     ],
@@ -1141,7 +1120,7 @@
           22,
           null,
           null,
-          28,
+          29,
           27,
           null,
           null,
@@ -1187,7 +1166,7 @@
           null,
           15,
           null,
-          23,
+          24,
           10,
           13,
           8,
