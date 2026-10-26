@@ -1,32 +1,32 @@
 {
   "meta": {
-    "week": "2026-10-18/2026-10-24",
-    "weekLabel": "Oct 18 – Oct 24, 2026",
-    "generatedAt": "2026-10-25T08:55:30.089Z",
+    "week": "2026-10-19/2026-10-25",
+    "weekLabel": "Oct 19 – Oct 25, 2026",
+    "generatedAt": "2026-10-26T09:38:59.688Z",
     "source": "meta-graph-api + youtube-data+analytics-api + apify",
     "windowType": "trailing-7-days"
   },
   "overview": {
     "totals": {
-      "followers": 498380,
-      "followersDelta": 651,
-      "engagements": 345,
-      "engagementsDeltaPct": -5,
+      "followers": 498437,
+      "followersDelta": 497,
+      "engagements": 370,
+      "engagementsDeltaPct": -7,
       "posts": 9,
-      "postsDelta": 0,
+      "postsDelta": 1,
       "topPlatform": "Facebook"
     },
     "platformSummary": [
       {
         "name": "Instagram",
-        "followers": 137275,
+        "followers": 137293,
         "followersDelta": 0,
         "topFormat": "—"
       },
       {
         "name": "Facebook",
-        "followers": 36505,
-        "followersDelta": 451,
+        "followers": 36544,
+        "followersDelta": 397,
         "topFormat": "Photo"
       },
       {
@@ -44,7 +44,7 @@
       {
         "name": "Youtube",
         "followers": 53900,
-        "followersDelta": 200,
+        "followersDelta": 100,
         "topFormat": "—"
       }
     ],
@@ -58,7 +58,7 @@
       ],
       "data": [
         0,
-        345,
+        370,
         0,
         0,
         0
@@ -80,16 +80,16 @@
         {
           "label": "Instagram",
           "data": [
-            137275,
-            137275
+            137293,
+            137293
           ],
           "color": "#E4405F"
         },
         {
           "label": "Facebook",
           "data": [
-            36054,
-            36505
+            36147,
+            36544
           ],
           "color": "#1877F2"
         },
@@ -112,7 +112,7 @@
         {
           "label": "Youtube",
           "data": [
-            53700,
+            53800,
             53900
           ],
           "color": "#FF0000"
@@ -126,7 +126,7 @@
         "date": "Oct 20",
         "format": "Photo",
         "views": 0,
-        "engagements": 243
+        "engagements": 261
       },
       {
         "title": "Special ed teachers, how are your centers going? GIFs only.",
@@ -134,7 +134,7 @@
         "date": "Oct 23",
         "format": "Video",
         "views": 0,
-        "engagements": 75
+        "engagements": 80
       },
       {
         "title": "Challenge advancing learners with 5 printable & digital workbooks, one for each ",
@@ -150,7 +150,7 @@
         "date": "Oct 22",
         "format": "Video",
         "views": 0,
-        "engagements": 7
+        "engagements": 8
       },
       {
         "title": "Reinforce academic skills with 30 FALL-themed file-folder activities, available ",
@@ -166,7 +166,7 @@
         "date": "Oct 24",
         "format": "Video",
         "views": 0,
-        "engagements": 2
+        "engagements": 3
       },
       {
         "title": "In this episode, Dr. Becca Tagg discusses comorbid or co-occurring conditions in",
@@ -213,7 +213,7 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 137275,
+        "value": 137293,
         "delta": 0
       },
       {
@@ -243,8 +243,8 @@
         {
           "label": "Followers",
           "data": [
-            137275,
-            137275
+            137293,
+            137293
           ],
           "color": "#E4405F"
         }
@@ -280,23 +280,23 @@
     "trafficSources": null,
     "deviceTypes": null,
     "watchTime": null,
-    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Sunday, 25-Oct-26 01:55:24 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"Al1v2rMx7RFrtyNbTJWbZFY\"}}"
+    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Monday, 26-Oct-26 02:38:52 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A2kBFW80HD3D-ZLtlnvzJv1\"}}"
   },
   "facebook": {
     "kpis": [
       {
         "label": "Followers",
-        "value": 36505,
-        "delta": 451
+        "value": 36544,
+        "delta": 397
       },
       {
         "label": "Posts This Week",
         "value": 9,
-        "delta": 1
+        "delta": 2
       },
       {
         "label": "Total Reactions",
-        "value": 110,
+        "value": 115,
         "delta": -16.7,
         "deltaSuffix": "%"
       },
@@ -316,8 +316,8 @@
         {
           "label": "Followers",
           "data": [
-            36054,
-            36505
+            36147,
+            36544
           ],
           "color": "#1877F2"
         }
@@ -328,35 +328,35 @@
         "title": "NECKLACE to learn more! ",
         "date": "Oct 20",
         "format": "Photo",
-        "reactions": 65,
-        "comments": 159,
+        "reactions": 66,
+        "comments": 176,
         "shares": 19,
         "reactionBreakdown": {
-          "like": 59,
+          "like": 60,
           "love": 6,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 243
+        "engagements": 261
       },
       {
         "title": "Special ed teachers, how are your centers going? GIFs only.",
         "date": "Oct 23",
         "format": "Video",
-        "reactions": 24,
-        "comments": 42,
+        "reactions": 26,
+        "comments": 45,
         "shares": 9,
         "reactionBreakdown": {
-          "like": 24,
+          "like": 26,
           "love": 0,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 75
+        "engagements": 80
       },
       {
         "title": "Challenge advancing learners with 5 printable & digital workbooks, one for each ",
@@ -379,18 +379,18 @@
         "title": "FALL to learn more. Same fall theme, different learning needs? ",
         "date": "Oct 22",
         "format": "Video",
-        "reactions": 6,
+        "reactions": 7,
         "comments": 1,
         "shares": 0,
         "reactionBreakdown": {
-          "like": 6,
+          "like": 7,
           "love": 0,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 7
+        "engagements": 8
       },
       {
         "title": "Reinforce academic skills with 30 FALL-themed file-folder activities, available ",
@@ -413,18 +413,18 @@
         "title": "ERRORLESS to learn more! Have students new to independent work? ",
         "date": "Oct 24",
         "format": "Video",
-        "reactions": 1,
+        "reactions": 2,
         "comments": 1,
         "shares": 0,
         "reactionBreakdown": {
-          "like": 1,
+          "like": 2,
           "love": 0,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 2
+        "engagements": 3
       },
       {
         "title": "In this episode, Dr. Becca Tagg discusses comorbid or co-occurring conditions in",
@@ -465,34 +465,34 @@
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>451 net new followers</strong> this week.",
+          "<strong>397 net new followers</strong> this week.",
           "Top post: \"<strong>NECKLACE to learn more! </strong>\" (Photo) drove the most engagement."
         ]
       },
       "pivot": {
         "headline": "Small tweaks to try",
         "bullets": [
-          "One post drove 70% of this week's engagement — concentration risk. Spread the bets."
+          "One post drove 71% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Photo</strong> content — averaged 52 engagements per post, <strong>148% above</strong> the next format.",
-          "Schedule your next post for <strong>Wed around 9 PM CT</strong> — historically your highest-engagement window (avg 363 engagements)."
+          "More <strong>Photo</strong> content — averaged 56 engagements per post, <strong>143% above</strong> the next format.",
+          "Schedule your next post for <strong>Wed around 9 PM CT</strong> — historically your highest-engagement window (avg 364 engagements)."
         ]
       }
     },
     "demographics": null,
     "demographicsNote": "Facebook Page demographic data was retired by Meta in 2024 (Graph API v18+). Instagram demographics above are a reasonable proxy for your overall Meta audience.",
     "followerChurn": {
-      "gained": 254381,
+      "gained": 254776,
       "lost": null,
       "lostNote": "Facebook doesn't expose unfollow counts via the Graph API. We report gains only.",
-      "net": 254381
+      "net": 254776
     },
     "actionFunnel": {
-      "pageViews": 3400,
+      "pageViews": 3209,
       "ctaClicks": 0,
       "note": "Facebook Page view / CTA click data may be unavailable if your Page hasn't enabled Professional Dashboard analytics."
     },
@@ -500,14 +500,14 @@
       {
         "format": "Photo",
         "count": 5,
-        "avgEngagement": 52,
+        "avgEngagement": 56,
         "avgReach": 0,
         "avgViews": 0
       },
       {
         "format": "Video",
         "count": 4,
-        "avgEngagement": 21,
+        "avgEngagement": 23,
         "avgReach": 0,
         "avgViews": 0
       }
@@ -515,7 +515,7 @@
     "bestTimeToPost": {
       "topDay": "Wed",
       "topHour": 2,
-      "topAvgEng": 363,
+      "topAvgEng": 364,
       "heatmap": [
         [
           null,
@@ -539,7 +539,7 @@
           null,
           259,
           null,
-          1,
+          null,
           null,
           11
         ],
@@ -593,12 +593,12 @@
           6,
           null,
           null,
-          243
+          261
         ],
         [
           4,
           null,
-          363,
+          364,
           null,
           null,
           null,
@@ -641,17 +641,17 @@
           null,
           4,
           34,
-          10,
+          11,
           5,
           null,
-          7,
+          8,
           null
         ],
         [
           null,
           53,
           null,
-          348,
+          351,
           null,
           null,
           null,
@@ -667,7 +667,7 @@
           null,
           null,
           11,
-          32,
+          34,
           null,
           38,
           5,
@@ -692,7 +692,7 @@
           14,
           1,
           null,
-          2,
+          3,
           null,
           16,
           null,
@@ -709,12 +709,12 @@
         "Fri",
         "Sat"
       ],
-      "sampleSize": 57,
+      "sampleSize": 56,
       "note": "Best time computed from historical post engagement (UTC hours; frontend converts to CT)."
     },
     "stories": null,
     "reactionBreakdown": {
-      "like": 104,
+      "like": 109,
       "love": 7,
       "haha": 0,
       "wow": 0,
@@ -877,7 +877,7 @@
       {
         "label": "Subscribers",
         "value": 53900,
-        "delta": 200
+        "delta": 100
       },
       {
         "label": "Videos Posted",
@@ -906,7 +906,7 @@
         {
           "label": "Followers",
           "data": [
-            53700,
+            53800,
             53900
           ],
           "color": "#FF0000"
@@ -918,7 +918,7 @@
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>200 net new followers</strong> this week."
+          "<strong>100 net new followers</strong> this week."
         ]
       },
       "pivot": {
@@ -944,16 +944,16 @@
         "format": "Video",
         "count": 9,
         "avgEngagement": 36,
-        "avgReach": 1381,
-        "avgViews": 1381,
+        "avgReach": 1388,
+        "avgViews": 1388,
         "avgWatchMinutes": null
       },
       {
         "format": "Short",
         "count": 41,
         "avgEngagement": 15,
-        "avgReach": 1017,
-        "avgViews": 1017,
+        "avgReach": 1019,
+        "avgViews": 1019,
         "avgWatchMinutes": null
       }
     ],
@@ -1060,7 +1060,7 @@
           23,
           null,
           null,
-          30,
+          31,
           28,
           null,
           null,
@@ -1109,7 +1109,7 @@
           25,
           10,
           13,
-          11,
+          12,
           24,
           null,
           21,
