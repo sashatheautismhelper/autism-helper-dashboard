@@ -1,32 +1,32 @@
 {
   "meta": {
-    "week": "2026-10-19/2026-10-25",
-    "weekLabel": "Oct 19 – Oct 25, 2026",
-    "generatedAt": "2026-10-26T09:38:59.688Z",
+    "week": "2026-10-20/2026-10-26",
+    "weekLabel": "Oct 20 – Oct 26, 2026",
+    "generatedAt": "2026-10-27T09:33:50.497Z",
     "source": "meta-graph-api + youtube-data+analytics-api + apify",
     "windowType": "trailing-7-days"
   },
   "overview": {
     "totals": {
-      "followers": 498437,
-      "followersDelta": 497,
-      "engagements": 370,
-      "engagementsDeltaPct": -7,
-      "posts": 9,
-      "postsDelta": 1,
+      "followers": 498484,
+      "followersDelta": 468,
+      "engagements": 376,
+      "engagementsDeltaPct": -8.5,
+      "posts": 8,
+      "postsDelta": -1,
       "topPlatform": "Facebook"
     },
     "platformSummary": [
       {
         "name": "Instagram",
-        "followers": 137293,
+        "followers": 137310,
         "followersDelta": 0,
         "topFormat": "—"
       },
       {
         "name": "Facebook",
-        "followers": 36544,
-        "followersDelta": 397,
+        "followers": 36574,
+        "followersDelta": 368,
         "topFormat": "Photo"
       },
       {
@@ -45,7 +45,7 @@
         "name": "Youtube",
         "followers": 53900,
         "followersDelta": 100,
-        "topFormat": "—"
+        "topFormat": "Short"
       }
     ],
     "platformMix": {
@@ -58,10 +58,10 @@
       ],
       "data": [
         0,
-        370,
+        375,
         0,
         0,
-        0
+        1
       ],
       "colors": [
         "#E4405F",
@@ -80,16 +80,16 @@
         {
           "label": "Instagram",
           "data": [
-            137293,
-            137293
+            137310,
+            137310
           ],
           "color": "#E4405F"
         },
         {
           "label": "Facebook",
           "data": [
-            36147,
-            36544
+            36206,
+            36574
           ],
           "color": "#1877F2"
         },
@@ -126,7 +126,7 @@
         "date": "Oct 20",
         "format": "Photo",
         "views": 0,
-        "engagements": 261
+        "engagements": 273
       },
       {
         "title": "Special ed teachers, how are your centers going? GIFs only.",
@@ -134,15 +134,7 @@
         "date": "Oct 23",
         "format": "Video",
         "views": 0,
-        "engagements": 80
-      },
-      {
-        "title": "Challenge advancing learners with 5 printable & digital workbooks, one for each ",
-        "platform": "Facebook",
-        "date": "Oct 19",
-        "format": "Photo",
-        "views": 0,
-        "engagements": 10
+        "engagements": 83
       },
       {
         "title": "FALL to learn more. Same fall theme, different learning needs? ",
@@ -153,6 +145,14 @@
         "engagements": 8
       },
       {
+        "title": "ERRORLESS to learn more! Have students new to independent work? ",
+        "platform": "Facebook",
+        "date": "Oct 24",
+        "format": "Video",
+        "views": 0,
+        "engagements": 5
+      },
+      {
         "title": "Reinforce academic skills with 30 FALL-themed file-folder activities, available ",
         "platform": "Facebook",
         "date": "Oct 22",
@@ -161,28 +161,28 @@
         "engagements": 5
       },
       {
-        "title": "ERRORLESS to learn more! Have students new to independent work? ",
-        "platform": "Facebook",
-        "date": "Oct 24",
-        "format": "Video",
-        "views": 0,
-        "engagements": 3
-      },
-      {
-        "title": "In this episode, Dr. Becca Tagg discusses comorbid or co-occurring conditions in",
-        "platform": "Facebook",
-        "date": "Oct 19",
-        "format": "Photo",
-        "views": 0,
-        "engagements": 2
-      },
-      {
         "title": "TURKEY for 8 digital, interactive build-a-turkey activities targeting matching, ",
         "platform": "Facebook",
         "date": "Oct 20",
         "format": "Photo",
         "views": 0,
         "engagements": 1
+      },
+      {
+        "title": "Easy Matching Weekly Workbooks - Halloween Edition",
+        "platform": "Youtube",
+        "date": "Oct 26",
+        "format": "Short",
+        "views": 162,
+        "engagements": 1
+      },
+      {
+        "title": "In this episode, I'm joined by Dr. Annie McLaughlin, PhD, BCBA-D, LBA, a behavio",
+        "platform": "Facebook",
+        "date": "Oct 26",
+        "format": "Photo",
+        "views": 0,
+        "engagements": 0
       }
     ],
     "insights": {
@@ -213,7 +213,7 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 137293,
+        "value": 137310,
         "delta": 0
       },
       {
@@ -243,8 +243,8 @@
         {
           "label": "Followers",
           "data": [
-            137293,
-            137293
+            137310,
+            137310
           ],
           "color": "#E4405F"
         }
@@ -280,30 +280,30 @@
     "trafficSources": null,
     "deviceTypes": null,
     "watchTime": null,
-    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Monday, 26-Oct-26 02:38:52 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"A2kBFW80HD3D-ZLtlnvzJv1\"}}"
+    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Tuesday, 27-Oct-26 02:33:42 PDT.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AFHnx0B5cwWqwwc--z2obML\"}}"
   },
   "facebook": {
     "kpis": [
       {
         "label": "Followers",
-        "value": 36544,
-        "delta": 397
+        "value": 36574,
+        "delta": 368
       },
       {
         "label": "Posts This Week",
-        "value": 9,
-        "delta": 2
+        "value": 7,
+        "delta": -1
       },
       {
         "label": "Total Reactions",
-        "value": 115,
-        "delta": -16.7,
+        "value": 108,
+        "delta": -21.2,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Shares",
-        "value": 30,
-        "delta": -30.2,
+        "value": 29,
+        "delta": -32.6,
         "deltaSuffix": "%"
       }
     ],
@@ -316,8 +316,8 @@
         {
           "label": "Followers",
           "data": [
-            36147,
-            36544
+            36206,
+            36574
           ],
           "color": "#1877F2"
         }
@@ -329,7 +329,7 @@
         "date": "Oct 20",
         "format": "Photo",
         "reactions": 66,
-        "comments": 176,
+        "comments": 188,
         "shares": 19,
         "reactionBreakdown": {
           "like": 60,
@@ -339,41 +339,24 @@
           "sad": 0,
           "angry": 0
         },
-        "engagements": 261
+        "engagements": 273
       },
       {
         "title": "Special ed teachers, how are your centers going? GIFs only.",
         "date": "Oct 23",
         "format": "Video",
-        "reactions": 26,
-        "comments": 45,
+        "reactions": 28,
+        "comments": 46,
         "shares": 9,
         "reactionBreakdown": {
-          "like": 26,
+          "like": 28,
           "love": 0,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 80
-      },
-      {
-        "title": "Challenge advancing learners with 5 printable & digital workbooks, one for each ",
-        "date": "Oct 19",
-        "format": "Photo",
-        "reactions": 9,
-        "comments": 1,
-        "shares": 0,
-        "reactionBreakdown": {
-          "like": 9,
-          "love": 0,
-          "haha": 0,
-          "wow": 0,
-          "sad": 0,
-          "angry": 0
-        },
-        "engagements": 10
+        "engagements": 83
       },
       {
         "title": "FALL to learn more. Same fall theme, different learning needs? ",
@@ -393,6 +376,23 @@
         "engagements": 8
       },
       {
+        "title": "ERRORLESS to learn more! Have students new to independent work? ",
+        "date": "Oct 24",
+        "format": "Video",
+        "reactions": 3,
+        "comments": 2,
+        "shares": 0,
+        "reactionBreakdown": {
+          "like": 3,
+          "love": 0,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 5
+      },
+      {
         "title": "Reinforce academic skills with 30 FALL-themed file-folder activities, available ",
         "date": "Oct 22",
         "format": "Photo",
@@ -410,40 +410,6 @@
         "engagements": 5
       },
       {
-        "title": "ERRORLESS to learn more! Have students new to independent work? ",
-        "date": "Oct 24",
-        "format": "Video",
-        "reactions": 2,
-        "comments": 1,
-        "shares": 0,
-        "reactionBreakdown": {
-          "like": 2,
-          "love": 0,
-          "haha": 0,
-          "wow": 0,
-          "sad": 0,
-          "angry": 0
-        },
-        "engagements": 3
-      },
-      {
-        "title": "In this episode, Dr. Becca Tagg discusses comorbid or co-occurring conditions in",
-        "date": "Oct 19",
-        "format": "Photo",
-        "reactions": 1,
-        "comments": 0,
-        "shares": 1,
-        "reactionBreakdown": {
-          "like": 0,
-          "love": 1,
-          "haha": 0,
-          "wow": 0,
-          "sad": 0,
-          "angry": 0
-        },
-        "engagements": 2
-      },
-      {
         "title": "TURKEY for 8 digital, interactive build-a-turkey activities targeting matching, ",
         "date": "Oct 20",
         "format": "Photo",
@@ -459,26 +425,43 @@
           "angry": 0
         },
         "engagements": 1
+      },
+      {
+        "title": "In this episode, I'm joined by Dr. Annie McLaughlin, PhD, BCBA-D, LBA, a behavio",
+        "date": "Oct 26",
+        "format": "Photo",
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reactionBreakdown": {
+          "like": 0,
+          "love": 0,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 0
       }
     ],
     "insights": {
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>397 net new followers</strong> this week.",
+          "<strong>368 net new followers</strong> this week.",
           "Top post: \"<strong>NECKLACE to learn more! </strong>\" (Photo) drove the most engagement."
         ]
       },
       "pivot": {
         "headline": "Small tweaks to try",
         "bullets": [
-          "One post drove 71% of this week's engagement — concentration risk. Spread the bets."
+          "One post drove 73% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Photo</strong> content — averaged 56 engagements per post, <strong>143% above</strong> the next format.",
+          "More <strong>Photo</strong> content — averaged 70 engagements per post, <strong>119% above</strong> the next format.",
           "Schedule your next post for <strong>Wed around 9 PM CT</strong> — historically your highest-engagement window (avg 364 engagements)."
         ]
       }
@@ -486,28 +469,28 @@
     "demographics": null,
     "demographicsNote": "Facebook Page demographic data was retired by Meta in 2024 (Graph API v18+). Instagram demographics above are a reasonable proxy for your overall Meta audience.",
     "followerChurn": {
-      "gained": 254776,
+      "gained": 255152,
       "lost": null,
       "lostNote": "Facebook doesn't expose unfollow counts via the Graph API. We report gains only.",
-      "net": 254776
+      "net": 255152
     },
     "actionFunnel": {
-      "pageViews": 3209,
+      "pageViews": 2959,
       "ctaClicks": 0,
       "note": "Facebook Page view / CTA click data may be unavailable if your Page hasn't enabled Professional Dashboard analytics."
     },
     "formatPerformance": [
       {
         "format": "Photo",
-        "count": 5,
-        "avgEngagement": 56,
+        "count": 4,
+        "avgEngagement": 70,
         "avgReach": 0,
         "avgViews": 0
       },
       {
         "format": "Video",
-        "count": 4,
-        "avgEngagement": 23,
+        "count": 3,
+        "avgEngagement": 32,
         "avgReach": 0,
         "avgViews": 0
       }
@@ -564,7 +547,7 @@
           null,
           1,
           null,
-          9,
+          10,
           null,
           null,
           7
@@ -593,7 +576,7 @@
           6,
           null,
           null,
-          261
+          273
         ],
         [
           4,
@@ -667,10 +650,10 @@
           null,
           null,
           11,
-          34,
+          35,
           null,
-          38,
-          5,
+          39,
+          6,
           null
         ],
         [
@@ -692,11 +675,11 @@
           14,
           1,
           null,
-          3,
+          5,
           null,
-          16,
+          17,
           null,
-          9,
+          10,
           null
         ]
       ],
@@ -714,8 +697,8 @@
     },
     "stories": null,
     "reactionBreakdown": {
-      "like": 109,
-      "love": 7,
+      "like": 102,
+      "love": 6,
       "haha": 0,
       "wow": 0,
       "sad": 0,
@@ -881,19 +864,19 @@
       },
       {
         "label": "Videos Posted",
-        "value": 0,
-        "delta": -1
+        "value": 1,
+        "delta": 0
       },
       {
         "label": "Total Views",
-        "value": 0,
-        "delta": -100,
+        "value": 162,
+        "delta": -73.1,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 0,
-        "delta": -100,
+        "value": 1,
+        "delta": -90.9,
         "deltaSuffix": "%"
       }
     ],
@@ -913,18 +896,41 @@
         }
       ]
     },
-    "topPosts": [],
+    "topPosts": [
+      {
+        "id": "hatzcOLGRQQ",
+        "title": "Easy Matching Weekly Workbooks - Halloween Edition",
+        "date": "Oct 26",
+        "timestamp": "2026-10-26T16:00:30Z",
+        "format": "Short",
+        "length": "0:13",
+        "durationSec": 13,
+        "views": 162,
+        "likes": 1,
+        "comments": 0,
+        "engagements": 1,
+        "watchMinutes": null,
+        "watchTimeMinutes": null,
+        "averageViewDurationSec": null,
+        "averageViewPercentage": null,
+        "subscribersGained": null,
+        "url": "https://www.youtube.com/watch?v=hatzcOLGRQQ",
+        "thumbnail": "https://i.ytimg.com/vi/hatzcOLGRQQ/hqdefault.jpg"
+      }
+    ],
     "insights": {
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>100 net new followers</strong> this week."
+          "<strong>100 net new followers</strong> this week.",
+          "Top post: \"<strong>Easy Matching Weekly Workbooks - Halloween Edition</strong>\" (Short) drove the most engagement."
         ]
       },
       "pivot": {
         "headline": "Engagement dipped week-over-week",
         "bullets": [
-          "Total engagement down <strong>100%</strong>. Investigate posting cadence and formats."
+          "Total engagement down <strong>92%</strong>. Investigate posting cadence and formats.",
+          "One post drove 100% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
@@ -944,16 +950,16 @@
         "format": "Video",
         "count": 9,
         "avgEngagement": 36,
-        "avgReach": 1388,
-        "avgViews": 1388,
+        "avgReach": 1396,
+        "avgViews": 1396,
         "avgWatchMinutes": null
       },
       {
         "format": "Short",
         "count": 41,
         "avgEngagement": 15,
-        "avgReach": 1019,
-        "avgViews": 1019,
+        "avgReach": 989,
+        "avgViews": 989,
         "avgWatchMinutes": null
       }
     ],
@@ -1004,8 +1010,8 @@
           null,
           13,
           null,
-          6,
-          20,
+          7,
+          14,
           null,
           null,
           null,
@@ -1082,7 +1088,7 @@
           null,
           15,
           26,
-          24,
+          7,
           12,
           null,
           null,
@@ -1112,7 +1118,7 @@
           12,
           24,
           null,
-          21,
+          22,
           null,
           null,
           null,
