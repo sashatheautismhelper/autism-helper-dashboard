@@ -1,32 +1,32 @@
 {
   "meta": {
-    "week": "2026-10-25/2026-10-31",
-    "weekLabel": "Oct 25 – Oct 31, 2026",
-    "generatedAt": "2026-11-01T11:10:27.467Z",
+    "week": "2026-10-26/2026-11-01",
+    "weekLabel": "Oct 26 – Nov 1, 2026",
+    "generatedAt": "2026-11-02T12:08:31.864Z",
     "source": "meta-graph-api + youtube-data+analytics-api + apify",
     "windowType": "trailing-7-days"
   },
   "overview": {
     "totals": {
-      "followers": 498964,
-      "followersDelta": 584,
-      "engagements": 6736,
-      "engagementsDeltaPct": 1852.5,
-      "posts": 18,
-      "postsDelta": 9,
+      "followers": 499003,
+      "followersDelta": 566,
+      "engagements": 8241,
+      "engagementsDeltaPct": 2127.3,
+      "posts": 19,
+      "postsDelta": 10,
       "topPlatform": "Tiktok"
     },
     "platformSummary": [
       {
         "name": "Instagram",
-        "followers": 137275,
+        "followers": 137293,
         "followersDelta": 0,
         "topFormat": "—"
       },
       {
         "name": "Facebook",
-        "followers": 36689,
-        "followersDelta": 184,
+        "followers": 36710,
+        "followersDelta": 166,
         "topFormat": "Photo"
       },
       {
@@ -58,9 +58,9 @@
       ],
       "data": [
         0,
-        240,
+        265,
         0,
-        6430,
+        7910,
         66
       ],
       "colors": [
@@ -80,16 +80,16 @@
         {
           "label": "Instagram",
           "data": [
-            137275,
-            137275
+            137293,
+            137293
           ],
           "color": "#E4405F"
         },
         {
           "label": "Facebook",
           "data": [
-            36505,
-            36689
+            36544,
+            36710
           ],
           "color": "#1877F2"
         },
@@ -126,22 +126,30 @@
         "date": "Oct 29",
         "format": "Photo",
         "views": 0,
-        "engagements": 212
+        "engagements": 236
       },
       {
         "title": "Admin, join us for a free lunch and learn, The Differentiation Dilemma on Novemb",
         "platform": "Tiktok",
         "date": "Oct 28",
         "format": "0:07",
-        "views": 2388,
-        "engagements": 72
+        "views": 2431,
+        "engagements": 73
       },
       {
         "title": "Teach it before they need it. Social Stories can help students understand what t",
         "platform": "Tiktok",
         "date": "Oct 26",
         "format": "0:10",
-        "views": 841,
+        "views": 855,
+        "engagements": 25
+      },
+      {
+        "title": "Supporting students starts with supporting each other. These Behavior Crisis Vis",
+        "platform": "Tiktok",
+        "date": "Nov 1",
+        "format": "—",
+        "views": 1265,
         "engagements": 24
       },
       {
@@ -157,7 +165,7 @@
         "platform": "Youtube",
         "date": "Oct 29",
         "format": "Short",
-        "views": 1372,
+        "views": 1475,
         "engagements": 19
       },
       {
@@ -165,7 +173,7 @@
         "platform": "Tiktok",
         "date": "Oct 29",
         "format": "—",
-        "views": 1129,
+        "views": 1166,
         "engagements": 18
       },
       {
@@ -173,7 +181,7 @@
         "platform": "Youtube",
         "date": "Oct 30",
         "format": "Video",
-        "views": 522,
+        "views": 632,
         "engagements": 15
       },
       {
@@ -181,7 +189,7 @@
         "platform": "Youtube",
         "date": "Oct 27",
         "format": "Short",
-        "views": 393,
+        "views": 400,
         "engagements": 14
       },
       {
@@ -189,16 +197,8 @@
         "platform": "Tiktok",
         "date": "Oct 28",
         "format": "—",
-        "views": 715,
+        "views": 745,
         "engagements": 13
-      },
-      {
-        "title": "Special Education Teacher Professional Development",
-        "platform": "Youtube",
-        "date": "Oct 28",
-        "format": "Short",
-        "views": 899,
-        "engagements": 11
       }
     ],
     "insights": {
@@ -206,7 +206,7 @@
         "headline": "Pinterest is leading growth",
         "bullets": [
           "<strong>Pinterest</strong> added 215,000 followers — our fastest grower this week.",
-          "<strong>0:07</strong> is the highest-engaging format this week across all platforms."
+          "<strong>—</strong> is the highest-engaging format this week across all platforms."
         ]
       },
       "pivot": {
@@ -219,7 +219,7 @@
         "headline": "Next 2 weeks — cross-platform priorities",
         "bullets": [
           "Double down on <strong>Pinterest</strong> — ride the wave.",
-          "Produce more <strong>0:07</strong> content across platforms.",
+          "Produce more <strong>—</strong> content across platforms.",
           "Cross-promote top-performing content between platforms (e.g., TikTok → Reel → Short)."
         ]
       }
@@ -229,7 +229,7 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 137275,
+        "value": 137293,
         "delta": 0
       },
       {
@@ -259,8 +259,8 @@
         {
           "label": "Followers",
           "data": [
-            137275,
-            137275
+            137293,
+            137293
           ],
           "color": "#E4405F"
         }
@@ -296,14 +296,14 @@
     "trafficSources": null,
     "deviceTypes": null,
     "watchTime": null,
-    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Sunday, 01-Nov-26 02:59:53 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AA5EtO0s5oQVGyxh6nyHLtd\"}}"
+    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Monday, 02-Nov-26 03:58:12 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"ANN2_CZ2NAjBiRMRPvsNZEn\"}}"
   },
   "facebook": {
     "kpis": [
       {
         "label": "Followers",
-        "value": 36689,
-        "delta": 184
+        "value": 36710,
+        "delta": 166
       },
       {
         "label": "Posts This Week",
@@ -312,14 +312,14 @@
       },
       {
         "label": "Total Reactions",
-        "value": 137,
-        "delta": 24.5,
+        "value": 150,
+        "delta": 30.4,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Shares",
-        "value": 78,
-        "delta": 160,
+        "value": 89,
+        "delta": 196.7,
         "deltaSuffix": "%"
       }
     ],
@@ -332,8 +332,8 @@
         {
           "label": "Followers",
           "data": [
-            36505,
-            36689
+            36544,
+            36710
           ],
           "color": "#1877F2"
         }
@@ -344,18 +344,18 @@
         "title": "Special education teachers, what else would you add?",
         "date": "Oct 29",
         "format": "Photo",
-        "reactions": 127,
+        "reactions": 140,
         "comments": 9,
-        "shares": 76,
+        "shares": 87,
         "reactionBreakdown": {
-          "like": 94,
+          "like": 102,
           "love": 9,
-          "haha": 22,
+          "haha": 27,
           "wow": 0,
           "sad": 2,
           "angry": 0
         },
-        "engagements": 212
+        "engagements": 236
       },
       {
         "title": "STORY to learn more! ",
@@ -396,7 +396,7 @@
         "date": "Oct 28",
         "format": "Video",
         "reactions": 1,
-        "comments": 2,
+        "comments": 3,
         "shares": 0,
         "reactionBreakdown": {
           "like": 1,
@@ -406,7 +406,7 @@
           "sad": 0,
           "angry": 0
         },
-        "engagements": 3
+        "engagements": 4
       },
       {
         "title": "https://youtu.be/hna4abC1U88",
@@ -447,21 +447,21 @@
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>184 net new followers</strong> this week.",
+          "<strong>166 net new followers</strong> this week.",
           "Top post: \"<strong>Special education teachers, what else would you add?</strong>\" (Photo) drove the most engagement."
         ]
       },
       "pivot": {
         "headline": "Engagement dipped week-over-week",
         "bullets": [
-          "Total engagement down <strong>30%</strong>. Investigate posting cadence and formats.",
-          "One post drove 88% of this week's engagement — concentration risk. Spread the bets."
+          "Total engagement down <strong>28%</strong>. Investigate posting cadence and formats.",
+          "One post drove 89% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Photo</strong> content — averaged 58 engagements per post, <strong>1350% above</strong> the next format.",
+          "More <strong>Photo</strong> content — averaged 64 engagements per post, <strong>1180% above</strong> the next format.",
           "Schedule your next post for <strong>Fri around 10 PM CT</strong> — historically your highest-engagement window (avg 366 engagements)."
         ]
       }
@@ -469,13 +469,13 @@
     "demographics": null,
     "demographicsNote": "Facebook Page demographic data was retired by Meta in 2024 (Graph API v18+). Instagram demographics above are a reasonable proxy for your overall Meta audience.",
     "followerChurn": {
-      "gained": 256309,
+      "gained": 256476,
       "lost": null,
       "lostNote": "Facebook doesn't expose unfollow counts via the Graph API. We report gains only.",
-      "net": 256309
+      "net": 256476
     },
     "actionFunnel": {
-      "pageViews": 2046,
+      "pageViews": 1973,
       "ctaClicks": 0,
       "note": "Facebook Page view / CTA click data may be unavailable if your Page hasn't enabled Professional Dashboard analytics."
     },
@@ -483,14 +483,14 @@
       {
         "format": "Photo",
         "count": 4,
-        "avgEngagement": 58,
+        "avgEngagement": 64,
         "avgReach": 0,
         "avgViews": 0
       },
       {
         "format": "Video",
         "count": 2,
-        "avgEngagement": 4,
+        "avgEngagement": 5,
         "avgReach": 0,
         "avgViews": 0
       }
@@ -520,11 +520,11 @@
           null,
           20,
           null,
-          260,
+          262,
           null,
           null,
           null,
-          11
+          16
         ],
         [
           null,
@@ -580,7 +580,7 @@
         ],
         [
           4,
-          3,
+          4,
           365,
           null,
           null,
@@ -623,8 +623,8 @@
           null,
           null,
           4,
-          43,
-          78,
+          42,
+          86,
           5,
           null,
           10,
@@ -632,7 +632,7 @@
         ],
         [
           null,
-          53,
+          54,
           null,
           366,
           null,
@@ -675,7 +675,7 @@
           15,
           1,
           null,
-          9,
+          10,
           null,
           17,
           null,
@@ -692,14 +692,14 @@
         "Fri",
         "Sat"
       ],
-      "sampleSize": 56,
+      "sampleSize": 55,
       "note": "Best time computed from historical post engagement (UTC hours; frontend converts to CT)."
     },
     "stories": null,
     "reactionBreakdown": {
-      "like": 103,
+      "like": 111,
       "love": 10,
-      "haha": 22,
+      "haha": 27,
       "wow": 0,
       "sad": 2,
       "angry": 0
@@ -780,7 +780,7 @@
     "trafficSources": null,
     "deviceTypes": null,
     "watchTime": null,
-    "_error": "[pinterest] actor run XPWfUEIikU4dgaWa2 ended with status RUNNING"
+    "_error": "[pinterest] actor run kVRnKhLp1jbRceAiG ended with status RUNNING"
   },
   "tiktok": {
     "kpis": [
@@ -791,18 +791,18 @@
       },
       {
         "label": "Videos Posted",
-        "value": 7,
-        "delta": 7
+        "value": 8,
+        "delta": 8
       },
       {
         "label": "Total Views",
-        "value": 6430,
+        "value": 7910,
         "delta": null,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 141,
+        "value": 170,
         "delta": null,
         "deltaSuffix": "%"
       }
@@ -828,16 +828,25 @@
         "title": "Admin, join us for a free lunch and learn, The Differentiation Dilemma on Novemb",
         "date": "Oct 28",
         "length": "0:07",
-        "views": 2388,
-        "likes": 72,
+        "views": 2431,
+        "likes": 73,
         "comments": 0,
         "shares": 0
+      },
+      {
+        "title": "Supporting students starts with supporting each other. These Behavior Crisis Vis",
+        "date": "Nov 1",
+        "length": "—",
+        "views": 1265,
+        "likes": 24,
+        "comments": 0,
+        "shares": 3
       },
       {
         "title": "What else would you add? \n\n#specialeducation #specialeducationteacher #specialed",
         "date": "Oct 29",
         "length": "—",
-        "views": 1129,
+        "views": 1166,
         "likes": 18,
         "comments": 3,
         "shares": 3
@@ -846,8 +855,8 @@
         "title": "Teach it before they need it. Social Stories can help students understand what t",
         "date": "Oct 26",
         "length": "0:10",
-        "views": 841,
-        "likes": 24,
+        "views": 855,
+        "likes": 25,
         "comments": 0,
         "shares": 2
       },
@@ -855,7 +864,7 @@
         "title": "Need fall activities your students can feel successful with? These Easy Matching",
         "date": "Oct 28",
         "length": "—",
-        "views": 715,
+        "views": 745,
         "likes": 13,
         "comments": 0,
         "shares": 0
@@ -864,8 +873,8 @@
         "title": "These visual conversation starters give students a starting point to share their",
         "date": "Oct 30",
         "length": "0:10",
-        "views": 596,
-        "likes": 9,
+        "views": 651,
+        "likes": 12,
         "comments": 1,
         "shares": 0
       },
@@ -873,7 +882,7 @@
         "title": "Need new ideas for your independent centers? Grab some ideas from a #Kindergarte",
         "date": "Oct 28",
         "length": "1:22",
-        "views": 388,
+        "views": 407,
         "likes": 5,
         "comments": 0,
         "shares": 0
@@ -882,7 +891,7 @@
         "title": "A shared approach to #differentiation gives teachers a process they can apply to",
         "date": "Oct 30",
         "length": "—",
-        "views": 373,
+        "views": 390,
         "likes": 0,
         "comments": 0,
         "shares": 0
@@ -905,8 +914,8 @@
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>0:07</strong> content — highest engagement this week.",
-          "More <strong>—</strong> content — highest engagement this week."
+          "More <strong>—</strong> content — highest engagement this week.",
+          "More <strong>0:07</strong> content — highest engagement this week."
         ]
       }
     },
@@ -937,7 +946,7 @@
       },
       {
         "label": "Total Views",
-        "value": 3677,
+        "value": 3957,
         "delta": null,
         "deltaSuffix": "%"
       },
@@ -973,7 +982,7 @@
         "format": "Short",
         "length": "0:07",
         "durationSec": 7,
-        "views": 1372,
+        "views": 1475,
         "likes": 18,
         "comments": 1,
         "engagements": 19,
@@ -993,7 +1002,7 @@
         "format": "Video",
         "length": "1:22",
         "durationSec": 82,
-        "views": 522,
+        "views": 632,
         "likes": 15,
         "comments": 0,
         "engagements": 15,
@@ -1013,7 +1022,7 @@
         "format": "Short",
         "length": "0:43",
         "durationSec": 43,
-        "views": 393,
+        "views": 400,
         "likes": 13,
         "comments": 1,
         "engagements": 14,
@@ -1033,7 +1042,7 @@
         "format": "Short",
         "length": "0:08",
         "durationSec": 8,
-        "views": 899,
+        "views": 953,
         "likes": 11,
         "comments": 0,
         "engagements": 11,
@@ -1053,7 +1062,7 @@
         "format": "Short",
         "length": "0:13",
         "durationSec": 13,
-        "views": 491,
+        "views": 497,
         "likes": 7,
         "comments": 0,
         "engagements": 7,
@@ -1097,16 +1106,16 @@
         "format": "Video",
         "count": 8,
         "avgEngagement": 32,
-        "avgReach": 1318,
-        "avgViews": 1318,
+        "avgReach": 1335,
+        "avgViews": 1335,
         "avgWatchMinutes": null
       },
       {
         "format": "Short",
         "count": 42,
         "avgEngagement": 15,
-        "avgReach": 1004,
-        "avgViews": 1004,
+        "avgReach": 1010,
+        "avgViews": 1010,
         "avgWatchMinutes": null
       }
     ],
