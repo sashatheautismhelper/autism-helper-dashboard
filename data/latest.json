@@ -1,32 +1,32 @@
 {
   "meta": {
-    "week": "2026-11-02/2026-11-08",
-    "weekLabel": "Nov 2 – Nov 8, 2026",
-    "generatedAt": "2026-11-09T12:29:06.954Z",
+    "week": "2026-11-03/2026-11-09",
+    "weekLabel": "Nov 3 – Nov 9, 2026",
+    "generatedAt": "2026-11-10T12:03:25.832Z",
     "source": "meta-graph-api + youtube-data+analytics-api + apify",
     "windowType": "trailing-7-days"
   },
   "overview": {
     "totals": {
-      "followers": 499299,
-      "followersDelta": 296,
-      "engagements": 54,
-      "engagementsDeltaPct": -99.3,
-      "posts": 8,
-      "postsDelta": -11,
+      "followers": 499348,
+      "followersDelta": 303,
+      "engagements": 50,
+      "engagementsDeltaPct": -99.4,
+      "posts": 6,
+      "postsDelta": -13,
       "topPlatform": "Facebook"
     },
     "platformSummary": [
       {
         "name": "Instagram",
-        "followers": 137293,
+        "followers": 137310,
         "followersDelta": 0,
         "topFormat": "—"
       },
       {
         "name": "Facebook",
-        "followers": 36906,
-        "followersDelta": 196,
+        "followers": 36938,
+        "followersDelta": 203,
         "topFormat": "Video"
       },
       {
@@ -58,10 +58,10 @@
       ],
       "data": [
         0,
-        42,
+        39,
         0,
         0,
-        12
+        11
       ],
       "colors": [
         "#E4405F",
@@ -80,16 +80,16 @@
         {
           "label": "Instagram",
           "data": [
-            137293,
-            137293
+            137310,
+            137310
           ],
           "color": "#E4405F"
         },
         {
           "label": "Facebook",
           "data": [
-            36710,
-            36906
+            36735,
+            36938
           ],
           "color": "#1877F2"
         },
@@ -126,22 +126,14 @@
         "date": "Nov 7",
         "format": "Video",
         "views": 0,
-        "engagements": 22
-      },
-      {
-        "title": "You wear a lot of hats. Creating every resource from scratch doesn’t have to be ",
-        "platform": "Facebook",
-        "date": "Nov 2",
-        "format": "Video",
-        "views": 0,
-        "engagements": 7
+        "engagements": 26
       },
       {
         "title": "Parent-Teacher Conference Prep for Special Education",
         "platform": "Youtube",
         "date": "Nov 6",
         "format": "Video",
-        "views": 281,
+        "views": 318,
         "engagements": 7
       },
       {
@@ -161,12 +153,12 @@
         "engagements": 5
       },
       {
-        "title": "Easy Matching Weekly Workbooks - Summer Edition",
+        "title": "The Autism Helper Professional Development Membership",
         "platform": "Youtube",
-        "date": "Nov 2",
+        "date": "Nov 9",
         "format": "Short",
-        "views": 149,
-        "engagements": 5
+        "views": 776,
+        "engagements": 4
       },
       {
         "title": "CURRICULUM to learn more. It’s the end of the day, and you realize you have noth",
@@ -175,14 +167,6 @@
         "format": "Video",
         "views": 0,
         "engagements": 2
-      },
-      {
-        "title": "In this episode, I'm joined by Lauren Haas, an elementary student-support profes",
-        "platform": "Facebook",
-        "date": "Nov 2",
-        "format": "Photo",
-        "views": 0,
-        "engagements": 0
       }
     ],
     "insights": {
@@ -213,7 +197,7 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 137293,
+        "value": 137310,
         "delta": 0
       },
       {
@@ -243,8 +227,8 @@
         {
           "label": "Followers",
           "data": [
-            137293,
-            137293
+            137310,
+            137310
           ],
           "color": "#E4405F"
         }
@@ -280,30 +264,30 @@
     "trafficSources": null,
     "deviceTypes": null,
     "watchTime": null,
-    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Monday, 09-Nov-26 04:28:59 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AqX6jVguDexkWLW5nwAXb1K\"}}"
+    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Tuesday, 10-Nov-26 04:03:15 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AwwrpfGEcQ8DNYIfPRWBY9o\"}}"
   },
   "facebook": {
     "kpis": [
       {
         "label": "Followers",
-        "value": 36906,
-        "delta": 196
+        "value": 36938,
+        "delta": 203
       },
       {
         "label": "Posts This Week",
-        "value": 6,
-        "delta": 0
+        "value": 4,
+        "delta": -3
       },
       {
         "label": "Total Reactions",
         "value": 25,
-        "delta": -83.3,
+        "delta": -83.6,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Shares",
-        "value": 5,
-        "delta": -94.4,
+        "value": 4,
+        "delta": -95.7,
         "deltaSuffix": "%"
       }
     ],
@@ -316,8 +300,8 @@
         {
           "label": "Followers",
           "data": [
-            36710,
-            36906
+            36735,
+            36938
           ],
           "color": "#1877F2"
         }
@@ -328,35 +312,18 @@
         "title": "TIME to learn more! A special ed hill I’ll die on: Waiting is a skill we can tea",
         "date": "Nov 7",
         "format": "Video",
-        "reactions": 9,
+        "reactions": 13,
         "comments": 10,
         "shares": 3,
         "reactionBreakdown": {
-          "like": 7,
+          "like": 11,
           "love": 2,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 22
-      },
-      {
-        "title": "You wear a lot of hats. Creating every resource from scratch doesn’t have to be ",
-        "date": "Nov 2",
-        "format": "Video",
-        "reactions": 4,
-        "comments": 2,
-        "shares": 1,
-        "reactionBreakdown": {
-          "like": 3,
-          "love": 1,
-          "haha": 0,
-          "wow": 0,
-          "sad": 0,
-          "angry": 0
-        },
-        "engagements": 7
+        "engagements": 26
       },
       {
         "title": "Build seasonal vocabulary with a structured unit centered on FALL, Halloween, Th",
@@ -408,44 +375,28 @@
           "angry": 0
         },
         "engagements": 2
-      },
-      {
-        "title": "In this episode, I'm joined by Lauren Haas, an elementary student-support profes",
-        "date": "Nov 2",
-        "format": "Photo",
-        "reactions": 0,
-        "comments": 0,
-        "shares": 0,
-        "reactionBreakdown": {
-          "like": 0,
-          "love": 0,
-          "haha": 0,
-          "wow": 0,
-          "sad": 0,
-          "angry": 0
-        },
-        "engagements": 0
       }
     ],
     "insights": {
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>196 net new followers</strong> this week.",
+          "<strong>203 net new followers</strong> this week.",
           "Top post: \"<strong>TIME to learn more! A special ed hill I’ll die on: Waiting is a skill we can tea</strong>\" (Video) drove the most engagement."
         ]
       },
       "pivot": {
         "headline": "Engagement dipped week-over-week",
         "bullets": [
-          "Total engagement down <strong>84%</strong>. Investigate posting cadence and formats.",
-          "One post drove 52% of this week's engagement — concentration risk. Spread the bets."
+          "Total engagement down <strong>86%</strong>. Investigate posting cadence and formats.",
+          "Posting cadence dropped to <strong>4</strong> posts (from 7). Restore volume with evergreen re-posts.",
+          "One post drove 67% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Video</strong> content — averaged 9 engagements per post, <strong>200% above</strong> the next format.",
+          "More <strong>Video</strong> content — averaged 11 engagements per post, <strong>83% above</strong> the next format.",
           "Schedule your next post for <strong>Wed around 9 PM CT</strong> — historically your highest-engagement window (avg 365 engagements)."
         ]
       }
@@ -453,28 +404,28 @@
     "demographics": null,
     "demographicsNote": "Facebook Page demographic data was retired by Meta in 2024 (Graph API v18+). Instagram demographics above are a reasonable proxy for your overall Meta audience.",
     "followerChurn": {
-      "gained": 257741,
+      "gained": 257949,
       "lost": null,
       "lostNote": "Facebook doesn't expose unfollow counts via the Graph API. We report gains only.",
-      "net": 257741
+      "net": 257949
     },
     "actionFunnel": {
-      "pageViews": 2281,
+      "pageViews": 2295,
       "ctaClicks": 0,
       "note": "Facebook Page view / CTA click data may be unavailable if your Page hasn't enabled Professional Dashboard analytics."
     },
     "formatPerformance": [
       {
         "format": "Video",
-        "count": 4,
-        "avgEngagement": 9,
+        "count": 3,
+        "avgEngagement": 11,
         "avgReach": 0,
         "avgViews": 0
       },
       {
         "format": "Photo",
-        "count": 2,
-        "avgEngagement": 3,
+        "count": 1,
+        "avgEngagement": 6,
         "avgReach": 0,
         "avgViews": 0
       }
@@ -525,7 +476,7 @@
           null,
           null,
           null,
-          1,
+          0,
           1,
           null,
           null,
@@ -582,7 +533,7 @@
           null,
           null,
           null,
-          8,
+          9,
           null,
           null,
           5,
@@ -607,7 +558,7 @@
           null,
           null,
           4,
-          38,
+          37,
           90,
           4,
           6,
@@ -656,7 +607,7 @@
           null,
           null,
           null,
-          19,
+          21,
           1,
           null,
           10,
@@ -676,13 +627,13 @@
         "Fri",
         "Sat"
       ],
-      "sampleSize": 53,
+      "sampleSize": 52,
       "note": "Best time computed from historical post engagement (UTC hours; frontend converts to CT)."
     },
     "stories": null,
     "reactionBreakdown": {
-      "like": 21,
-      "love": 4,
+      "like": 22,
+      "love": 3,
       "haha": 0,
       "wow": 0,
       "sad": 0,
@@ -776,7 +727,7 @@
       {
         "label": "Videos Posted",
         "value": 0,
-        "delta": -8
+        "delta": -7
       },
       {
         "label": "Total Views",
@@ -817,7 +768,7 @@
         "headline": "Engagement dipped week-over-week",
         "bullets": [
           "Total engagement down <strong>100%</strong>. Investigate posting cadence and formats.",
-          "Posting cadence dropped to <strong>0</strong> posts (from 8). Restore volume with evergreen re-posts."
+          "Posting cadence dropped to <strong>0</strong> posts (from 7). Restore volume with evergreen re-posts."
         ]
       },
       "postMore": {
@@ -854,14 +805,14 @@
       },
       {
         "label": "Total Views",
-        "value": 430,
-        "delta": -89.1,
+        "value": 1094,
+        "delta": -70,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 12,
-        "delta": -81.3,
+        "value": 11,
+        "delta": -82,
         "deltaSuffix": "%"
       }
     ],
@@ -890,7 +841,7 @@
         "format": "Video",
         "length": "6:13",
         "durationSec": 373,
-        "views": 281,
+        "views": 318,
         "likes": 7,
         "comments": 0,
         "engagements": 7,
@@ -903,24 +854,24 @@
         "thumbnail": "https://i.ytimg.com/vi/R7fQ92fOxXg/hqdefault.jpg"
       },
       {
-        "id": "19SLWUPc6LI",
-        "title": "Easy Matching Weekly Workbooks - Summer Edition",
-        "date": "Nov 2",
-        "timestamp": "2026-11-02T17:00:38Z",
+        "id": "gwybtgeHvCY",
+        "title": "The Autism Helper Professional Development Membership",
+        "date": "Nov 9",
+        "timestamp": "2026-11-09T17:15:31Z",
         "format": "Short",
-        "length": "0:29",
-        "durationSec": 29,
-        "views": 149,
-        "likes": 5,
+        "length": "0:08",
+        "durationSec": 8,
+        "views": 776,
+        "likes": 4,
         "comments": 0,
-        "engagements": 5,
+        "engagements": 4,
         "watchMinutes": null,
         "watchTimeMinutes": null,
         "averageViewDurationSec": null,
         "averageViewPercentage": null,
         "subscribersGained": null,
-        "url": "https://www.youtube.com/watch?v=19SLWUPc6LI",
-        "thumbnail": "https://i.ytimg.com/vi/19SLWUPc6LI/hqdefault.jpg"
+        "url": "https://www.youtube.com/watch?v=gwybtgeHvCY",
+        "thumbnail": "https://i.ytimg.com/vi/gwybtgeHvCY/hqdefault.jpg"
       }
     ],
     "insights": {
@@ -934,9 +885,9 @@
       "pivot": {
         "headline": "Engagement dipped week-over-week",
         "bullets": [
-          "Total engagement down <strong>82%</strong>. Investigate posting cadence and formats.",
+          "Total engagement down <strong>83%</strong>. Investigate posting cadence and formats.",
           "Posting cadence dropped to <strong>2</strong> posts (from 5). Restore volume with evergreen re-posts.",
-          "One post drove 58% of this week's engagement — concentration risk. Spread the bets."
+          "One post drove 64% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
@@ -956,16 +907,16 @@
         "format": "Video",
         "count": 9,
         "avgEngagement": 29,
-        "avgReach": 1254,
-        "avgViews": 1254,
+        "avgReach": 1260,
+        "avgViews": 1260,
         "avgWatchMinutes": null
       },
       {
         "format": "Short",
         "count": 41,
         "avgEngagement": 15,
-        "avgReach": 969,
-        "avgViews": 969,
+        "avgReach": 955,
+        "avgViews": 955,
         "avgWatchMinutes": null
       }
     ],
@@ -1119,7 +1070,7 @@
           null,
           null,
           11,
-          10,
+          null,
           13,
           16,
           24,
