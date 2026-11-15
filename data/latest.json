@@ -1,31 +1,31 @@
 {
   "meta": {
-    "week": "2026-11-07/2026-11-13",
-    "weekLabel": "Nov 7 – Nov 13, 2026",
-    "generatedAt": "2026-11-14T11:10:56.693Z",
+    "week": "2026-11-08/2026-11-14",
+    "weekLabel": "Nov 8 – Nov 14, 2026",
+    "generatedAt": "2026-11-15T11:44:10.614Z",
     "source": "meta-graph-api + youtube-data+analytics-api + apify",
     "windowType": "trailing-7-days"
   },
   "overview": {
     "totals": {
-      "followers": 499228,
+      "followers": 499584,
       "followersDelta": 333,
-      "engagements": 311,
-      "engagementsDeltaPct": 1144,
+      "engagements": 353,
+      "engagementsDeltaPct": 938.2,
       "posts": 10,
-      "postsDelta": 3,
+      "postsDelta": 2,
       "topPlatform": "Facebook"
     },
     "platformSummary": [
       {
         "name": "Instagram",
-        "followers": 137250,
+        "followers": 137275,
         "followersDelta": 0,
         "topFormat": "—"
       },
       {
         "name": "Facebook",
-        "followers": 37078,
+        "followers": 37109,
         "followersDelta": 233,
         "topFormat": "Photo"
       },
@@ -37,7 +37,7 @@
       },
       {
         "name": "Tiktok",
-        "followers": 55700,
+        "followers": 56000,
         "followersDelta": 0,
         "topFormat": "—"
       },
@@ -58,10 +58,10 @@
       ],
       "data": [
         0,
-        282,
+        319,
         0,
         0,
-        29
+        34
       ],
       "colors": [
         "#E4405F",
@@ -80,16 +80,16 @@
         {
           "label": "Instagram",
           "data": [
-            137250,
-            137250
+            137275,
+            137275
           ],
           "color": "#E4405F"
         },
         {
           "label": "Facebook",
           "data": [
-            36845,
-            37078
+            36876,
+            37109
           ],
           "color": "#1877F2"
         },
@@ -104,8 +104,8 @@
         {
           "label": "Tiktok",
           "data": [
-            55700,
-            55700
+            56000,
+            56000
           ],
           "color": "#111"
         },
@@ -126,22 +126,30 @@
         "date": "Nov 12",
         "format": "Photo",
         "views": 0,
-        "engagements": 240
+        "engagements": 300
       },
       {
-        "title": "TIME to learn more! A special ed hill I’ll die on: Waiting is a skill we can tea",
+        "title": "Grace’s top 3 behavior tools she can’t live without in her Special Education cla",
         "platform": "Facebook",
-        "date": "Nov 7",
+        "date": "Nov 14",
         "format": "Video",
         "views": 0,
-        "engagements": 34
+        "engagements": 10
+      },
+      {
+        "title": "Compliance-Based Culture vs. Teaching Skills in IEP Writing",
+        "platform": "Youtube",
+        "date": "Nov 13",
+        "format": "Short",
+        "views": 367,
+        "engagements": 10
       },
       {
         "title": "The Autism Helper Professional Development Membership",
         "platform": "Youtube",
         "date": "Nov 11",
         "format": "Short",
-        "views": 685,
+        "views": 689,
         "engagements": 8
       },
       {
@@ -157,23 +165,15 @@
         "platform": "Youtube",
         "date": "Nov 10",
         "format": "Short",
-        "views": 452,
+        "views": 484,
         "engagements": 6
-      },
-      {
-        "title": "Compliance-Based Culture vs. Teaching Skills in IEP Writing",
-        "platform": "Youtube",
-        "date": "Nov 13",
-        "format": "Short",
-        "views": 146,
-        "engagements": 5
       },
       {
         "title": "Phonics Leveled Daily Curriculum {LEVEL 1.5}",
         "platform": "Youtube",
         "date": "Nov 12",
         "format": "Short",
-        "views": 248,
+        "views": 308,
         "engagements": 5
       },
       {
@@ -181,7 +181,7 @@
         "platform": "Youtube",
         "date": "Nov 9",
         "format": "Short",
-        "views": 883,
+        "views": 904,
         "engagements": 5
       },
       {
@@ -190,7 +190,7 @@
         "date": "Nov 12",
         "format": "Photo",
         "views": 0,
-        "engagements": 1
+        "engagements": 2
       },
       {
         "title": "https://youtu.be/XV9zYVTgPuw",
@@ -229,7 +229,7 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 137250,
+        "value": 137275,
         "delta": 0
       },
       {
@@ -259,8 +259,8 @@
         {
           "label": "Followers",
           "data": [
-            137250,
-            137250
+            137275,
+            137275
           ],
           "color": "#E4405F"
         }
@@ -296,30 +296,30 @@
     "trafficSources": null,
     "deviceTypes": null,
     "watchTime": null,
-    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Saturday, 14-Nov-26 03:10:51 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AIhWXrPkgwrIH_Wu8S_og2Y\"}}"
+    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Sunday, 15-Nov-26 03:44:06 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"ARSsRXsCinjXXIgDWQUOL-a\"}}"
   },
   "facebook": {
     "kpis": [
       {
         "label": "Followers",
-        "value": 37078,
+        "value": 37109,
         "delta": 233
       },
       {
         "label": "Posts This Week",
         "value": 5,
-        "delta": 0
+        "delta": -1
       },
       {
         "label": "Total Reactions",
-        "value": 68,
-        "delta": 466.7,
+        "value": 71,
+        "delta": 343.8,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Shares",
-        "value": 14,
-        "delta": 600,
+        "value": 18,
+        "delta": 800,
         "deltaSuffix": "%"
       }
     ],
@@ -332,8 +332,8 @@
         {
           "label": "Followers",
           "data": [
-            36845,
-            37078
+            36876,
+            37109
           ],
           "color": "#1877F2"
         }
@@ -344,35 +344,35 @@
         "title": "ERRORLESS to learn more! ",
         "date": "Nov 12",
         "format": "Photo",
-        "reactions": 48,
-        "comments": 184,
-        "shares": 8,
+        "reactions": 63,
+        "comments": 224,
+        "shares": 13,
         "reactionBreakdown": {
-          "like": 45,
-          "love": 3,
+          "like": 58,
+          "love": 5,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 240
+        "engagements": 300
       },
       {
-        "title": "TIME to learn more! A special ed hill I’ll die on: Waiting is a skill we can tea",
-        "date": "Nov 7",
+        "title": "Grace’s top 3 behavior tools she can’t live without in her Special Education cla",
+        "date": "Nov 14",
         "format": "Video",
-        "reactions": 16,
-        "comments": 15,
-        "shares": 3,
+        "reactions": 4,
+        "comments": 5,
+        "shares": 1,
         "reactionBreakdown": {
-          "like": 14,
-          "love": 2,
+          "like": 3,
+          "love": 1,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 34
+        "engagements": 10
       },
       {
         "title": "384 to listen! A student who usually jumps into a favorite activity suddenly wan",
@@ -397,7 +397,7 @@
         "format": "Photo",
         "reactions": 0,
         "comments": 0,
-        "shares": 1,
+        "shares": 2,
         "reactionBreakdown": {
           "like": 0,
           "love": 0,
@@ -406,7 +406,7 @@
           "sad": 0,
           "angry": 0
         },
-        "engagements": 1
+        "engagements": 2
       },
       {
         "title": "https://youtu.be/XV9zYVTgPuw",
@@ -432,33 +432,33 @@
         "bullets": [
           "<strong>233 net new followers</strong> this week.",
           "Top post: \"<strong>ERRORLESS to learn more! </strong>\" (Photo) drove the most engagement.",
-          "Engagement volume up <strong>1663%</strong> vs last week — momentum building."
+          "Engagement volume up <strong>1229%</strong> vs last week — momentum building."
         ]
       },
       "pivot": {
         "headline": "Small tweaks to try",
         "bullets": [
-          "One post drove 85% of this week's engagement — concentration risk. Spread the bets."
+          "One post drove 94% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Photo</strong> content — averaged 81 engagements per post, <strong>305% above</strong> the next format.",
-          "Schedule your next post for <strong>Wed around 9 PM CT</strong> — historically your highest-engagement window (avg 366 engagements)."
+          "More <strong>Photo</strong> content — averaged 101 engagements per post, <strong>1163% above</strong> the next format.",
+          "Schedule your next post for <strong>Wed around 9 PM CT</strong> — historically your highest-engagement window (avg 365 engagements)."
         ]
       }
     },
     "demographics": null,
     "demographicsNote": "Facebook Page demographic data was retired by Meta in 2024 (Graph API v18+). Instagram demographics above are a reasonable proxy for your overall Meta audience.",
     "followerChurn": {
-      "gained": 258768,
+      "gained": 258991,
       "lost": null,
       "lostNote": "Facebook doesn't expose unfollow counts via the Graph API. We report gains only.",
-      "net": 258768
+      "net": 258991
     },
     "actionFunnel": {
-      "pageViews": 2484,
+      "pageViews": 2545,
       "ctaClicks": 0,
       "note": "Facebook Page view / CTA click data may be unavailable if your Page hasn't enabled Professional Dashboard analytics."
     },
@@ -466,14 +466,14 @@
       {
         "format": "Photo",
         "count": 3,
-        "avgEngagement": 81,
+        "avgEngagement": 101,
         "avgReach": 0,
         "avgViews": 0
       },
       {
         "format": "Video",
         "count": 2,
-        "avgEngagement": 20,
+        "avgEngagement": 8,
         "avgReach": 0,
         "avgViews": 0
       }
@@ -481,7 +481,7 @@
     "bestTimeToPost": {
       "topDay": "Wed",
       "topHour": 2,
-      "topAvgEng": 366,
+      "topAvgEng": 365,
       "heatmap": [
         [
           null,
@@ -564,7 +564,7 @@
         [
           4,
           6,
-          366,
+          365,
           null,
           null,
           null,
@@ -581,7 +581,7 @@
           null,
           null,
           null,
-          9,
+          10,
           null,
           null,
           5,
@@ -601,7 +601,7 @@
           null,
           null,
           null,
-          1,
+          2,
           1,
           null,
           null,
@@ -609,7 +609,7 @@
           null,
           91,
           5,
-          124,
+          154,
           16,
           null
         ],
@@ -633,9 +633,9 @@
           null,
           null,
           9,
-          51,
+          52,
           null,
-          40,
+          42,
           6,
           null
         ],
@@ -655,12 +655,12 @@
           null,
           null,
           null,
-          25,
+          20,
           1,
           null,
           10,
           null,
-          17,
+          null,
           null,
           10,
           null
@@ -680,8 +680,8 @@
     },
     "stories": null,
     "reactionBreakdown": {
-      "like": 62,
-      "love": 6,
+      "like": 64,
+      "love": 7,
       "haha": 0,
       "wow": 0,
       "sad": 0,
@@ -769,7 +769,7 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 55700,
+        "value": 56000,
         "delta": 0
       },
       {
@@ -799,8 +799,8 @@
         {
           "label": "Followers",
           "data": [
-            55700,
-            55700
+            56000,
+            56000
           ],
           "color": "#111"
         }
@@ -852,14 +852,14 @@
       },
       {
         "label": "Total Views",
-        "value": 2414,
-        "delta": 762.1,
+        "value": 2752,
+        "delta": 620.4,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 29,
-        "delta": 222.2,
+        "value": 34,
+        "delta": 240,
         "deltaSuffix": "%"
       }
     ],
@@ -881,6 +881,26 @@
     },
     "topPosts": [
       {
+        "id": "u_zpmlgIZww",
+        "title": "Compliance-Based Culture vs. Teaching Skills in IEP Writing",
+        "date": "Nov 13",
+        "timestamp": "2026-11-13T17:15:10Z",
+        "format": "Short",
+        "length": "0:32",
+        "durationSec": 32,
+        "views": 367,
+        "likes": 10,
+        "comments": 0,
+        "engagements": 10,
+        "watchMinutes": null,
+        "watchTimeMinutes": null,
+        "averageViewDurationSec": null,
+        "averageViewPercentage": null,
+        "subscribersGained": null,
+        "url": "https://www.youtube.com/watch?v=u_zpmlgIZww",
+        "thumbnail": "https://i.ytimg.com/vi/u_zpmlgIZww/hqdefault.jpg"
+      },
+      {
         "id": "7LVufsVEF_k",
         "title": "The Autism Helper Professional Development Membership",
         "date": "Nov 11",
@@ -888,7 +908,7 @@
         "format": "Short",
         "length": "0:16",
         "durationSec": 16,
-        "views": 685,
+        "views": 689,
         "likes": 8,
         "comments": 0,
         "engagements": 8,
@@ -908,7 +928,7 @@
         "format": "Short",
         "length": "0:31",
         "durationSec": 31,
-        "views": 452,
+        "views": 484,
         "likes": 6,
         "comments": 0,
         "engagements": 6,
@@ -921,26 +941,6 @@
         "thumbnail": "https://i.ytimg.com/vi/s-WGAg2E0hs/hqdefault.jpg"
       },
       {
-        "id": "u_zpmlgIZww",
-        "title": "Compliance-Based Culture vs. Teaching Skills in IEP Writing",
-        "date": "Nov 13",
-        "timestamp": "2026-11-13T17:15:10Z",
-        "format": "Short",
-        "length": "0:32",
-        "durationSec": 32,
-        "views": 146,
-        "likes": 5,
-        "comments": 0,
-        "engagements": 5,
-        "watchMinutes": null,
-        "watchTimeMinutes": null,
-        "averageViewDurationSec": null,
-        "averageViewPercentage": null,
-        "subscribersGained": null,
-        "url": "https://www.youtube.com/watch?v=u_zpmlgIZww",
-        "thumbnail": "https://i.ytimg.com/vi/u_zpmlgIZww/hqdefault.jpg"
-      },
-      {
         "id": "l7wgBHSFL84",
         "title": "Phonics Leveled Daily Curriculum {LEVEL 1.5}",
         "date": "Nov 12",
@@ -948,7 +948,7 @@
         "format": "Short",
         "length": "0:31",
         "durationSec": 31,
-        "views": 248,
+        "views": 308,
         "likes": 5,
         "comments": 0,
         "engagements": 5,
@@ -968,7 +968,7 @@
         "format": "Short",
         "length": "0:08",
         "durationSec": 8,
-        "views": 883,
+        "views": 904,
         "likes": 5,
         "comments": 0,
         "engagements": 5,
@@ -986,8 +986,8 @@
         "headline": "Audience is growing",
         "bullets": [
           "<strong>100 net new followers</strong> this week.",
-          "Top post: \"<strong>The Autism Helper Professional Development Membership</strong>\" (Short) drove the most engagement.",
-          "Engagement volume up <strong>222%</strong> vs last week — momentum building."
+          "Top post: \"<strong>Compliance-Based Culture vs. Teaching Skills in IEP Writing</strong>\" (Short) drove the most engagement.",
+          "Engagement volume up <strong>240%</strong> vs last week — momentum building."
         ]
       },
       "pivot": {
@@ -999,8 +999,8 @@
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Video</strong> content — averaged 30 engagements per post, <strong>131% above</strong> the next format.",
-          "Schedule your next post for <strong>Wed around 9 AM CT</strong> — historically your highest-engagement window (avg 35 engagements)."
+          "More <strong>Video</strong> content — averaged 31 engagements per post, <strong>138% above</strong> the next format.",
+          "Schedule your next post for <strong>Wed around 2 PM CT</strong> — historically your highest-engagement window (avg 36 engagements)."
         ]
       }
     },
@@ -1012,24 +1012,24 @@
       {
         "format": "Video",
         "count": 9,
-        "avgEngagement": 30,
-        "avgReach": 1281,
-        "avgViews": 1281,
+        "avgEngagement": 31,
+        "avgReach": 1286,
+        "avgViews": 1286,
         "avgWatchMinutes": null
       },
       {
         "format": "Short",
         "count": 41,
         "avgEngagement": 13,
-        "avgReach": 854,
-        "avgViews": 854,
+        "avgReach": 864,
+        "avgViews": 864,
         "avgWatchMinutes": null
       }
     ],
     "bestTimeToPost": {
       "topDay": "Wed",
-      "topHour": 14,
-      "topAvgEng": 35,
+      "topHour": 19,
+      "topAvgEng": 36,
       "heatmap": [
         [
           null,
@@ -1129,8 +1129,8 @@
           18,
           8,
           null,
-          35,
-          29,
+          36,
+          30,
           null,
           null,
           null
@@ -1179,7 +1179,7 @@
           null,
           13,
           16,
-          15,
+          17,
           null,
           23,
           9,
