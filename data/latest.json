@@ -1,32 +1,32 @@
 {
   "meta": {
-    "week": "2026-11-10/2026-11-16",
-    "weekLabel": "Nov 10 – Nov 16, 2026",
-    "generatedAt": "2026-11-17T12:44:44.767Z",
+    "week": "2026-11-11/2026-11-17",
+    "weekLabel": "Nov 11 – Nov 17, 2026",
+    "generatedAt": "2026-11-18T12:36:45.146Z",
     "source": "meta-graph-api + youtube-data+analytics-api + apify",
     "windowType": "trailing-7-days"
   },
   "overview": {
     "totals": {
-      "followers": 499788,
-      "followersDelta": 440,
-      "engagements": 411,
-      "engagementsDeltaPct": 722,
+      "followers": 499622,
+      "followersDelta": 354,
+      "engagements": 578,
+      "engagementsDeltaPct": 817.5,
       "posts": 10,
-      "postsDelta": 4,
+      "postsDelta": 1,
       "topPlatform": "Facebook"
     },
     "platformSummary": [
       {
         "name": "Instagram",
-        "followers": 137310,
+        "followers": 137299,
         "followersDelta": 0,
         "topFormat": "—"
       },
       {
         "name": "Facebook",
-        "followers": 37178,
-        "followersDelta": 240,
+        "followers": 37223,
+        "followersDelta": 254,
         "topFormat": "Photo"
       },
       {
@@ -37,14 +37,14 @@
       },
       {
         "name": "Tiktok",
-        "followers": 56000,
+        "followers": 55800,
         "followersDelta": 0,
         "topFormat": "—"
       },
       {
         "name": "Youtube",
         "followers": 54300,
-        "followersDelta": 200,
+        "followersDelta": 100,
         "topFormat": "Short"
       }
     ],
@@ -58,10 +58,10 @@
       ],
       "data": [
         0,
-        376,
+        546,
         0,
         0,
-        35
+        32
       ],
       "colors": [
         "#E4405F",
@@ -80,16 +80,16 @@
         {
           "label": "Instagram",
           "data": [
-            137310,
-            137310
+            137299,
+            137299
           ],
           "color": "#E4405F"
         },
         {
           "label": "Facebook",
           "data": [
-            36938,
-            37178
+            36969,
+            37223
           ],
           "color": "#1877F2"
         },
@@ -104,15 +104,15 @@
         {
           "label": "Tiktok",
           "data": [
-            56000,
-            56000
+            55800,
+            55800
           ],
           "color": "#111"
         },
         {
           "label": "Youtube",
           "data": [
-            54100,
+            54200,
             54300
           ],
           "color": "#FF0000"
@@ -126,7 +126,15 @@
         "date": "Nov 12",
         "format": "Photo",
         "views": 0,
-        "engagements": 334
+        "engagements": 337
+      },
+      {
+        "title": "DIGITAL to try a free sample of our digital products! ",
+        "platform": "Facebook",
+        "date": "Nov 17",
+        "format": "Video",
+        "views": 0,
+        "engagements": 169
       },
       {
         "title": "Grace’s top 3 behavior tools she can’t live without in her Special Education cla",
@@ -134,14 +142,14 @@
         "date": "Nov 14",
         "format": "Video",
         "views": 0,
-        "engagements": 30
+        "engagements": 33
       },
       {
         "title": "Compliance-Based Culture vs. Teaching Skills in IEP Writing",
         "platform": "Youtube",
         "date": "Nov 13",
         "format": "Short",
-        "views": 558,
+        "views": 578,
         "engagements": 15
       },
       {
@@ -149,32 +157,8 @@
         "platform": "Youtube",
         "date": "Nov 11",
         "format": "Short",
-        "views": 721,
+        "views": 733,
         "engagements": 9
-      },
-      {
-        "title": "384 to listen! A student who usually jumps into a favorite activity suddenly wan",
-        "platform": "Facebook",
-        "date": "Nov 10",
-        "format": "Video",
-        "views": 0,
-        "engagements": 7
-      },
-      {
-        "title": "Phonics Leveled Daily Curriculum Level 1.5",
-        "platform": "Youtube",
-        "date": "Nov 10",
-        "format": "Short",
-        "views": 545,
-        "engagements": 6
-      },
-      {
-        "title": "Phonics Leveled Daily Curriculum {LEVEL 1.5}",
-        "platform": "Youtube",
-        "date": "Nov 12",
-        "format": "Short",
-        "views": 349,
-        "engagements": 5
       },
       {
         "title": "Build accurate responses to yes and no questions with 15 FILE folder activities ",
@@ -182,15 +166,31 @@
         "date": "Nov 12",
         "format": "Photo",
         "views": 0,
-        "engagements": 4
+        "engagements": 5
       },
       {
-        "title": "https://youtu.be/XV9zYVTgPuw",
+        "title": "Phonics Leveled Daily Curriculum {LEVEL 1.5}",
+        "platform": "Youtube",
+        "date": "Nov 12",
+        "format": "Short",
+        "views": 360,
+        "engagements": 5
+      },
+      {
+        "title": "Errorless Work Tasks",
+        "platform": "Youtube",
+        "date": "Nov 17",
+        "format": "Short",
+        "views": 90,
+        "engagements": 3
+      },
+      {
+        "title": "Teach sound identification, phonemic awareness, word patterns, and decodable tex",
         "platform": "Facebook",
-        "date": "Nov 10",
+        "date": "Nov 17",
         "format": "Photo",
         "views": 0,
-        "engagements": 1
+        "engagements": 2
       },
       {
         "title": "A communication board can't help anyone if it's tucked inside a backpack. In thi",
@@ -229,7 +229,7 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 137310,
+        "value": 137299,
         "delta": 0
       },
       {
@@ -259,8 +259,8 @@
         {
           "label": "Followers",
           "data": [
-            137310,
-            137310
+            137299,
+            137299
           ],
           "color": "#E4405F"
         }
@@ -296,30 +296,30 @@
     "trafficSources": null,
     "deviceTypes": null,
     "watchTime": null,
-    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Tuesday, 17-Nov-26 04:44:38 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AfNFV2vq9W7MO1ZLGuzKquE\"}}"
+    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Wednesday, 18-Nov-26 04:36:38 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AZJihTFvqNAxNvi0Q3ThvH6\"}}"
   },
   "facebook": {
     "kpis": [
       {
         "label": "Followers",
-        "value": 37178,
-        "delta": 240
+        "value": 37223,
+        "delta": 254
       },
       {
         "label": "Posts This Week",
         "value": 6,
-        "delta": 2
+        "delta": 0
       },
       {
         "label": "Total Reactions",
-        "value": 93,
-        "delta": 272,
+        "value": 132,
+        "delta": 340,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Shares",
-        "value": 19,
-        "delta": 375,
+        "value": 22,
+        "delta": 450,
         "deltaSuffix": "%"
       }
     ],
@@ -332,8 +332,8 @@
         {
           "label": "Followers",
           "data": [
-            36938,
-            37178
+            36969,
+            37223
           ],
           "color": "#1877F2"
         }
@@ -345,7 +345,7 @@
         "date": "Nov 12",
         "format": "Photo",
         "reactions": 74,
-        "comments": 246,
+        "comments": 249,
         "shares": 14,
         "reactionBreakdown": {
           "like": 69,
@@ -355,66 +355,66 @@
           "sad": 0,
           "angry": 0
         },
-        "engagements": 334
+        "engagements": 337
+      },
+      {
+        "title": "DIGITAL to try a free sample of our digital products! ",
+        "date": "Nov 17",
+        "format": "Video",
+        "reactions": 41,
+        "comments": 124,
+        "shares": 4,
+        "reactionBreakdown": {
+          "like": 33,
+          "love": 8,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 169
       },
       {
         "title": "Grace’s top 3 behavior tools she can’t live without in her Special Education cla",
         "date": "Nov 14",
         "format": "Video",
-        "reactions": 12,
-        "comments": 17,
+        "reactions": 13,
+        "comments": 19,
         "shares": 1,
         "reactionBreakdown": {
-          "like": 10,
+          "like": 11,
           "love": 2,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 30
-      },
-      {
-        "title": "384 to listen! A student who usually jumps into a favorite activity suddenly wan",
-        "date": "Nov 10",
-        "format": "Video",
-        "reactions": 4,
-        "comments": 1,
-        "shares": 2,
-        "reactionBreakdown": {
-          "like": 3,
-          "love": 1,
-          "haha": 0,
-          "wow": 0,
-          "sad": 0,
-          "angry": 0
-        },
-        "engagements": 7
+        "engagements": 33
       },
       {
         "title": "Build accurate responses to yes and no questions with 15 FILE folder activities ",
         "date": "Nov 12",
         "format": "Photo",
-        "reactions": 2,
+        "reactions": 3,
         "comments": 0,
         "shares": 2,
         "reactionBreakdown": {
-          "like": 2,
+          "like": 3,
           "love": 0,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 4
+        "engagements": 5
       },
       {
-        "title": "https://youtu.be/XV9zYVTgPuw",
-        "date": "Nov 10",
+        "title": "Teach sound identification, phonemic awareness, word patterns, and decodable tex",
+        "date": "Nov 17",
         "format": "Photo",
         "reactions": 1,
         "comments": 0,
-        "shares": 0,
+        "shares": 1,
         "reactionBreakdown": {
           "like": 1,
           "love": 0,
@@ -423,7 +423,7 @@
           "sad": 0,
           "angry": 0
         },
-        "engagements": 1
+        "engagements": 2
       },
       {
         "title": "A communication board can't help anyone if it's tucked inside a backpack. In thi",
@@ -447,21 +447,21 @@
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>240 net new followers</strong> this week.",
+          "<strong>254 net new followers</strong> this week.",
           "Top post: \"<strong>ERRORLESS to learn more! </strong>\" (Photo) drove the most engagement.",
-          "Engagement volume up <strong>864%</strong> vs last week — momentum building."
+          "Engagement volume up <strong>1087%</strong> vs last week — momentum building."
         ]
       },
       "pivot": {
         "headline": "Small tweaks to try",
         "bullets": [
-          "One post drove 89% of this week's engagement — concentration risk. Spread the bets."
+          "One post drove 62% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Photo</strong> content — averaged 85 engagements per post, <strong>347% above</strong> the next format.",
+          "More <strong>Video</strong> content — your highest avg engagement format (101 per post).",
           "Schedule your next post for <strong>Wed around 9 PM CT</strong> — historically your highest-engagement window (avg 364 engagements)."
         ]
       }
@@ -469,28 +469,28 @@
     "demographics": null,
     "demographicsNote": "Facebook Page demographic data was retired by Meta in 2024 (Graph API v18+). Instagram demographics above are a reasonable proxy for your overall Meta audience.",
     "followerChurn": {
-      "gained": 259515,
+      "gained": 259748,
       "lost": null,
       "lostNote": "Facebook doesn't expose unfollow counts via the Graph API. We report gains only.",
-      "net": 259515
+      "net": 259748
     },
     "actionFunnel": {
-      "pageViews": 2605,
+      "pageViews": 2784,
       "ctaClicks": 0,
       "note": "Facebook Page view / CTA click data may be unavailable if your Page hasn't enabled Professional Dashboard analytics."
     },
     "formatPerformance": [
       {
-        "format": "Photo",
-        "count": 4,
-        "avgEngagement": 85,
+        "format": "Video",
+        "count": 2,
+        "avgEngagement": 101,
         "avgReach": 0,
         "avgViews": 0
       },
       {
-        "format": "Video",
-        "count": 2,
-        "avgEngagement": 19,
+        "format": "Photo",
+        "count": 4,
+        "avgEngagement": 86,
         "avgReach": 0,
         "avgViews": 0
       }
@@ -569,7 +569,7 @@
           null,
           null,
           null,
-          10,
+          169,
           7,
           null,
           null,
@@ -618,21 +618,21 @@
           null,
           null,
           null,
-          4,
+          5,
           1,
           null,
           null,
           4,
           null,
-          90,
+          91,
           5,
-          171,
+          172,
           16,
           null
         ],
         [
           null,
-          24,
+          26,
           null,
           null,
           null,
@@ -672,10 +672,10 @@
           null,
           null,
           null,
-          26,
+          28,
           1,
           null,
-          10,
+          12,
           null,
           null,
           null,
@@ -692,13 +692,13 @@
         "Fri",
         "Sat"
       ],
-      "sampleSize": 51,
+      "sampleSize": 52,
       "note": "Best time computed from historical post engagement (UTC hours; frontend converts to CT)."
     },
     "stories": null,
     "reactionBreakdown": {
-      "like": 85,
-      "love": 8,
+      "like": 117,
+      "love": 15,
       "haha": 0,
       "wow": 0,
       "sad": 0,
@@ -786,7 +786,7 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 56000,
+        "value": 55800,
         "delta": 0
       },
       {
@@ -816,8 +816,8 @@
         {
           "label": "Followers",
           "data": [
-            56000,
-            56000
+            55800,
+            55800
           ],
           "color": "#111"
         }
@@ -860,23 +860,23 @@
       {
         "label": "Subscribers",
         "value": 54300,
-        "delta": 200
+        "delta": 100
       },
       {
         "label": "Videos Posted",
         "value": 4,
-        "delta": 2
+        "delta": 1
       },
       {
         "label": "Total Views",
-        "value": 2173,
-        "delta": 98.6,
+        "value": 1761,
+        "delta": 33.3,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 35,
-        "delta": 218.2,
+        "value": 32,
+        "delta": 113.3,
         "deltaSuffix": "%"
       }
     ],
@@ -889,7 +889,7 @@
         {
           "label": "Followers",
           "data": [
-            54100,
+            54200,
             54300
           ],
           "color": "#FF0000"
@@ -905,7 +905,7 @@
         "format": "Short",
         "length": "0:32",
         "durationSec": 32,
-        "views": 558,
+        "views": 578,
         "likes": 15,
         "comments": 0,
         "engagements": 15,
@@ -925,7 +925,7 @@
         "format": "Short",
         "length": "0:16",
         "durationSec": 16,
-        "views": 721,
+        "views": 733,
         "likes": 9,
         "comments": 0,
         "engagements": 9,
@@ -938,26 +938,6 @@
         "thumbnail": "https://i.ytimg.com/vi/7LVufsVEF_k/hqdefault.jpg"
       },
       {
-        "id": "s-WGAg2E0hs",
-        "title": "Phonics Leveled Daily Curriculum Level 1.5",
-        "date": "Nov 10",
-        "timestamp": "2026-11-10T17:15:29Z",
-        "format": "Short",
-        "length": "0:31",
-        "durationSec": 31,
-        "views": 545,
-        "likes": 6,
-        "comments": 0,
-        "engagements": 6,
-        "watchMinutes": null,
-        "watchTimeMinutes": null,
-        "averageViewDurationSec": null,
-        "averageViewPercentage": null,
-        "subscribersGained": null,
-        "url": "https://www.youtube.com/watch?v=s-WGAg2E0hs",
-        "thumbnail": "https://i.ytimg.com/vi/s-WGAg2E0hs/hqdefault.jpg"
-      },
-      {
         "id": "l7wgBHSFL84",
         "title": "Phonics Leveled Daily Curriculum {LEVEL 1.5}",
         "date": "Nov 12",
@@ -965,7 +945,7 @@
         "format": "Short",
         "length": "0:31",
         "durationSec": 31,
-        "views": 349,
+        "views": 360,
         "likes": 5,
         "comments": 0,
         "engagements": 5,
@@ -976,15 +956,35 @@
         "subscribersGained": null,
         "url": "https://www.youtube.com/watch?v=l7wgBHSFL84",
         "thumbnail": "https://i.ytimg.com/vi/l7wgBHSFL84/hqdefault.jpg"
+      },
+      {
+        "id": "Cd8J_GXZ4Zg",
+        "title": "Errorless Work Tasks",
+        "date": "Nov 17",
+        "timestamp": "2026-11-17T17:00:08Z",
+        "format": "Short",
+        "length": "0:08",
+        "durationSec": 8,
+        "views": 90,
+        "likes": 3,
+        "comments": 0,
+        "engagements": 3,
+        "watchMinutes": null,
+        "watchTimeMinutes": null,
+        "averageViewDurationSec": null,
+        "averageViewPercentage": null,
+        "subscribersGained": null,
+        "url": "https://www.youtube.com/watch?v=Cd8J_GXZ4Zg",
+        "thumbnail": "https://i.ytimg.com/vi/Cd8J_GXZ4Zg/hqdefault.jpg"
       }
     ],
     "insights": {
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>200 net new followers</strong> this week.",
+          "<strong>100 net new followers</strong> this week.",
           "Top post: \"<strong>Compliance-Based Culture vs. Teaching Skills in IEP Writing</strong>\" (Short) drove the most engagement.",
-          "Engagement volume up <strong>218%</strong> vs last week — momentum building."
+          "Engagement volume up <strong>88%</strong> vs last week — momentum building."
         ]
       },
       "pivot": {
@@ -996,7 +996,7 @@
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Video</strong> content — averaged 31 engagements per post, <strong>121% above</strong> the next format.",
+          "More <strong>Video</strong> content — averaged 31 engagements per post, <strong>138% above</strong> the next format.",
           "Schedule your next post for <strong>Wed around 2 PM CT</strong> — historically your highest-engagement window (avg 36 engagements)."
         ]
       }
@@ -1010,16 +1010,16 @@
         "format": "Video",
         "count": 9,
         "avgEngagement": 31,
-        "avgReach": 1293,
-        "avgViews": 1293,
+        "avgReach": 1298,
+        "avgViews": 1298,
         "avgWatchMinutes": null
       },
       {
         "format": "Short",
         "count": 41,
-        "avgEngagement": 14,
-        "avgReach": 877,
-        "avgViews": 877,
+        "avgEngagement": 13,
+        "avgReach": 845,
+        "avgViews": 845,
         "avgWatchMinutes": null
       }
     ],
@@ -1098,7 +1098,7 @@
           null,
           9,
           12,
-          6,
+          5,
           null,
           null,
           null,
@@ -1176,10 +1176,10 @@
           null,
           13,
           16,
-          20,
+          15,
           null,
           23,
-          9,
+          11,
           null,
           null,
           null
