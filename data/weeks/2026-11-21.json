@@ -1,0 +1,1267 @@
+{
+  "meta": {
+    "week": "2026-11-15/2026-11-21",
+    "weekLabel": "Nov 15 – Nov 21, 2026",
+    "generatedAt": "2026-11-22T12:15:10.628Z",
+    "source": "meta-graph-api + youtube-data+analytics-api + apify",
+    "windowType": "trailing-7-days"
+  },
+  "overview": {
+    "totals": {
+      "followers": 499894,
+      "followersDelta": 310,
+      "engagements": 284,
+      "engagementsDeltaPct": -19.5,
+      "posts": 13,
+      "postsDelta": 3,
+      "topPlatform": "Facebook"
+    },
+    "platformSummary": [
+      {
+        "name": "Instagram",
+        "followers": 137275,
+        "followersDelta": 0,
+        "topFormat": "—"
+      },
+      {
+        "name": "Facebook",
+        "followers": 37319,
+        "followersDelta": 210,
+        "topFormat": "Video"
+      },
+      {
+        "name": "Pinterest",
+        "followers": 215000,
+        "followersDelta": 0,
+        "topFormat": "—"
+      },
+      {
+        "name": "Tiktok",
+        "followers": 56000,
+        "followersDelta": 0,
+        "topFormat": "—"
+      },
+      {
+        "name": "Youtube",
+        "followers": 54300,
+        "followersDelta": 100,
+        "topFormat": "Short"
+      }
+    ],
+    "platformMix": {
+      "labels": [
+        "Instagram",
+        "Facebook",
+        "Pinterest",
+        "Tiktok",
+        "Youtube"
+      ],
+      "data": [
+        0,
+        254,
+        0,
+        0,
+        30
+      ],
+      "colors": [
+        "#E4405F",
+        "#1877F2",
+        "#E60023",
+        "#111",
+        "#FF0000"
+      ]
+    },
+    "followersHistory": {
+      "labels": [
+        "Last week",
+        "This week"
+      ],
+      "datasets": [
+        {
+          "label": "Instagram",
+          "data": [
+            137275,
+            137275
+          ],
+          "color": "#E4405F"
+        },
+        {
+          "label": "Facebook",
+          "data": [
+            37109,
+            37319
+          ],
+          "color": "#1877F2"
+        },
+        {
+          "label": "Pinterest",
+          "data": [
+            215000,
+            215000
+          ],
+          "color": "#E60023"
+        },
+        {
+          "label": "Tiktok",
+          "data": [
+            56000,
+            56000
+          ],
+          "color": "#111"
+        },
+        {
+          "label": "Youtube",
+          "data": [
+            54200,
+            54300
+          ],
+          "color": "#FF0000"
+        }
+      ]
+    },
+    "topPosts": [
+      {
+        "title": "DIGITAL to try a free sample of our digital products! ",
+        "platform": "Facebook",
+        "date": "Nov 17",
+        "format": "Video",
+        "views": 0,
+        "engagements": 222
+      },
+      {
+        "title": "Wow Okay Trend",
+        "platform": "Youtube",
+        "date": "Nov 19",
+        "format": "Short",
+        "views": 2110,
+        "engagements": 16
+      },
+      {
+        "title": "STORY to learn more! ",
+        "platform": "Facebook",
+        "date": "Nov 19",
+        "format": "Photo",
+        "views": 0,
+        "engagements": 14
+      },
+      {
+        "title": "New Leveled Daily Curriculum File Folders!😍",
+        "platform": "Facebook",
+        "date": "Nov 19",
+        "format": "Photo",
+        "views": 0,
+        "engagements": 11
+      },
+      {
+        "title": "Phonics Leveled Daily Curriculum",
+        "platform": "Youtube",
+        "date": "Nov 20",
+        "format": "Short",
+        "views": 411,
+        "engagements": 8
+      },
+      {
+        "title": "Errorless Work Tasks",
+        "platform": "Youtube",
+        "date": "Nov 17",
+        "format": "Short",
+        "views": 224,
+        "engagements": 5
+      },
+      {
+        "title": "Teach sound identification, phonemic awareness, word patterns, and decodable tex",
+        "platform": "Facebook",
+        "date": "Nov 17",
+        "format": "Photo",
+        "views": 0,
+        "engagements": 4
+      },
+      {
+        "title": "We’re a team of people who care deeply about giving educators the tools to provi",
+        "platform": "Facebook",
+        "date": "Nov 18",
+        "format": "Video",
+        "views": 0,
+        "engagements": 2
+      },
+      {
+        "title": "Velcro dots are my love language 💕",
+        "platform": "Facebook",
+        "date": "Nov 20",
+        "format": "Video",
+        "views": 0,
+        "engagements": 1
+      },
+      {
+        "title": "Errorless Work Tasks",
+        "platform": "Youtube",
+        "date": "Nov 18",
+        "format": "Short",
+        "views": 143,
+        "engagements": 1
+      }
+    ],
+    "insights": {
+      "working": {
+        "headline": "Pinterest is leading growth",
+        "bullets": [
+          "<strong>Pinterest</strong> added 215,000 followers — our fastest grower this week.",
+          "<strong>Video</strong> is the highest-engaging format this week across all platforms."
+        ]
+      },
+      "pivot": {
+        "headline": "Nothing major to flag",
+        "bullets": [
+          "All platforms tracking to trend."
+        ]
+      },
+      "postMore": {
+        "headline": "Next 2 weeks — cross-platform priorities",
+        "bullets": [
+          "Double down on <strong>Pinterest</strong> — ride the wave.",
+          "Produce more <strong>Video</strong> content across platforms.",
+          "Cross-promote top-performing content between platforms (e.g., TikTok → Reel → Short)."
+        ]
+      }
+    }
+  },
+  "instagram": {
+    "kpis": [
+      {
+        "label": "Followers",
+        "value": 137275,
+        "delta": 0
+      },
+      {
+        "label": "Posts This Week",
+        "value": 0,
+        "delta": 0
+      },
+      {
+        "label": "Total Likes",
+        "value": 0,
+        "delta": null,
+        "deltaSuffix": "%"
+      },
+      {
+        "label": "Total Comments",
+        "value": 0,
+        "delta": null,
+        "deltaSuffix": "%"
+      }
+    ],
+    "trend": {
+      "labels": [
+        "Last week",
+        "This week"
+      ],
+      "datasets": [
+        {
+          "label": "Followers",
+          "data": [
+            137275,
+            137275
+          ],
+          "color": "#E4405F"
+        }
+      ]
+    },
+    "topPosts": [],
+    "insights": {
+      "working": {
+        "headline": "Steady engagement this week",
+        "bullets": []
+      },
+      "pivot": {
+        "headline": "Small tweaks to try",
+        "bullets": [
+          "Nothing urgent — stay the course."
+        ]
+      },
+      "postMore": {
+        "headline": "Next 2 weeks",
+        "bullets": [
+          "Mix in a fresh format to test audience response."
+        ]
+      }
+    },
+    "demographics": null,
+    "demographicsNote": null,
+    "followerChurn": null,
+    "actionFunnel": null,
+    "formatPerformance": null,
+    "bestTimeToPost": null,
+    "stories": null,
+    "reactionBreakdown": null,
+    "trafficSources": null,
+    "deviceTypes": null,
+    "watchTime": null,
+    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Sunday, 22-Nov-26 04:15:04 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"Aj-rk1jTiQOIxTNVMUfsEEV\"}}"
+  },
+  "facebook": {
+    "kpis": [
+      {
+        "label": "Followers",
+        "value": 37319,
+        "delta": 210
+      },
+      {
+        "label": "Posts This Week",
+        "value": 9,
+        "delta": 4
+      },
+      {
+        "label": "Total Reactions",
+        "value": 77,
+        "delta": 8.5,
+        "deltaSuffix": "%"
+      },
+      {
+        "label": "Total Shares",
+        "value": 11,
+        "delta": -38.9,
+        "deltaSuffix": "%"
+      }
+    ],
+    "trend": {
+      "labels": [
+        "Last week",
+        "This week"
+      ],
+      "datasets": [
+        {
+          "label": "Followers",
+          "data": [
+            37109,
+            37319
+          ],
+          "color": "#1877F2"
+        }
+      ]
+    },
+    "topPosts": [
+      {
+        "title": "DIGITAL to try a free sample of our digital products! ",
+        "date": "Nov 17",
+        "format": "Video",
+        "reactions": 59,
+        "comments": 158,
+        "shares": 5,
+        "reactionBreakdown": {
+          "like": 49,
+          "love": 10,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 222
+      },
+      {
+        "title": "STORY to learn more! ",
+        "date": "Nov 19",
+        "format": "Photo",
+        "reactions": 3,
+        "comments": 8,
+        "shares": 3,
+        "reactionBreakdown": {
+          "like": 3,
+          "love": 0,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 14
+      },
+      {
+        "title": "New Leveled Daily Curriculum File Folders!😍",
+        "date": "Nov 19",
+        "format": "Photo",
+        "reactions": 9,
+        "comments": 0,
+        "shares": 2,
+        "reactionBreakdown": {
+          "like": 9,
+          "love": 0,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 11
+      },
+      {
+        "title": "Teach sound identification, phonemic awareness, word patterns, and decodable tex",
+        "date": "Nov 17",
+        "format": "Photo",
+        "reactions": 3,
+        "comments": 0,
+        "shares": 1,
+        "reactionBreakdown": {
+          "like": 3,
+          "love": 0,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 4
+      },
+      {
+        "title": "We’re a team of people who care deeply about giving educators the tools to provi",
+        "date": "Nov 18",
+        "format": "Video",
+        "reactions": 2,
+        "comments": 0,
+        "shares": 0,
+        "reactionBreakdown": {
+          "like": 2,
+          "love": 0,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 2
+      },
+      {
+        "title": "Velcro dots are my love language 💕",
+        "date": "Nov 20",
+        "format": "Video",
+        "reactions": 1,
+        "comments": 0,
+        "shares": 0,
+        "reactionBreakdown": {
+          "like": 0,
+          "love": 1,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 1
+      },
+      {
+        "title": "Move past basic matching with 5 printable and digital workbooks featuring fun Ch",
+        "date": "Nov 19",
+        "format": "Photo",
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reactionBreakdown": {
+          "like": 0,
+          "love": 0,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 0
+      },
+      {
+        "title": "Eight students. Multiple learning levels. A lot of time spent adapting lessons. ",
+        "date": "Nov 18",
+        "format": "Photo",
+        "reactions": 0,
+        "comments": 0,
+        "shares": 0,
+        "reactionBreakdown": {
+          "like": 0,
+          "love": 0,
+          "haha": 0,
+          "wow": 0,
+          "sad": 0,
+          "angry": 0
+        },
+        "engagements": 0
+      }
+    ],
+    "insights": {
+      "working": {
+        "headline": "Audience is growing",
+        "bullets": [
+          "<strong>210 net new followers</strong> this week.",
+          "Top post: \"<strong>DIGITAL to try a free sample of our digital products! </strong>\" (Video) drove the most engagement."
+        ]
+      },
+      "pivot": {
+        "headline": "Engagement dipped week-over-week",
+        "bullets": [
+          "Total engagement down <strong>20%</strong>. Investigate posting cadence and formats.",
+          "One post drove 87% of this week's engagement — concentration risk. Spread the bets."
+        ]
+      },
+      "postMore": {
+        "headline": "Next 2 weeks",
+        "bullets": [
+          "More <strong>Video</strong> content — averaged 75 engagements per post, <strong>1400% above</strong> the next format.",
+          "Schedule your next post for <strong>Wed around 9 PM CT</strong> — historically your highest-engagement window (avg 365 engagements)."
+        ]
+      }
+    },
+    "demographics": null,
+    "demographicsNote": "Facebook Page demographic data was retired by Meta in 2024 (Graph API v18+). Instagram demographics above are a reasonable proxy for your overall Meta audience.",
+    "followerChurn": {
+      "gained": 260685,
+      "lost": null,
+      "lostNote": "Facebook doesn't expose unfollow counts via the Graph API. We report gains only.",
+      "net": 260685
+    },
+    "actionFunnel": {
+      "pageViews": 2160,
+      "ctaClicks": 0,
+      "note": "Facebook Page view / CTA click data may be unavailable if your Page hasn't enabled Professional Dashboard analytics."
+    },
+    "formatPerformance": [
+      {
+        "format": "Video",
+        "count": 3,
+        "avgEngagement": 75,
+        "avgReach": 0,
+        "avgViews": 0
+      },
+      {
+        "format": "Photo",
+        "count": 6,
+        "avgEngagement": 5,
+        "avgReach": 0,
+        "avgViews": 0
+      }
+    ],
+    "bestTimeToPost": {
+      "topDay": "Wed",
+      "topHour": 2,
+      "topAvgEng": 365,
+      "heatmap": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          20,
+          null,
+          262,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          0,
+          null,
+          5,
+          null,
+          11,
+          7,
+          null,
+          7
+        ],
+        [
+          null,
+          null,
+          25,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          222,
+          7,
+          null,
+          null,
+          1,
+          5,
+          null,
+          283
+        ],
+        [
+          null,
+          7,
+          365,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          0,
+          10,
+          null,
+          2,
+          5,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          8,
+          1,
+          null,
+          null,
+          null,
+          null,
+          91,
+          3,
+          183,
+          18,
+          14
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          6,
+          52,
+          null,
+          22,
+          6,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          35,
+          1,
+          null,
+          14,
+          null,
+          null,
+          null,
+          10,
+          null
+        ]
+      ],
+      "heatmapDays": [
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "sampleSize": 54,
+      "note": "Best time computed from historical post engagement (UTC hours; frontend converts to CT)."
+    },
+    "stories": null,
+    "reactionBreakdown": {
+      "like": 66,
+      "love": 11,
+      "haha": 0,
+      "wow": 0,
+      "sad": 0,
+      "angry": 0
+    },
+    "trafficSources": null,
+    "deviceTypes": null,
+    "watchTime": null,
+    "_error": null
+  },
+  "pinterest": {
+    "kpis": [
+      {
+        "label": "Monthly Viewers",
+        "value": 215000,
+        "delta": 0
+      },
+      {
+        "label": "Pins This Week",
+        "value": 0,
+        "delta": 0
+      },
+      {
+        "label": "Total Saves",
+        "value": 0,
+        "delta": null,
+        "deltaSuffix": "%"
+      },
+      {
+        "label": "Total Comments",
+        "value": 0,
+        "delta": null,
+        "deltaSuffix": "%"
+      }
+    ],
+    "trend": {
+      "labels": [
+        "Last week",
+        "This week"
+      ],
+      "datasets": [
+        {
+          "label": "Followers",
+          "data": [
+            215000,
+            215000
+          ],
+          "color": "#E60023"
+        }
+      ]
+    },
+    "topPosts": [],
+    "insights": {
+      "working": {
+        "headline": "Steady engagement this week",
+        "bullets": []
+      },
+      "pivot": {
+        "headline": "Small tweaks to try",
+        "bullets": [
+          "Nothing urgent — stay the course."
+        ]
+      },
+      "postMore": {
+        "headline": "Next 2 weeks",
+        "bullets": [
+          "Mix in a fresh format to test audience response."
+        ]
+      }
+    },
+    "demographics": null,
+    "demographicsNote": null,
+    "followerChurn": null,
+    "actionFunnel": null,
+    "formatPerformance": null,
+    "bestTimeToPost": null,
+    "stories": null,
+    "reactionBreakdown": null,
+    "trafficSources": null,
+    "deviceTypes": null,
+    "watchTime": null,
+    "_error": "You've used the $5.00 of monthly usage included in the Free plan, so Actor runs and other Apify services are blocked until your monthly usage cycle resets. GET https://api.apify.com/v2/users/me/limits shows when (monthlyUsageCycle.endAt). The Free plan limit can't be raised. To continue now, upgrade at https://console.apify.com/billing/subscription."
+  },
+  "tiktok": {
+    "kpis": [
+      {
+        "label": "Followers",
+        "value": 56000,
+        "delta": 0
+      },
+      {
+        "label": "Videos Posted",
+        "value": 0,
+        "delta": 0
+      },
+      {
+        "label": "Total Views",
+        "value": 0,
+        "delta": null,
+        "deltaSuffix": "%"
+      },
+      {
+        "label": "Total Likes",
+        "value": 0,
+        "delta": null,
+        "deltaSuffix": "%"
+      }
+    ],
+    "trend": {
+      "labels": [
+        "Last week",
+        "This week"
+      ],
+      "datasets": [
+        {
+          "label": "Followers",
+          "data": [
+            56000,
+            56000
+          ],
+          "color": "#111"
+        }
+      ]
+    },
+    "topPosts": [],
+    "insights": {
+      "working": {
+        "headline": "Steady engagement this week",
+        "bullets": []
+      },
+      "pivot": {
+        "headline": "Small tweaks to try",
+        "bullets": [
+          "Nothing urgent — stay the course."
+        ]
+      },
+      "postMore": {
+        "headline": "Next 2 weeks",
+        "bullets": [
+          "Mix in a fresh format to test audience response."
+        ]
+      }
+    },
+    "demographics": null,
+    "demographicsNote": null,
+    "followerChurn": null,
+    "actionFunnel": null,
+    "formatPerformance": null,
+    "bestTimeToPost": null,
+    "stories": null,
+    "reactionBreakdown": null,
+    "trafficSources": null,
+    "deviceTypes": null,
+    "watchTime": null,
+    "_error": "You've used the $5.00 of monthly usage included in the Free plan, so Actor runs and other Apify services are blocked until your monthly usage cycle resets. GET https://api.apify.com/v2/users/me/limits shows when (monthlyUsageCycle.endAt). The Free plan limit can't be raised. To continue now, upgrade at https://console.apify.com/billing/subscription."
+  },
+  "youtube": {
+    "kpis": [
+      {
+        "label": "Subscribers",
+        "value": 54300,
+        "delta": 100
+      },
+      {
+        "label": "Videos Posted",
+        "value": 4,
+        "delta": -1
+      },
+      {
+        "label": "Total Views",
+        "value": 2888,
+        "delta": 4.9,
+        "deltaSuffix": "%"
+      },
+      {
+        "label": "Total Likes",
+        "value": 30,
+        "delta": -11.8,
+        "deltaSuffix": "%"
+      }
+    ],
+    "trend": {
+      "labels": [
+        "Last week",
+        "This week"
+      ],
+      "datasets": [
+        {
+          "label": "Followers",
+          "data": [
+            54200,
+            54300
+          ],
+          "color": "#FF0000"
+        }
+      ]
+    },
+    "topPosts": [
+      {
+        "id": "714xT2a5LRQ",
+        "title": "Wow Okay Trend",
+        "date": "Nov 19",
+        "timestamp": "2026-11-19T17:00:09Z",
+        "format": "Short",
+        "length": "0:22",
+        "durationSec": 22,
+        "views": 2110,
+        "likes": 16,
+        "comments": 0,
+        "engagements": 16,
+        "watchMinutes": null,
+        "watchTimeMinutes": null,
+        "averageViewDurationSec": null,
+        "averageViewPercentage": null,
+        "subscribersGained": null,
+        "url": "https://www.youtube.com/watch?v=714xT2a5LRQ",
+        "thumbnail": "https://i.ytimg.com/vi/714xT2a5LRQ/hqdefault.jpg"
+      },
+      {
+        "id": "nIabyCf9_z4",
+        "title": "Phonics Leveled Daily Curriculum",
+        "date": "Nov 20",
+        "timestamp": "2026-11-20T17:00:12Z",
+        "format": "Short",
+        "length": "0:35",
+        "durationSec": 35,
+        "views": 411,
+        "likes": 8,
+        "comments": 0,
+        "engagements": 8,
+        "watchMinutes": null,
+        "watchTimeMinutes": null,
+        "averageViewDurationSec": null,
+        "averageViewPercentage": null,
+        "subscribersGained": null,
+        "url": "https://www.youtube.com/watch?v=nIabyCf9_z4",
+        "thumbnail": "https://i.ytimg.com/vi/nIabyCf9_z4/hqdefault.jpg"
+      },
+      {
+        "id": "Cd8J_GXZ4Zg",
+        "title": "Errorless Work Tasks",
+        "date": "Nov 17",
+        "timestamp": "2026-11-17T17:00:08Z",
+        "format": "Short",
+        "length": "0:08",
+        "durationSec": 8,
+        "views": 224,
+        "likes": 5,
+        "comments": 0,
+        "engagements": 5,
+        "watchMinutes": null,
+        "watchTimeMinutes": null,
+        "averageViewDurationSec": null,
+        "averageViewPercentage": null,
+        "subscribersGained": null,
+        "url": "https://www.youtube.com/watch?v=Cd8J_GXZ4Zg",
+        "thumbnail": "https://i.ytimg.com/vi/Cd8J_GXZ4Zg/hqdefault.jpg"
+      },
+      {
+        "id": "IcJo1iq_Aw8",
+        "title": "Errorless Work Tasks",
+        "date": "Nov 18",
+        "timestamp": "2026-11-18T17:00:35Z",
+        "format": "Short",
+        "length": "0:15",
+        "durationSec": 15,
+        "views": 143,
+        "likes": 1,
+        "comments": 0,
+        "engagements": 1,
+        "watchMinutes": null,
+        "watchTimeMinutes": null,
+        "averageViewDurationSec": null,
+        "averageViewPercentage": null,
+        "subscribersGained": null,
+        "url": "https://www.youtube.com/watch?v=IcJo1iq_Aw8",
+        "thumbnail": "https://i.ytimg.com/vi/IcJo1iq_Aw8/hqdefault.jpg"
+      }
+    ],
+    "insights": {
+      "working": {
+        "headline": "Audience is growing",
+        "bullets": [
+          "<strong>100 net new followers</strong> this week.",
+          "Top post: \"<strong>Wow Okay Trend</strong>\" (Short) drove the most engagement."
+        ]
+      },
+      "pivot": {
+        "headline": "Engagement dipped week-over-week",
+        "bullets": [
+          "Total engagement down <strong>12%</strong>. Investigate posting cadence and formats.",
+          "One post drove 53% of this week's engagement — concentration risk. Spread the bets."
+        ]
+      },
+      "postMore": {
+        "headline": "Next 2 weeks",
+        "bullets": [
+          "More <strong>Video</strong> content — averaged 31 engagements per post, <strong>138% above</strong> the next format.",
+          "Schedule your next post for <strong>Wed around 9 AM CT</strong> — historically your highest-engagement window (avg 35 engagements)."
+        ]
+      }
+    },
+    "demographics": null,
+    "demographicsNote": null,
+    "followerChurn": null,
+    "actionFunnel": null,
+    "formatPerformance": [
+      {
+        "format": "Video",
+        "count": 8,
+        "avgEngagement": 31,
+        "avgReach": 1324,
+        "avgViews": 1324,
+        "avgWatchMinutes": null
+      },
+      {
+        "format": "Short",
+        "count": 42,
+        "avgEngagement": 13,
+        "avgReach": 865,
+        "avgViews": 865,
+        "avgWatchMinutes": null
+      }
+    ],
+    "bestTimeToPost": {
+      "topDay": "Wed",
+      "topHour": 14,
+      "topAvgEng": 35,
+      "heatmap": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          12,
+          null,
+          7,
+          11,
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          19,
+          null,
+          4,
+          12,
+          6,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          24,
+          35,
+          20,
+          18,
+          6,
+          null,
+          35,
+          32,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          15,
+          18,
+          7,
+          20,
+          11,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          11,
+          null,
+          13,
+          16,
+          12,
+          null,
+          23,
+          13,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ],
+      "heatmapDays": [
+        "Sun",
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat"
+      ],
+      "sampleSize": 50,
+      "note": "Best time computed from historical video engagement (UTC hours; frontend converts to CT)."
+    },
+    "stories": null,
+    "reactionBreakdown": null,
+    "trafficSources": null,
+    "deviceTypes": null,
+    "watchTime": null,
+    "_error": null
+  }
+}
