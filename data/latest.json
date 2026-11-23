@@ -1,17 +1,17 @@
 {
   "meta": {
-    "week": "2026-11-15/2026-11-21",
-    "weekLabel": "Nov 15 – Nov 21, 2026",
-    "generatedAt": "2026-11-22T12:15:10.628Z",
+    "week": "2026-11-16/2026-11-22",
+    "weekLabel": "Nov 16 – Nov 22, 2026",
+    "generatedAt": "2026-11-23T13:59:17.649Z",
     "source": "meta-graph-api + youtube-data+analytics-api + apify",
     "windowType": "trailing-7-days"
   },
   "overview": {
     "totals": {
-      "followers": 499894,
-      "followersDelta": 310,
-      "engagements": 284,
-      "engagementsDeltaPct": -19.5,
+      "followers": 500029,
+      "followersDelta": 285,
+      "engagements": 299,
+      "engagementsDeltaPct": -24.7,
       "posts": 13,
       "postsDelta": 3,
       "topPlatform": "Facebook"
@@ -19,14 +19,14 @@
     "platformSummary": [
       {
         "name": "Instagram",
-        "followers": 137275,
+        "followers": 137293,
         "followersDelta": 0,
         "topFormat": "—"
       },
       {
         "name": "Facebook",
-        "followers": 37319,
-        "followersDelta": 210,
+        "followers": 37336,
+        "followersDelta": 185,
         "topFormat": "Video"
       },
       {
@@ -43,7 +43,7 @@
       },
       {
         "name": "Youtube",
-        "followers": 54300,
+        "followers": 54400,
         "followersDelta": 100,
         "topFormat": "Short"
       }
@@ -58,10 +58,10 @@
       ],
       "data": [
         0,
-        254,
+        261,
         0,
         0,
-        30
+        38
       ],
       "colors": [
         "#E4405F",
@@ -80,16 +80,16 @@
         {
           "label": "Instagram",
           "data": [
-            137275,
-            137275
+            137293,
+            137293
           ],
           "color": "#E4405F"
         },
         {
           "label": "Facebook",
           "data": [
-            37109,
-            37319
+            37151,
+            37336
           ],
           "color": "#1877F2"
         },
@@ -112,8 +112,8 @@
         {
           "label": "Youtube",
           "data": [
-            54200,
-            54300
+            54300,
+            54400
           ],
           "color": "#FF0000"
         }
@@ -126,15 +126,15 @@
         "date": "Nov 17",
         "format": "Video",
         "views": 0,
-        "engagements": 222
+        "engagements": 225
       },
       {
         "title": "Wow Okay Trend",
         "platform": "Youtube",
         "date": "Nov 19",
         "format": "Short",
-        "views": 2110,
-        "engagements": 16
+        "views": 2847,
+        "engagements": 24
       },
       {
         "title": "STORY to learn more! ",
@@ -142,7 +142,7 @@
         "date": "Nov 19",
         "format": "Photo",
         "views": 0,
-        "engagements": 14
+        "engagements": 16
       },
       {
         "title": "New Leveled Daily Curriculum File Folders!😍",
@@ -150,14 +150,14 @@
         "date": "Nov 19",
         "format": "Photo",
         "views": 0,
-        "engagements": 11
+        "engagements": 12
       },
       {
         "title": "Phonics Leveled Daily Curriculum",
         "platform": "Youtube",
         "date": "Nov 20",
         "format": "Short",
-        "views": 411,
+        "views": 581,
         "engagements": 8
       },
       {
@@ -165,7 +165,7 @@
         "platform": "Youtube",
         "date": "Nov 17",
         "format": "Short",
-        "views": 224,
+        "views": 244,
         "engagements": 5
       },
       {
@@ -193,11 +193,11 @@
         "engagements": 1
       },
       {
-        "title": "Errorless Work Tasks",
-        "platform": "Youtube",
-        "date": "Nov 18",
-        "format": "Short",
-        "views": 143,
+        "title": "Move past basic matching with 5 printable and digital workbooks featuring fun Ch",
+        "platform": "Facebook",
+        "date": "Nov 19",
+        "format": "Photo",
+        "views": 0,
         "engagements": 1
       }
     ],
@@ -229,7 +229,7 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 137275,
+        "value": 137293,
         "delta": 0
       },
       {
@@ -259,8 +259,8 @@
         {
           "label": "Followers",
           "data": [
-            137275,
-            137275
+            137293,
+            137293
           ],
           "color": "#E4405F"
         }
@@ -296,14 +296,14 @@
     "trafficSources": null,
     "deviceTypes": null,
     "watchTime": null,
-    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Sunday, 22-Nov-26 04:15:04 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"Aj-rk1jTiQOIxTNVMUfsEEV\"}}"
+    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Monday, 23-Nov-26 05:59:12 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AFFCGdaRZS8XWVbOnm0XayT\"}}"
   },
   "facebook": {
     "kpis": [
       {
         "label": "Followers",
-        "value": 37319,
-        "delta": 210
+        "value": 37336,
+        "delta": 185
       },
       {
         "label": "Posts This Week",
@@ -312,14 +312,14 @@
       },
       {
         "label": "Total Reactions",
-        "value": 77,
-        "delta": 8.5,
+        "value": 82,
+        "delta": -3.5,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Shares",
-        "value": 11,
-        "delta": -38.9,
+        "value": 12,
+        "delta": -33.3,
         "deltaSuffix": "%"
       }
     ],
@@ -332,8 +332,8 @@
         {
           "label": "Followers",
           "data": [
-            37109,
-            37319
+            37151,
+            37336
           ],
           "color": "#1877F2"
         }
@@ -344,52 +344,52 @@
         "title": "DIGITAL to try a free sample of our digital products! ",
         "date": "Nov 17",
         "format": "Video",
-        "reactions": 59,
-        "comments": 158,
-        "shares": 5,
+        "reactions": 60,
+        "comments": 159,
+        "shares": 6,
         "reactionBreakdown": {
           "like": 49,
-          "love": 10,
+          "love": 11,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 222
+        "engagements": 225
       },
       {
         "title": "STORY to learn more! ",
         "date": "Nov 19",
         "format": "Photo",
-        "reactions": 3,
+        "reactions": 5,
         "comments": 8,
         "shares": 3,
         "reactionBreakdown": {
-          "like": 3,
+          "like": 5,
           "love": 0,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 14
+        "engagements": 16
       },
       {
         "title": "New Leveled Daily Curriculum File Folders!😍",
         "date": "Nov 19",
         "format": "Photo",
-        "reactions": 9,
+        "reactions": 10,
         "comments": 0,
         "shares": 2,
         "reactionBreakdown": {
-          "like": 9,
+          "like": 10,
           "love": 0,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 11
+        "engagements": 12
       },
       {
         "title": "Teach sound identification, phonemic awareness, word patterns, and decodable tex",
@@ -446,18 +446,18 @@
         "title": "Move past basic matching with 5 printable and digital workbooks featuring fun Ch",
         "date": "Nov 19",
         "format": "Photo",
-        "reactions": 0,
+        "reactions": 1,
         "comments": 0,
         "shares": 0,
         "reactionBreakdown": {
-          "like": 0,
+          "like": 1,
           "love": 0,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 0
+        "engagements": 1
       },
       {
         "title": "Eight students. Multiple learning levels. A lot of time spent adapting lessons. ",
@@ -481,35 +481,35 @@
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>210 net new followers</strong> this week.",
+          "<strong>185 net new followers</strong> this week.",
           "Top post: \"<strong>DIGITAL to try a free sample of our digital products! </strong>\" (Video) drove the most engagement."
         ]
       },
       "pivot": {
         "headline": "Engagement dipped week-over-week",
         "bullets": [
-          "Total engagement down <strong>20%</strong>. Investigate posting cadence and formats.",
-          "One post drove 87% of this week's engagement — concentration risk. Spread the bets."
+          "Total engagement down <strong>27%</strong>. Investigate posting cadence and formats.",
+          "One post drove 86% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Video</strong> content — averaged 75 engagements per post, <strong>1400% above</strong> the next format.",
-          "Schedule your next post for <strong>Wed around 9 PM CT</strong> — historically your highest-engagement window (avg 365 engagements)."
+          "More <strong>Video</strong> content — averaged 76 engagements per post, <strong>1167% above</strong> the next format.",
+          "Schedule your next post for <strong>Wed around 9 PM CT</strong> — historically your highest-engagement window (avg 364 engagements)."
         ]
       }
     },
     "demographics": null,
     "demographicsNote": "Facebook Page demographic data was retired by Meta in 2024 (Graph API v18+). Instagram demographics above are a reasonable proxy for your overall Meta audience.",
     "followerChurn": {
-      "gained": 260685,
+      "gained": 260881,
       "lost": null,
       "lostNote": "Facebook doesn't expose unfollow counts via the Graph API. We report gains only.",
-      "net": 260685
+      "net": 260881
     },
     "actionFunnel": {
-      "pageViews": 2160,
+      "pageViews": 1986,
       "ctaClicks": 0,
       "note": "Facebook Page view / CTA click data may be unavailable if your Page hasn't enabled Professional Dashboard analytics."
     },
@@ -517,14 +517,14 @@
       {
         "format": "Video",
         "count": 3,
-        "avgEngagement": 75,
+        "avgEngagement": 76,
         "avgReach": 0,
         "avgViews": 0
       },
       {
         "format": "Photo",
         "count": 6,
-        "avgEngagement": 5,
+        "avgEngagement": 6,
         "avgReach": 0,
         "avgViews": 0
       }
@@ -532,7 +532,7 @@
     "bestTimeToPost": {
       "topDay": "Wed",
       "topHour": 2,
-      "topAvgEng": 365,
+      "topAvgEng": 364,
       "heatmap": [
         [
           null,
@@ -554,7 +554,7 @@
           null,
           20,
           null,
-          262,
+          null,
           null,
           null,
           null,
@@ -603,7 +603,7 @@
           null,
           null,
           null,
-          222,
+          225,
           7,
           null,
           null,
@@ -615,7 +615,7 @@
         [
           null,
           7,
-          365,
+          364,
           null,
           null,
           null,
@@ -652,17 +652,17 @@
           null,
           null,
           null,
-          8,
+          9,
           1,
           null,
           null,
           null,
           null,
-          91,
+          90,
           3,
-          183,
+          184,
           18,
-          14
+          16
         ],
         [
           null,
@@ -706,7 +706,7 @@
           null,
           null,
           null,
-          35,
+          37,
           1,
           null,
           14,
@@ -726,13 +726,13 @@
         "Fri",
         "Sat"
       ],
-      "sampleSize": 54,
+      "sampleSize": 53,
       "note": "Best time computed from historical post engagement (UTC hours; frontend converts to CT)."
     },
     "stories": null,
     "reactionBreakdown": {
-      "like": 66,
-      "love": 11,
+      "like": 70,
+      "love": 12,
       "haha": 0,
       "wow": 0,
       "sad": 0,
@@ -893,7 +893,7 @@
     "kpis": [
       {
         "label": "Subscribers",
-        "value": 54300,
+        "value": 54400,
         "delta": 100
       },
       {
@@ -903,14 +903,14 @@
       },
       {
         "label": "Total Views",
-        "value": 2888,
-        "delta": 4.9,
+        "value": 3825,
+        "delta": 27.4,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 30,
-        "delta": -11.8,
+        "value": 37,
+        "delta": -2.6,
         "deltaSuffix": "%"
       }
     ],
@@ -923,8 +923,8 @@
         {
           "label": "Followers",
           "data": [
-            54200,
-            54300
+            54300,
+            54400
           ],
           "color": "#FF0000"
         }
@@ -939,10 +939,10 @@
         "format": "Short",
         "length": "0:22",
         "durationSec": 22,
-        "views": 2110,
-        "likes": 16,
-        "comments": 0,
-        "engagements": 16,
+        "views": 2847,
+        "likes": 23,
+        "comments": 1,
+        "engagements": 24,
         "watchMinutes": null,
         "watchTimeMinutes": null,
         "averageViewDurationSec": null,
@@ -959,7 +959,7 @@
         "format": "Short",
         "length": "0:35",
         "durationSec": 35,
-        "views": 411,
+        "views": 581,
         "likes": 8,
         "comments": 0,
         "engagements": 8,
@@ -979,7 +979,7 @@
         "format": "Short",
         "length": "0:08",
         "durationSec": 8,
-        "views": 224,
+        "views": 244,
         "likes": 5,
         "comments": 0,
         "engagements": 5,
@@ -999,7 +999,7 @@
         "format": "Short",
         "length": "0:15",
         "durationSec": 15,
-        "views": 143,
+        "views": 153,
         "likes": 1,
         "comments": 0,
         "engagements": 1,
@@ -1021,10 +1021,9 @@
         ]
       },
       "pivot": {
-        "headline": "Engagement dipped week-over-week",
+        "headline": "Small tweaks to try",
         "bullets": [
-          "Total engagement down <strong>12%</strong>. Investigate posting cadence and formats.",
-          "One post drove 53% of this week's engagement — concentration risk. Spread the bets."
+          "One post drove 63% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
@@ -1044,16 +1043,16 @@
         "format": "Video",
         "count": 8,
         "avgEngagement": 31,
-        "avgReach": 1324,
-        "avgViews": 1324,
+        "avgReach": 1328,
+        "avgViews": 1328,
         "avgWatchMinutes": null
       },
       {
         "format": "Short",
         "count": 42,
         "avgEngagement": 13,
-        "avgReach": 865,
-        "avgViews": 865,
+        "avgReach": 890,
+        "avgViews": 890,
         "avgWatchMinutes": null
       }
     ],
@@ -1184,7 +1183,7 @@
           18,
           7,
           20,
-          11,
+          15,
           null,
           null,
           null,
