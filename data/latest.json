@@ -1,17 +1,17 @@
 {
   "meta": {
-    "week": "2026-11-16/2026-11-22",
-    "weekLabel": "Nov 16 – Nov 22, 2026",
-    "generatedAt": "2026-11-23T13:59:17.649Z",
+    "week": "2026-11-17/2026-11-23",
+    "weekLabel": "Nov 17 – Nov 23, 2026",
+    "generatedAt": "2026-11-24T14:30:26.227Z",
     "source": "meta-graph-api + youtube-data+analytics-api + apify",
     "windowType": "trailing-7-days"
   },
   "overview": {
     "totals": {
-      "followers": 500029,
-      "followersDelta": 285,
-      "engagements": 299,
-      "engagementsDeltaPct": -24.7,
+      "followers": 500077,
+      "followersDelta": 289,
+      "engagements": 308,
+      "engagementsDeltaPct": -25.1,
       "posts": 13,
       "postsDelta": 3,
       "topPlatform": "Facebook"
@@ -19,14 +19,14 @@
     "platformSummary": [
       {
         "name": "Instagram",
-        "followers": 137293,
+        "followers": 137310,
         "followersDelta": 0,
         "topFormat": "—"
       },
       {
         "name": "Facebook",
-        "followers": 37336,
-        "followersDelta": 185,
+        "followers": 37367,
+        "followersDelta": 189,
         "topFormat": "Video"
       },
       {
@@ -58,10 +58,10 @@
       ],
       "data": [
         0,
-        261,
+        265,
         0,
         0,
-        38
+        43
       ],
       "colors": [
         "#E4405F",
@@ -80,16 +80,16 @@
         {
           "label": "Instagram",
           "data": [
-            137293,
-            137293
+            137310,
+            137310
           ],
           "color": "#E4405F"
         },
         {
           "label": "Facebook",
           "data": [
-            37151,
-            37336
+            37178,
+            37367
           ],
           "color": "#1877F2"
         },
@@ -126,15 +126,15 @@
         "date": "Nov 17",
         "format": "Video",
         "views": 0,
-        "engagements": 225
+        "engagements": 226
       },
       {
         "title": "Wow Okay Trend",
         "platform": "Youtube",
         "date": "Nov 19",
         "format": "Short",
-        "views": 2847,
-        "engagements": 24
+        "views": 3157,
+        "engagements": 28
       },
       {
         "title": "STORY to learn more! ",
@@ -142,7 +142,7 @@
         "date": "Nov 19",
         "format": "Photo",
         "views": 0,
-        "engagements": 16
+        "engagements": 17
       },
       {
         "title": "New Leveled Daily Curriculum File Folders!😍",
@@ -150,22 +150,22 @@
         "date": "Nov 19",
         "format": "Photo",
         "views": 0,
-        "engagements": 12
+        "engagements": 13
       },
       {
         "title": "Phonics Leveled Daily Curriculum",
         "platform": "Youtube",
         "date": "Nov 20",
         "format": "Short",
-        "views": 581,
-        "engagements": 8
+        "views": 635,
+        "engagements": 9
       },
       {
         "title": "Errorless Work Tasks",
         "platform": "Youtube",
         "date": "Nov 17",
         "format": "Short",
-        "views": 244,
+        "views": 253,
         "engagements": 5
       },
       {
@@ -182,7 +182,7 @@
         "date": "Nov 18",
         "format": "Video",
         "views": 0,
-        "engagements": 2
+        "engagements": 3
       },
       {
         "title": "Velcro dots are my love language 💕",
@@ -229,7 +229,7 @@
     "kpis": [
       {
         "label": "Followers",
-        "value": 137293,
+        "value": 137310,
         "delta": 0
       },
       {
@@ -259,8 +259,8 @@
         {
           "label": "Followers",
           "data": [
-            137293,
-            137293
+            137310,
+            137310
           ],
           "color": "#E4405F"
         }
@@ -296,30 +296,30 @@
     "trafficSources": null,
     "deviceTypes": null,
     "watchTime": null,
-    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Monday, 23-Nov-26 05:59:12 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AFFCGdaRZS8XWVbOnm0XayT\"}}"
+    "_error": "[ig/me] 400 Bad Request — {\"error\":{\"message\":\"Error validating access token: Session has expired on Friday, 19-Jun-26 14:46:12 PDT. The current time is Tuesday, 24-Nov-26 06:30:20 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":0,\"fbtrace_id\":\"AGoZNtOptJKYz3lQDNrjBqr\"}}"
   },
   "facebook": {
     "kpis": [
       {
         "label": "Followers",
-        "value": 37336,
-        "delta": 185
+        "value": 37367,
+        "delta": 189
       },
       {
         "label": "Posts This Week",
         "value": 9,
-        "delta": 4
+        "delta": 3
       },
       {
         "label": "Total Reactions",
-        "value": 82,
-        "delta": -3.5,
+        "value": 85,
+        "delta": -8.6,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Shares",
-        "value": 12,
-        "delta": -33.3,
+        "value": 13,
+        "delta": -31.6,
         "deltaSuffix": "%"
       }
     ],
@@ -332,8 +332,8 @@
         {
           "label": "Followers",
           "data": [
-            37151,
-            37336
+            37178,
+            37367
           ],
           "color": "#1877F2"
         }
@@ -344,35 +344,35 @@
         "title": "DIGITAL to try a free sample of our digital products! ",
         "date": "Nov 17",
         "format": "Video",
-        "reactions": 60,
+        "reactions": 61,
         "comments": 159,
         "shares": 6,
         "reactionBreakdown": {
-          "like": 49,
+          "like": 50,
           "love": 11,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 225
+        "engagements": 226
       },
       {
         "title": "STORY to learn more! ",
         "date": "Nov 19",
         "format": "Photo",
-        "reactions": 5,
+        "reactions": 6,
         "comments": 8,
         "shares": 3,
         "reactionBreakdown": {
-          "like": 5,
+          "like": 6,
           "love": 0,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 16
+        "engagements": 17
       },
       {
         "title": "New Leveled Daily Curriculum File Folders!😍",
@@ -380,7 +380,7 @@
         "format": "Photo",
         "reactions": 10,
         "comments": 0,
-        "shares": 2,
+        "shares": 3,
         "reactionBreakdown": {
           "like": 10,
           "love": 0,
@@ -389,7 +389,7 @@
           "sad": 0,
           "angry": 0
         },
-        "engagements": 12
+        "engagements": 13
       },
       {
         "title": "Teach sound identification, phonemic awareness, word patterns, and decodable tex",
@@ -412,18 +412,18 @@
         "title": "We’re a team of people who care deeply about giving educators the tools to provi",
         "date": "Nov 18",
         "format": "Video",
-        "reactions": 2,
+        "reactions": 3,
         "comments": 0,
         "shares": 0,
         "reactionBreakdown": {
-          "like": 2,
+          "like": 3,
           "love": 0,
           "haha": 0,
           "wow": 0,
           "sad": 0,
           "angry": 0
         },
-        "engagements": 2
+        "engagements": 3
       },
       {
         "title": "Velcro dots are my love language 💕",
@@ -460,8 +460,8 @@
         "engagements": 1
       },
       {
-        "title": "Eight students. Multiple learning levels. A lot of time spent adapting lessons. ",
-        "date": "Nov 18",
+        "title": "Why do familiar classroom tools so often fail students with ADHD? Dr. Rachel Sch",
+        "date": "Nov 23",
         "format": "Photo",
         "reactions": 0,
         "comments": 0,
@@ -481,35 +481,35 @@
       "working": {
         "headline": "Audience is growing",
         "bullets": [
-          "<strong>185 net new followers</strong> this week.",
+          "<strong>189 net new followers</strong> this week.",
           "Top post: \"<strong>DIGITAL to try a free sample of our digital products! </strong>\" (Video) drove the most engagement."
         ]
       },
       "pivot": {
         "headline": "Engagement dipped week-over-week",
         "bullets": [
-          "Total engagement down <strong>27%</strong>. Investigate posting cadence and formats.",
-          "One post drove 86% of this week's engagement — concentration risk. Spread the bets."
+          "Total engagement down <strong>30%</strong>. Investigate posting cadence and formats.",
+          "One post drove 85% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
         "headline": "Next 2 weeks",
         "bullets": [
-          "More <strong>Video</strong> content — averaged 76 engagements per post, <strong>1167% above</strong> the next format.",
-          "Schedule your next post for <strong>Wed around 9 PM CT</strong> — historically your highest-engagement window (avg 364 engagements)."
+          "More <strong>Video</strong> content — averaged 77 engagements per post, <strong>1183% above</strong> the next format.",
+          "Schedule your next post for <strong>Wed around 9 PM CT</strong> — historically your highest-engagement window (avg 365 engagements)."
         ]
       }
     },
     "demographics": null,
     "demographicsNote": "Facebook Page demographic data was retired by Meta in 2024 (Graph API v18+). Instagram demographics above are a reasonable proxy for your overall Meta audience.",
     "followerChurn": {
-      "gained": 260881,
+      "gained": 261060,
       "lost": null,
       "lostNote": "Facebook doesn't expose unfollow counts via the Graph API. We report gains only.",
-      "net": 260881
+      "net": 261060
     },
     "actionFunnel": {
-      "pageViews": 1986,
+      "pageViews": 1896,
       "ctaClicks": 0,
       "note": "Facebook Page view / CTA click data may be unavailable if your Page hasn't enabled Professional Dashboard analytics."
     },
@@ -517,7 +517,7 @@
       {
         "format": "Video",
         "count": 3,
-        "avgEngagement": 76,
+        "avgEngagement": 77,
         "avgReach": 0,
         "avgViews": 0
       },
@@ -532,7 +532,7 @@
     "bestTimeToPost": {
       "topDay": "Wed",
       "topHour": 2,
-      "topAvgEng": 364,
+      "topAvgEng": 365,
       "heatmap": [
         [
           null,
@@ -581,7 +581,7 @@
           null,
           5,
           null,
-          11,
+          13,
           7,
           null,
           7
@@ -603,7 +603,7 @@
           null,
           null,
           null,
-          225,
+          226,
           7,
           null,
           null,
@@ -615,7 +615,7 @@
         [
           null,
           7,
-          364,
+          365,
           null,
           null,
           null,
@@ -634,7 +634,7 @@
           0,
           10,
           null,
-          2,
+          3,
           5,
           null
         ],
@@ -652,17 +652,17 @@
           null,
           null,
           null,
-          9,
+          10,
           1,
           null,
           null,
           null,
           null,
-          90,
+          91,
           3,
-          184,
+          185,
           18,
-          16
+          17
         ],
         [
           null,
@@ -706,7 +706,7 @@
           null,
           null,
           null,
-          37,
+          38,
           1,
           null,
           14,
@@ -726,12 +726,12 @@
         "Fri",
         "Sat"
       ],
-      "sampleSize": 53,
+      "sampleSize": 52,
       "note": "Best time computed from historical post engagement (UTC hours; frontend converts to CT)."
     },
     "stories": null,
     "reactionBreakdown": {
-      "like": 70,
+      "like": 73,
       "love": 12,
       "haha": 0,
       "wow": 0,
@@ -899,18 +899,18 @@
       {
         "label": "Videos Posted",
         "value": 4,
-        "delta": -1
+        "delta": 0
       },
       {
         "label": "Total Views",
-        "value": 3825,
-        "delta": 27.4,
+        "value": 4203,
+        "delta": 93.4,
         "deltaSuffix": "%"
       },
       {
         "label": "Total Likes",
-        "value": 37,
-        "delta": -2.6,
+        "value": 42,
+        "delta": 20,
         "deltaSuffix": "%"
       }
     ],
@@ -939,10 +939,10 @@
         "format": "Short",
         "length": "0:22",
         "durationSec": 22,
-        "views": 2847,
-        "likes": 23,
+        "views": 3157,
+        "likes": 27,
         "comments": 1,
-        "engagements": 24,
+        "engagements": 28,
         "watchMinutes": null,
         "watchTimeMinutes": null,
         "averageViewDurationSec": null,
@@ -959,10 +959,10 @@
         "format": "Short",
         "length": "0:35",
         "durationSec": 35,
-        "views": 581,
-        "likes": 8,
+        "views": 635,
+        "likes": 9,
         "comments": 0,
-        "engagements": 8,
+        "engagements": 9,
         "watchMinutes": null,
         "watchTimeMinutes": null,
         "averageViewDurationSec": null,
@@ -979,7 +979,7 @@
         "format": "Short",
         "length": "0:08",
         "durationSec": 8,
-        "views": 244,
+        "views": 253,
         "likes": 5,
         "comments": 0,
         "engagements": 5,
@@ -999,7 +999,7 @@
         "format": "Short",
         "length": "0:15",
         "durationSec": 15,
-        "views": 153,
+        "views": 158,
         "likes": 1,
         "comments": 0,
         "engagements": 1,
@@ -1017,13 +1017,14 @@
         "headline": "Audience is growing",
         "bullets": [
           "<strong>100 net new followers</strong> this week.",
-          "Top post: \"<strong>Wow Okay Trend</strong>\" (Short) drove the most engagement."
+          "Top post: \"<strong>Wow Okay Trend</strong>\" (Short) drove the most engagement.",
+          "Engagement volume up <strong>23%</strong> vs last week — momentum building."
         ]
       },
       "pivot": {
         "headline": "Small tweaks to try",
         "bullets": [
-          "One post drove 63% of this week's engagement — concentration risk. Spread the bets."
+          "One post drove 65% of this week's engagement — concentration risk. Spread the bets."
         ]
       },
       "postMore": {
@@ -1043,16 +1044,16 @@
         "format": "Video",
         "count": 8,
         "avgEngagement": 31,
-        "avgReach": 1328,
-        "avgViews": 1328,
+        "avgReach": 1331,
+        "avgViews": 1331,
         "avgWatchMinutes": null
       },
       {
         "format": "Short",
         "count": 42,
         "avgEngagement": 13,
-        "avgReach": 890,
-        "avgViews": 890,
+        "avgReach": 900,
+        "avgViews": 900,
         "avgWatchMinutes": null
       }
     ],
@@ -1183,7 +1184,7 @@
           18,
           7,
           20,
-          15,
+          17,
           null,
           null,
           null,
@@ -1209,7 +1210,7 @@
           null,
           13,
           16,
-          12,
+          13,
           null,
           23,
           13,
